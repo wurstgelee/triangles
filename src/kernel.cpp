@@ -314,12 +314,10 @@ bool CheckStakeKernelHash(unsigned int nBits, const CBlock& blockFrom, unsigned 
         
 		return false;
 	}
-    if (boolean == 0)
-    {
+    if (fDebug)
         printf(">>> CheckStakeKernelHash: passed GetKernelStakeModifier\n");
-        ss << nStakeModifier;
-    }
 
+    ss << nStakeModifier;
     ss << nTimeBlockFrom << nTxPrevOffset << txPrev.nTime << prevout.n << nTimeTx;
     hashProofOfStake = Hash(ss.begin(), ss.end());
     if (fPrintProofOfStake)

@@ -38,6 +38,7 @@ static const int64 CIRCULATION_MONEY = MAX_MONEY;
 static const double TAX_PERCENTAGE = 0.00; //no tax. who likes tax?
 static const int64 MAX_TRI_PROOF_OF_STAKE = 0.33 * COIN;
 static const int CUTOFF_POW_BLOCK = 9000;
+static const unsigned int CUTOFF_POW_TIME = 1405986970;
 
 static const int64 MIN_TXOUT_AMOUNT = MIN_TX_FEE;
 

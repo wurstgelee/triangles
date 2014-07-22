@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>593</width>
-    <height>331</height>
+    <width>632</width>
+    <height>417</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -63,7 +63,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string notr="true">3.3.3.3-beta</string>
+          <string notr="true">3.3.4.3-beta</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -161,8 +161,8 @@ This product includes software developed by the OpenSSL Project for use in the O
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>360</x>
-     <y>308</y>
+     <x>619</x>
+     <y>404</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -177,8 +177,8 @@ This product includes software developed by the OpenSSL Project for use in the O
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>428</x>
-     <y>308</y>
+     <x>619</x>
+     <y>404</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
