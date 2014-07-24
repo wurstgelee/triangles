@@ -979,7 +979,7 @@ unsigned int ComputeMaxBits(CBigNum bnTargetLimit, unsigned int nBase, int64 nTi
     {
         // Maximum 200% adjustment per day...
         bnResult *= 2;
-        nTime -= 24 * 60 * 60;
+        nTime -= 24 * 60 * 6;
     }
     if (bnResult > bnTargetLimit)
         bnResult = bnTargetLimit;
@@ -2212,7 +2212,7 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
     if (pblock->IsProofOfStake())
     {
         uint256 hashProofOfStake = 0;
-        if (!CheckProofOfStake(pblock->vtx[1], pblock->nBits, hashProofOfStake))
+        if (!CheckProofOfStake(pblock->vtx[1], pblock->nBits, hashProofOfStake, IsInitialBlockDownload()))
         {
             printf("WARNING: ProcessBlock(): check proof-of-stake failed for block %s\n", hash.ToString().c_str());
             return false; // do not error here as we expect this during initial block download
@@ -2225,15 +2225,15 @@ bool ProcessBlock(CNode* pfrom, CBlock* pblock)
 
     if(pcheckpoint && fDebug)
     {
-	const CBlockIndex* pindexLastPos = GetLastBlockIndex(pcheckpoint, true);
+        const CBlockIndex* pindexLastPos = GetLastBlockIndex(pcheckpoint, true);
         if(pindexLastPos)
-	{
+        {
             printf("ProcessBlock(): Last POS Block Height: %d \n", pindexLastPos->nHeight);
-	}
-	else
-	{
-	    printf("ProcessBlock(): Previous POS block not found.\n");
-	}
+        }
+        else
+        {
+            printf("ProcessBlock(): Previous POS block not found.\n");
+        }
     }
 
     if (pcheckpoint && pblock->hashPrevBlock != hashBestChain && !Checkpoints::WantedByPendingSyncCheckpoint(hash))
@@ -4319,7 +4319,7 @@ static int nLimitProcessors = -1;
 void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
 {
     printf("CPUMiner started for proof-of-%s\n", fProofOfStake? "stake" : "work");
-    SetThreadPriority(THREAD_PRIORITY_LOWEST);
+    SetThreadPriority(THREAD_PRIORITY_NORMAL);
 
     // Make this thread recognisable as the mining thread
     RenameThread("bitcoin-miner");
@@ -4366,7 +4366,7 @@ void BitcoinMiner(CWallet *pwallet, bool fProofOfStake)
                 CheckWork(pblock.get(), *pwalletMain, reservekey);
                 SetThreadPriority(THREAD_PRIORITY_LOWEST);
             }
-            Sleep(300);
+            Sleep(250);
             continue;
         }
 
