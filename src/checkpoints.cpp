@@ -31,7 +31,9 @@ namespace Checkpoints
     (  3589, uint256("0xb12a2ca3db4e288cada98aa2139768532bd4474c49dd7b8158031032dac08d51"))
     (  3935, uint256("0xe16290c9757d1368b8d7c35de07d4f8f70c2c9f9c785b667df0c3bff85086ca6"))
     (  5703, uint256("0x587db07bb2172ad7db72c5fabc2518262a1b27f503f99417510b2c6fafa6557b"))
+    (  9000, uint256("0x00000000019ef6b2f5e7c324c7d083ee94502305aabc7e9cd73a7fb2a57bb8db"))
     (  9001, uint256("0x6d5c6c5f201cc9e59659ee0da30d1430dc6bf3b12a8ff4c3864ab8d6286b0007"))
+    (  9002, uint256("0xa1e20fb1d44688b763690cf74d6aefe859e4cc32981f9e3f2b2ae9702bbcf249"))
             ;
 
     static MapCheckpoints mapCheckpointsTestnet =
@@ -43,9 +45,11 @@ namespace Checkpoints
     (  3589, uint256("0xb12a2ca3db4e288cada98aa2139768532bd4474c49dd7b8158031032dac08d51"))
     (  3935, uint256("0xe16290c9757d1368b8d7c35de07d4f8f70c2c9f9c785b667df0c3bff85086ca6"))
     (  5703, uint256("0x587db07bb2172ad7db72c5fabc2518262a1b27f503f99417510b2c6fafa6557b"))
-    (  9001, uint256("0x6d5c6c5f201cc9e59659ee0da30d1430dc6bf3b12a8ff4c3864ab8d6286b0007"))
+    (  9000, uint256("0x00000000019ef6b2f5e7c324c7d083ee94502305aabc7e9cd73a7fb2a57bb8db"))
+    (  9001, uint256("0x6d5c6c5f201cc9e59659ee0da30d1430dc6bf3b12a8ff4c3864ab8d6286b0007"))            
+    (  9002, uint256("0xa1e20fb1d44688b763690cf74d6aefe859e4cc32981f9e3f2b2ae9702bbcf249"))
             ;
-    
+ 
     bool CheckHardened(int nHeight, const uint256& hash)
     {
         MapCheckpoints& checkpoints = (fTestNet ? mapCheckpointsTestnet : mapCheckpoints);
