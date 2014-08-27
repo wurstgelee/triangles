@@ -636,7 +636,8 @@ public:
         // Quick answer in most cases
         if (!IsFinal())
             return false;
-        if (GetDepthInMainChain() >= 1)
+        //triangles fix: show balance as confirmed after 4 confirmations
+        if (GetDepthInMainChain() >= 4)
             return true;
         if (!IsFromMe()) // using wtx's cached debit
             return false;

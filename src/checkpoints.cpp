@@ -34,6 +34,7 @@ namespace Checkpoints
     (  9000, uint256("0x00000000019ef6b2f5e7c324c7d083ee94502305aabc7e9cd73a7fb2a57bb8db"))
     (  9001, uint256("0x6d5c6c5f201cc9e59659ee0da30d1430dc6bf3b12a8ff4c3864ab8d6286b0007"))
     (  9002, uint256("0xa1e20fb1d44688b763690cf74d6aefe859e4cc32981f9e3f2b2ae9702bbcf249"))
+    ( 10881, uint256("0x4b6554c45e1e6764a6f3c309c47baf53c9edd81f624e52b072518cd15da237e6"))
             ;
 
     static MapCheckpoints mapCheckpointsTestnet =
@@ -48,6 +49,7 @@ namespace Checkpoints
     (  9000, uint256("0x00000000019ef6b2f5e7c324c7d083ee94502305aabc7e9cd73a7fb2a57bb8db"))
     (  9001, uint256("0x6d5c6c5f201cc9e59659ee0da30d1430dc6bf3b12a8ff4c3864ab8d6286b0007"))            
     (  9002, uint256("0xa1e20fb1d44688b763690cf74d6aefe859e4cc32981f9e3f2b2ae9702bbcf249"))
+    ( 10881, uint256("0x4b6554c45e1e6764a6f3c309c47baf53c9edd81f624e52b072518cd15da237e6"))
             ;
  
     bool CheckHardened(int nHeight, const uint256& hash)
@@ -81,8 +83,8 @@ namespace Checkpoints
     }
 
     // triangles: synchronized checkpoint (centrally broadcasted)
-    uint256 hashSyncCheckpoint = uint256("0xa1e20fb1d44688b763690cf74d6aefe859e4cc32981f9e3f2b2ae9702bbcf249");
-    uint256 hashPendingCheckpoint = uint256("0xa1e20fb1d44688b763690cf74d6aefe859e4cc32981f9e3f2b2ae9702bbcf249");
+    uint256 hashSyncCheckpoint = uint256("0x4b6554c45e1e6764a6f3c309c47baf53c9edd81f624e52b072518cd15da237e6");
+    uint256 hashPendingCheckpoint = uint256("0x4b6554c45e1e6764a6f3c309c47baf53c9edd81f624e52b072518cd15da237e6");
     CSyncCheckpoint checkpointMessage;
     CSyncCheckpoint checkpointMessagePending;
     uint256 hashInvalidCheckpoint = 0;
@@ -211,8 +213,8 @@ namespace Checkpoints
 
         // Select the last proof-of-work block
         const CBlockIndex *pindex = GetLastBlockIndex(pindexBest, false);
-        // Search forward for a block within max span and maturity window
-        while (pindex->pnext && (pindex->GetBlockTime() + CHECKPOINT_MAX_SPAN <= pindexBest->GetBlockTime() || pindex->nHeight + std::min(6, nCoinbaseMaturity - 20) <= pindexBest->nHeight))
+        // Search forward for a block within max span and 6 blocks
+        while (pindex->pnext && (pindex->GetBlockTime() + CHECKPOINT_MAX_SPAN <= pindexBest->GetBlockTime() || pindex->nHeight + 6 <= pindexBest->nHeight))
             pindex = pindex->pnext;
         return pindex->GetBlockHash();
     }

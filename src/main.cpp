@@ -40,12 +40,12 @@ static CBigNum bnProofOfStakeLimit(~uint256(0) >> 8);
 static CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 8);
 static CBigNum bnProofOfStakeLimitTestNet(~uint256(0) >> 8);
 
-unsigned int nStakeMinAge = 60 * 60 * 3;
+unsigned int nStakeMinAge = 60 * 60 * 1;
 unsigned int nStakeMaxAge = 60 * 60 * 12;
 unsigned int nStakeTargetSpacing = 60;
 
 int64 nChainStartTime = 1405500418;
-int nCoinbaseMaturity = 33;
+int nCoinbaseMaturity = 7;
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 CBigNum bnBestChainTrust = 0;
@@ -766,11 +766,12 @@ int CMerkleTx::GetDepthInMainChain(CBlockIndex* &pindexRet) const
 }
 
 
+
 int CMerkleTx::GetBlocksToMaturity() const
 {
     if (!(IsCoinBase() || IsCoinStake()))
         return 0;
-    return max(0, (nCoinbaseMaturity+20) - GetDepthInMainChain());
+    return max(0, (nCoinbaseMaturity) - GetDepthInMainChain());
 }
 
 
