@@ -3,7 +3,7 @@
 
 #include <QAbstractListModel>
 
-/** Interface from Qt to configuration data structure for Bitcoin client.
+/** Interface from Qt to configuration data structure for Triangles client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -26,11 +26,12 @@ public:
         ProxyPort,         // int
         ProxySocksVersion, // int
         Fee,               // qint64
-        DisplayUnit,       // BitcoinUnits::Unit
+        ReserveBalance,    // qint64
+        DisplayUnit,       // TrianglesUnits::Unit
         DisplayAddresses,  // bool
         DetachDatabases,   // bool
         Language,          // QString
-		CoinControlFeatures, // bool
+        CoinControlFeatures, // bool
         OptionIDRowCount,
     };
 
@@ -45,11 +46,12 @@ public:
 
     /* Explicit getters */
     qint64 getTransactionFee();
+    qint64 getReserveBalance();
     bool getMinimizeToTray();
     bool getMinimizeOnClose();
     int getDisplayUnit();
     bool getDisplayAddresses();
-	bool getCoinControlFeatures();
+    bool getCoinControlFeatures();
     QString getLanguage() { return language; }
 
 private:
@@ -57,12 +59,13 @@ private:
     bool bDisplayAddresses;
     bool fMinimizeToTray;
     bool fMinimizeOnClose;
-	bool fCoinControlFeatures;
+    bool fCoinControlFeatures;
     QString language;
 
 signals:
     void displayUnitChanged(int unit);
-	void transactionFeeChanged(qint64);
+    void transactionFeeChanged(qint64);
+    void reserveBalanceChanged(qint64);
     void coinControlFeaturesChanged(bool);
 };
 

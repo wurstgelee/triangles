@@ -28,7 +28,7 @@ someVariable.
 
 Common types:
 n       integer number: short, unsigned short, int, unsigned int,
-            int64, uint64, sometimes char if used as a number
+            int64_t, uint64_t, sometimes char if used as a number
 d       double, float
 f       flag
 hash    uint256
@@ -90,7 +90,7 @@ in 500ms.
 ThreadRPCServer : Remote procedure call handler, listens on port 8332
 for connections and services them.
 
-ThreadBitcoinMiner : Generates bitcoins
+ThreadStakeMiner : Generates TRIs
 
 ThreadMapPort : Universal plug-and-play startup/shutdown
 

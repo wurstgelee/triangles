@@ -13,7 +13,7 @@ class QDateTime;
 class QTimer;
 QT_END_NAMESPACE
 
-/** Model for Bitcoin network client. */
+/** Model for Triangles network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT
@@ -42,7 +42,7 @@ public:
     QString formatBuildDate() const;
     QString clientName() const;
     QString formatClientStartupTime() const;
-	double GetDifficulty() const;
+    double GetDifficulty() const;
 
 private:
     OptionsModel *optionsModel;

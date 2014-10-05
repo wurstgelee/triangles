@@ -1,5 +1,8 @@
-Bitcoin-qt: Qt4 GUI for Bitcoin
+triangles-qt: Qt5 GUI for triangles
 ===============================
+
+Note: Not all of these instructions are updated yet, so they probably don't work.  
+Feel free to update them! ;)
 
 Build instructions
 ===================
@@ -7,22 +10,15 @@ Build instructions
 Debian
 -------
 
-First, make sure that the required packages for Qt4 development of your
-distribution are installed.
-
-On recent Ubuntu releases, the `libdb4.8++-dev` package is not in the default
-repositories. However it's in the bitcoin repository, which we can add
-with:
-
-    apt-add-repository ppa:bitcoin/bitcoin
-
-Then we need to make sure our build environment is up to date. For Debian and Ubuntu:
+First, make sure that the required packages for Qt5 development of your
+distribution are installed, for Debian and Ubuntu these are:
 
 ::
 
-    apt-get install qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev \
+    apt-get install qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
+        build-essential libboost-dev libboost-system-dev \
         libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev \
-        libssl-dev libdb4.8++-dev libminiupnpc-dev libminiupnpc8
+        libssl-dev libdb++-dev
 
 then execute the following:
 
@@ -31,9 +27,9 @@ then execute the following:
     qmake
     make
 
-Alternatively, install Qt Creator and open the `bitcoin-qt.pro` file.
+Alternatively, install Qt Creator and open the `triangles-qt.pro` file.
 
-An executable named `bitcoin-qt` will be built.
+An executable named `triangles-qt` will be built.
 
 
 Windows
@@ -50,8 +46,8 @@ Windows build instructions:
 - Open the .pro file in QT creator and build as normal (ctrl-B)
 
 .. _`QT Windows SDK`: http://qt.nokia.com/downloads/sdk-windows-cpp
-.. _`dependencies archive`: https://download.visucore.com/bitcoin/qtgui_deps_1.zip
-.. [#] PGP signature: https://download.visucore.com/bitcoin/qtgui_deps_1.zip.sig (signed with RSA key ID `610945D0`_)
+.. _`dependencies archive`: https://download.visucore.com/triangles/qtgui_deps_1.zip
+.. [#] PGP signature: https://download.visucore.com/triangles/qtgui_deps_1.zip.sig (signed with RSA key ID `610945D0`_)
 .. _`610945D0`: http://pgp.mit.edu:11371/pks/lookup?op=get&search=0x610945D0
 
 
@@ -81,7 +77,7 @@ Build configuration options
 UPNnP port forwarding
 ---------------------
 
-To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable bitcoin experience), pass the following argument to qmake:
+To use UPnP for port forwarding behind a NAT router (recommended, as more connections overall allow for a faster and more stable triangles experience), pass the following argument to qmake:
 
 ::
 
@@ -129,9 +125,9 @@ flag to qmake to control this:
 Berkely DB version warning
 ==========================
 
-A warning for people using the *static binary* version of Bitcoin on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
+A warning for people using the *static binary* version of triangles on a Linux/UNIX-ish system (tl;dr: **Berkely DB databases are not forward compatible**).
 
-The static binary version of Bitcoin is linked against libdb4.8 (see also `this Debian issue`_).
+The static binary version of triangles is linked against libdb 5.0 (see also `this Debian issue`_).
 
 Now the nasty thing is that databases from 5.X are not compatible with 4.X.
 
@@ -146,7 +142,7 @@ Ubuntu 11.10 warning
 ====================
 
 Ubuntu 11.10 has a package called 'qt-at-spi' installed by default.  At the time of writing, having that package
-installed causes bitcoin-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
+installed causes triangles-qt to crash intermittently.  The issue has been reported as `launchpad bug 857790`_, but
 isn't yet fixed.
 
 Until the bug is fixed, you can remove the qt-at-spi package to work around the problem, though this will presumably

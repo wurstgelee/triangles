@@ -1,4 +1,4 @@
-Copyright (c) 2009-2012 Bitcoin Developers
+Copyright (c) 2009-2012 Bitcoin developers
 Distributed under the MIT/X11 software license, see the accompanying
 file license.txt or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in
@@ -14,10 +14,10 @@ To Build
 --------
 
 cd src/
-make -f makefile.unix            # Headless bitcoin
+make -f makefile.unix            # Headless Triangles
 
-See readme-qt.rst for instructions on building Bitcoin QT,
-the graphical bitcoin.
+See readme-qt.rst for instructions on building Triangles QT,
+the graphical Triangles.
 
 Dependencies
 ------------
@@ -25,10 +25,11 @@ Dependencies
  Library     Purpose           Description
  -------     -------           -----------
  libssl      SSL Support       Secure communications
- libdb4.8    Berkeley DB       Blockchain & wallet storage
+ libdb       Berkeley DB       Blockchain & wallet storage
  libboost    Boost             C++ Library
  miniupnpc   UPnP Support      Optional firewall-jumping support
  libqrencode QRCode generation Optional QRCode generation
+ libevent    Callbacks	       Execute a callback function when a specific event occurs
 
 Note that libexecinfo should be installed, if you building under *BSD systems. 
 This library provides backtrace facility.
@@ -54,19 +55,19 @@ Licenses of statically linked libraries:
 
 Versions used in this release:
  GCC           4.3.3
- OpenSSL       0.9.8g
- Berkeley DB   4.8.30.NC
- Boost         1.37
- miniupnpc     1.6
+ OpenSSL       1.0.1h
+ Berkeley DB   5.1 (4.8.30.NC should work too)
+ Boost         1.48
+ miniupnpc     1.9
 
 Dependency Build Instructions: Ubuntu & Debian
 ----------------------------------------------
 sudo apt-get install build-essential
 sudo apt-get install libssl-dev
-sudo apt-get install libdb4.8-dev
-sudo apt-get install libdb4.8++-dev
- Boost 1.40+: sudo apt-get install libboost-all-dev
- or Boost 1.37: sudo apt-get install libboost1.37-dev
+sudo apt-get install libdb-dev
+sudo apt-get install libdb++-dev
+sudo apt-get install libboost1.48-all-dev
+sudo apt-get install libevent-dev
 sudo apt-get install libqrencode-dev
 
 If using Boost 1.37, append -mt to the boost libraries in the makefile.
@@ -75,21 +76,21 @@ If using Boost 1.37, append -mt to the boost libraries in the makefile.
 Dependency Build Instructions: Gentoo
 -------------------------------------
 
-Note: If you just want to install bitcoind on Gentoo, you can add the Bitcoin
+Note: If you just want to install trianglesd on Gentoo, you can add the Triangles
       overlay and use your package manager:
-          layman -a bitcoin && emerge bitcoind
+          layman -a triangles && emerge trianglesd
 
-emerge -av1 --noreplace boost glib openssl sys-libs/db:4.8
+emerge -av1 --noreplace boost glib openssl sys-libs/db
 
 Take the following steps to build (no UPnP support):
- cd ${BITCOIN_DIR}/src
+ cd ${TRIANGLES_DIR}/src
  make -f makefile.unix USE_UPNP= BDB_INCLUDE_PATH='/usr/include/db4.8'
- strip bitcoind
+ strip trianglesd
 
 
 Notes
 -----
-The release is built with GCC and then "strip bitcoind" to strip the debug
+The release is built with GCC and then "strip trianglesd" to strip the debug
 symbols, which reduces the executable size by about 90%.
 
 
@@ -116,10 +117,16 @@ sudo su
 ./bootstrap.sh
 ./bjam install
 
+Libevent
+--------
+If you need to build Libevent yourself
+./configure --enable-static --disable-shared
+make
+
 
 Security
 --------
-To help make your bitcoin installation more secure by making certain attacks impossible to
+To help make your Triangles installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -136,7 +143,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     make -f makefile.unix ... -e PIE=1
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
-    scanelf -e ./bitcoin
+    scanelf -e ./triangles
 
     The output should contain:
      TYPE
@@ -144,13 +151,13 @@ exploit even if a vulnerability is found, you can take the following measures:
 
 * Non-executable Stack
     If the stack is executable then trivial stack based buffer overflow exploits are possible if
-    vulnerable buffers are found. By default, bitcoin should be built with a non-executable stack
+    vulnerable buffers are found. By default, Triangles should be built with a non-executable stack
     but if one of the libraries it uses asks for an executable stack or someone makes a mistake
     and uses a compiler extension which requires an executable stack, it will silently build an
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    scanelf -e ./bitcoin
+    scanelf -e ./triangles
 
     the output should contain:
     STK/REL/PTL

@@ -27,10 +27,12 @@ class SendCoinsRecipient
 public:
     QString address;
     QString label;
+    QString narration;
+    int typeInd;
     qint64 amount;
 };
 
-/** Interface to Bitcoin wallet from Qt view code. */
+/** Interface to Triangles wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT
@@ -49,6 +51,7 @@ public:
         DuplicateAddress,
         TransactionCreationFailed, // Error returned when wallet is still locked
         TransactionCommitFailed,
+		NarrationTooLong,
         Aborted
     };
 
@@ -117,7 +120,7 @@ public:
     };
 
     UnlockContext requestUnlock();
-	
+
     bool getPubKey(const CKeyID &address, CPubKey& vchPubKeyOut) const;
     void getOutputs(const std::vector<COutPoint>& vOutpoints, std::vector<COutput>& vOutputs);
     void listCoins(std::map<QString, std::vector<COutput> >& mapCoins) const;

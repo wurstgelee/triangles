@@ -44,7 +44,7 @@
         </widget>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_Main">
+        <layout class="QHBoxLayout" name="horizontalLayoutFee">
          <item>
           <widget class="QLabel" name="transactionFeeLabel">
            <property name="text">
@@ -59,10 +59,10 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="transactionFee"/>
+          <widget class="TrianglesAmountField" name="transactionFee"/>
          </item>
          <item>
-          <spacer name="horizontalSpacer_Main">
+          <spacer name="horizontalSpacerFee">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
@@ -77,12 +77,58 @@
         </layout>
        </item>
        <item>
-        <widget class="QCheckBox" name="bitcoinAtStartup">
+        <widget class="QLabel" name="reserveBalanceInfoLabel">
+         <property name="text">
+          <string>Reserved amount does not participate in staking and is therefore spendable at any time.</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayoutReserveBalance">
+         <item>
+          <widget class="QLabel" name="reserveBalanceLabel">
+           <property name="text">
+            <string>Reserve</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::PlainText</enum>
+           </property>
+           <property name="buddy">
+            <cstring>reserveBalance</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="TrianglesAmountField" name="reserveBalance"/>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerReserveBalance">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="trianglesAtStartup">
          <property name="toolTip">
-          <string>Automatically start triangles after logging in to the system.</string>
+          <string>Automatically start Triangles after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start triangles on system login</string>
+          <string>&amp;Start Triangles on system login</string>
          </property>
         </widget>
        </item>
@@ -119,7 +165,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the triangles client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the Triangles client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -129,7 +175,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the triangles network through a SOCKS proxy (e.g. when connecting through Tor).</string>
+          <string>Connect to the Triangles network through a SOCKS proxy (e.g. when connecting through Tor).</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS proxy:</string>
@@ -303,7 +349,7 @@
          <item>
           <widget class="QValueComboBox" name="lang">
            <property name="toolTip">
-            <string>The user interface language can be set here. This setting will take effect after restarting triangles.</string>
+            <string>The user interface language can be set here. This setting will take effect after restarting Triangles.</string>
            </property>
           </widget>
          </item>
@@ -336,7 +382,7 @@
        <item>
         <widget class="QCheckBox" name="displayAddresses">
          <property name="toolTip">
-          <string>Whether to show triangles addresses in the transaction list or not.</string>
+          <string>Whether to show TRI addresses in the transaction list or not.</string>
          </property>
          <property name="text">
           <string>&amp;Display addresses in transaction list</string>
@@ -450,9 +496,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>BitcoinAmountField</class>
+   <class>TrianglesAmountField</class>
    <extends>QSpinBox</extends>
-   <header>bitcoinamountfield.h</header>
+   <header>trianglesamountfield.h</header>
   </customwidget>
   <customwidget>
    <class>QValueComboBox</class>

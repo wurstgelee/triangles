@@ -2,8 +2,8 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_KEYSTORE_H
-#define BITCOIN_KEYSTORE_H
+#ifndef TRIANGLES_KEYSTORE_H
+#define TRIANGLES_KEYSTORE_H
 
 #include "crypter.h"
 #include "sync.h"
@@ -105,15 +105,14 @@ typedef std::map<CKeyID, std::pair<CPubKey, std::vector<unsigned char> > > Crypt
 class CCryptoKeyStore : public CBasicKeyStore
 {
 private:
-    CryptedKeyMap mapCryptedKeys;
-
-    CKeyingMaterial vMasterKey;
-
     // if fUseCrypto is true, mapKeys must be empty
     // if fUseCrypto is false, vMasterKey must be empty
     bool fUseCrypto;
 
 protected:
+    CryptedKeyMap mapCryptedKeys;
+    CKeyingMaterial vMasterKey;
+
     bool SetCrypted();
 
     // will encrypt previously unencrypted keys
@@ -143,7 +142,7 @@ public:
         return result;
     }
 
-    bool Lock();
+    bool LockKeyStore();
 
     virtual bool AddCryptedKey(const CPubKey &vchPubKey, const std::vector<unsigned char> &vchCryptedSecret);
     bool AddKey(const CKey& key);

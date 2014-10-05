@@ -2,8 +2,8 @@ Building triangles
 
 See doc/readme-qt.rst for instructions on building triangles QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of triangles.
+implementation of Triangles.
 
 See doc/build-*.txt for instructions on building trianglesd,
 the intended-for-services, no-graphical-interface, reference
-implementation of triangles.
+implementation of Triangles.

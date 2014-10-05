@@ -14,21 +14,21 @@ BOOST_AUTO_TEST_SUITE(Checkpoints_tests)
 
 BOOST_AUTO_TEST_CASE(sanity)
 {
-    uint256 p11111 = uint256("0x0000000069e244f73d78e8fd29ba2fd2ed618bd6fa2ee92559f542fdb26e7c1d");
-    uint256 p134444 = uint256("0x00000000000005b12ffd4cd315cd34ffd4a594f430ac814c91184a0d42d2b0fe");
+    uint256 p11111 = uint256("0x05cbc42d0421207a39427f1b44610a30380e0e3dd593c154276d7c8d4ae8c9b2");
+    uint256 p16666 = uint256("0x682d99d096441e046dae8dd86d5bdfaa32d4e29dea6cf38273bb2b261905f1e2");
     BOOST_CHECK(Checkpoints::CheckBlock(11111, p11111));
-    BOOST_CHECK(Checkpoints::CheckBlock(134444, p134444));
+    BOOST_CHECK(Checkpoints::CheckBlock(16666, p16666));
 
     
     // Wrong hashes at checkpoints should fail:
-    BOOST_CHECK(!Checkpoints::CheckBlock(11111, p134444));
-    BOOST_CHECK(!Checkpoints::CheckBlock(134444, p11111));
+    BOOST_CHECK(!Checkpoints::CheckBlock(11111, p16666));
+    BOOST_CHECK(!Checkpoints::CheckBlock(16666, p11111));
 
     // ... but any hash not at a checkpoint should succeed:
-    BOOST_CHECK(Checkpoints::CheckBlock(11111+1, p134444));
-    BOOST_CHECK(Checkpoints::CheckBlock(134444+1, p11111));
+    BOOST_CHECK(Checkpoints::CheckBlock(11111+1, p16666));
+    BOOST_CHECK(Checkpoints::CheckBlock(16666+1, p11111));
 
-    BOOST_CHECK(Checkpoints::GetTotalBlocksEstimate() >= 134444);
+    BOOST_CHECK(Checkpoints::GetTotalBlocksEstimate() >= 16666);
 }    
 
 BOOST_AUTO_TEST_SUITE_END()

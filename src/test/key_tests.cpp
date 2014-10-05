@@ -10,17 +10,17 @@
 
 using namespace std;
 
-static const string strSecret1     ("5HxWvvfubhXpYYpS3tJkw6fq9jE9j18THftkZjHHfmFiWtmAbrj");
-static const string strSecret2     ("5KC4ejrDjv152FGwP386VD1i2NYc5KkfSMyv1nGy1VGDxGHqVY3");
-static const string strSecret1C    ("Kwr371tjA9u2rFSMZjTNun2PXXP3WPZu2afRHTcta6KxEUdm1vEw");
-static const string strSecret2C    ("L3Hq7a8FEQwJkW1M2GNKDW28546Vp5miewcCzSqUD9kCAXrJdS3g");
-static const CBitcoinAddress addr1 ("1QFqqMUD55ZV3PJEJZtaKCsQmjLT6JkjvJ");
-static const CBitcoinAddress addr2 ("1F5y5E5FMc5YzdJtB9hLaUe43GDxEKXENJ");
-static const CBitcoinAddress addr1C("1NoJrossxPBKfCHuJXT4HadJrXRE9Fxiqs");
-static const CBitcoinAddress addr2C("1CRj2HyM1CXWzHAXLQtiGLyggNT9WQqsDs");
+static const string strSecret1     ("VgbPo2gxpQ9Wv3ukSKZyaYqaYE1gCtzpdZtLBSL4Vax17Gk9QWtr");
+static const string strSecret2     ("VZK4HxH5ThQPZjkMVGRb7GHPBhrfwvNCQxYpTsTL7zHtcK5Xmu56");
+static const string strSecret1C    ("VaGAFqyHzPVbXmLRVEfNBCjGoFfkdk5us5RkxdNVu9GKzk1UKdW4");
+static const string strSecret2C    ("VbGMJ5R3znfmv3harEnjEfa9to9hnAp3vGqahGLq12hF3L2aa9vr");
+static const CTrianglesAddress addr1 ("TBUTdKJg53PmmwjyzdPgXjABq2MJrz7sdC");
+static const CTrianglesAddress addr2 ("TV7guKExCcH65B5oKFhtYiVo5M59md24MZ");
+static const CTrianglesAddress addr1C("TM1W8XP18TM2zEqeRo76gXSkaM6UGppfFG");
+static const CTrianglesAddress addr2C("TD4n8bbK75ufLRT5kraXVty6MwN6FXGwai");
 
 
-static const string strAddressBad("1HV9Lc3sNHZxwj4Zk6fB38tEmBryq2cBiF");
+static const string strAddressBad("TNLwP8QiuFTWntVCrmswefDetZkgTLXeG8");
 
 
 #ifdef KEY_TESTS_DUMPINFO
@@ -38,14 +38,14 @@ void dumpKeyInfo(uint256 privkey)
     {
         bool fCompressed = nCompressed == 1;
         printf("  * %s:\n", fCompressed ? "compressed" : "uncompressed");
-        CBitcoinSecret bsecret;
+        CTrianglesSecret bsecret;
         bsecret.SetSecret(secret, fCompressed);
         printf("    * secret (base58): %s\n", bsecret.ToString().c_str());
         CKey key;
         key.SetSecret(secret, fCompressed);
         vector<unsigned char> vchPubKey = key.GetPubKey();
         printf("    * pubkey (hex): %s\n", HexStr(vchPubKey).c_str());
-        printf("    * address (base58): %s\n", CBitcoinAddress(vchPubKey).ToString().c_str());
+        printf("    * address (base58): %s\n", CTrianglesAddress(vchPubKey).ToString().c_str());
     }
 }
 #endif
@@ -55,7 +55,7 @@ BOOST_AUTO_TEST_SUITE(key_tests)
 
 BOOST_AUTO_TEST_CASE(key_test1)
 {
-    CBitcoinSecret bsecret1, bsecret2, bsecret1C, bsecret2C, baddress1;
+    CTrianglesSecret bsecret1, bsecret2, bsecret1C, bsecret2C, baddress1;
     BOOST_CHECK( bsecret1.SetString (strSecret1));
     BOOST_CHECK( bsecret2.SetString (strSecret2));
     BOOST_CHECK( bsecret1C.SetString(strSecret1C));
