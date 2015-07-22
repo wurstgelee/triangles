@@ -9,7 +9,8 @@ QValidatedTextEdit::QValidatedTextEdit(QWidget *parent) :
 
 void QValidatedTextEdit::setValid(bool valid)
 {
-    setStyleSheet(valid ? "" : STYLE_INVALID);
+    //setStyleSheet(valid ? "border: 1px solid#f26522;background-color: #1c1c1c;" : STYLE_INVALID);
+    setStyleSheet(valid ? "" : "border: 1px solid#ff0000;background-color: #1c1c1c;");
 
     if(valid)
     {

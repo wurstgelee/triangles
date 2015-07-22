@@ -1,7 +1,10 @@
 #include "aboutdialog.h"
 #include "ui_aboutdialog.h"
-#include "clientmodel.h"
 
+#include <QDesktopWidget>
+
+#include "clientmodel.h"
+#include "dialog_move_handler.h"
 #include "version.h"
 
 AboutDialog::AboutDialog(QWidget *parent) :
@@ -9,6 +12,8 @@ AboutDialog::AboutDialog(QWidget *parent) :
     ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
 }
 
 void AboutDialog::setModel(ClientModel *model)

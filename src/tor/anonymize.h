@@ -1,5 +1,5 @@
-/* Copyright (c) 2014, StealthCoin/StealthSend Developers */
-/* Copyright (c) 2014, triangles Developers */
+/* Copyright (c) 2014-2015, StealthCoin/StealthSend Developers */
+/* Copyright (c) 2014-2015, Triangles Developers */
 /* See LICENSE for licensing information */
 
 /**

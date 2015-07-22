@@ -4,6 +4,7 @@
 #include "clientmodel.h"
 #include "trianglesrpc.h"
 #include "guiutil.h"
+#include "dialog_move_handler.h"
 
 #include <QTime>
 #include <QTimer>
@@ -191,10 +192,12 @@ RPCConsole::RPCConsole(QWidget *parent) :
     historyPtr(0)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
 
 #ifndef Q_OS_MAC
-    ui->openDebugLogfileButton->setIcon(QIcon(":/icons/export"));
-    ui->showCLOptionsButton->setIcon(QIcon(":/icons/options"));
+    ui->openDebugLogfileButton->setIcon(QIcon(":/menu_16/file"));
+    ui->showCLOptionsButton->setIcon(QIcon(":/menu_16/options"));
 #endif
 
     // Install event filter for up and down arrow

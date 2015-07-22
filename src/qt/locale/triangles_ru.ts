@@ -4,35 +4,27 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../forms/aboutdialog.ui" line="+14"/>
+        <location filename="../forms/aboutdialog.ui" line="+441"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+153"/>
         <source>About Triangles</source>
         <translation>О triangles</translation>
     </message>
     <message>
-        <source>&lt;b&gt;triangles&lt;/b&gt; version</source>
-        <translation type="vanished">&lt;b&gt;triangles&lt;/b&gt; версия</translation>
+        <location line="+565"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team
-Copyright © 2014 The triangles developers</source>
-        <translation type="vanished">Все права защищены © 2009-2014 Разработчики Triangles
-Все права защищены © 2012-2014 Разработчики Triangles
-Все права защищены © 2014 Разработчики triangles</translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="-457"/>
         <source>&lt;b&gt;Triangles&lt;/b&gt; version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+170"/>
         <source>
 This is experimental software.
 
@@ -50,60 +42,57 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressBookPage</name>
     <message>
-        <location filename="../forms/addressbookpage.ui" line="+14"/>
+        <location filename="../forms/addressbookpage.ui" line="+186"/>
         <source>Address Book</source>
         <translation>Адресная книга</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+158"/>
+        <source>Address book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>These are your Triangles addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+269"/>
         <source>Double-click to edit address or label</source>
         <translation>Для того, чтобы изменить адрес или метку давжды кликните по изменяемому объекту</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+50"/>
         <source>Create a new address</source>
         <translation>Создать новый адрес</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Копировать текущий выделенный адрес в буфер обмена</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+65"/>
         <source>Sign a message to prove you own a TRI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-76"/>
         <source>&amp;New Address</source>
         <translation>&amp;Новый адрес</translation>
     </message>
     <message>
-        <source>These are your triangles addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="vanished">Это Ваши адреса для получения платежей. Вы можете дать разные адреса отправителям, чтобы отслеживать, кто именно вам платит.</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Копировать адрес</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+31"/>
         <source>Show &amp;QR Code</source>
         <translation>Показать &amp;QR код</translation>
     </message>
     <message>
-        <source>Sign a message to prove you own a triangles address</source>
-        <translation type="vanished">Подписать сообщение, чтобы доказать владение адресом triangles</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Sign &amp;Message</source>
         <translation>&amp;Подписать сообщение</translation>
     </message>
@@ -113,13 +102,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Удалить выбранный адрес из списка</translation>
-    </message>
-    <message>
-        <source>Verify a message to ensure it was signed with a specified triangles address</source>
-        <translation type="vanished">Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом triangles</translation>
     </message>
     <message>
         <location line="-11"/>
@@ -127,12 +112,17 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Проверить сообщение</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Delete</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+65"/>
+        <location filename="../addressbookpage.cpp" line="+66"/>
+        <source>Triangles receiving addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Copy &amp;Label</source>
         <translation>Копировать &amp;метку</translation>
     </message>
@@ -142,7 +132,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Правка</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+265"/>
         <source>Export Address Book Data</source>
         <translation>Экспортировать адресную книгу</translation>
     </message>
@@ -165,7 +155,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+156"/>
+        <location filename="../addresstablemodel.cpp" line="+146"/>
         <source>Label</source>
         <translation>Метка</translation>
     </message>
@@ -188,32 +178,32 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Диалог ввода пароля</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+209"/>
+        <source>Change password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+115"/>
         <source>Enter passphrase</source>
         <translation>Введите пароль</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>New passphrase</source>
         <translation>Новый пароль</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Repeat new passphrase</source>
         <translation>Повторите новый пароль</translation>
     </message>
     <message>
-        <location line="+33"/>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Служит для предотвращения тривиальной отправки монет, если ваша система скомпрометирована. Не предоставляет реальной безопасности.</translation>
+        <location line="+47"/>
+        <source>Unlock for staking only</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>For staking only</source>
-        <translation>Только для участия в доле</translation>
-    </message>
-    <message>
-        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <location filename="../askpassphrasedialog.cpp" line="+42"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Введите новый пароль для бумажника. &lt;br/&gt; Пожалуйста, используйте фразы из &lt;b&gt;10 или более случайных символов,&lt;/b&gt; или &lt;b&gt;восьми и более слов.&lt;/b&gt;</translation>
     </message>
@@ -223,7 +213,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Зашифровать бумажник</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Для выполнения операции требуется пароль вашего бумажника.</translation>
     </message>
@@ -233,7 +223,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Разблокировать бумажник</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
         <translation>Для выполнения операции требуется пароль вашего бумажника.</translation>
     </message>
@@ -243,7 +233,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Расшифровать бумажник</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Change passphrase</source>
         <translation>Сменить пароль</translation>
     </message>
@@ -288,10 +278,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+60"/>
         <source>Wallet encrypted</source>
         <translation>Бумажник зашифрован</translation>
-    </message>
-    <message>
-        <source>triangles will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="vanished">Сейчас программа закроется для завершения процесса шифрования. Помните, что шифрование вашего бумажника не может полностью защитить ваши монеты от кражи с помощью инфицирования вашего компьютера вредоносным ПО.</translation>
     </message>
     <message>
         <location line="-45"/>
@@ -346,12 +332,17 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>CoinControlDialog</name>
     <message>
-        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <location filename="../forms/coincontroldialog.ui" line="+17"/>
         <source>Coin Control</source>
         <translation>Выбор входов</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+178"/>
+        <source>Triangles Coin Control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Quantity:</source>
         <translation>Количество:</translation>
     </message>
@@ -361,7 +352,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Размер:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+51"/>
         <source>Amount:</source>
         <translation>Сумма:</translation>
     </message>
@@ -381,7 +372,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Мелкие входы:</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+551"/>
+        <location filename="../coincontroldialog.cpp" line="+720"/>
         <source>no</source>
         <translation>нет</translation>
     </message>
@@ -396,22 +387,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Сдача:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+94"/>
         <source>(un)select all</source>
         <translation>Выбрать все</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+51"/>
         <source>Tree mode</source>
         <translation>Дерево</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+57"/>
         <source>List mode</source>
         <translation>Список</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+233"/>
         <source>Amount</source>
         <translation>Сумма</translation>
     </message>
@@ -446,7 +437,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Приоритет</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="-515"/>
+        <location filename="../coincontroldialog.cpp" line="-682"/>
         <source>Copy address</source>
         <translation>Копировать адрес</translation>
     </message>
@@ -457,17 +448,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <location line="+26"/>
+        <location line="+41"/>
         <source>Copy amount</source>
         <translation>Копировать сумму</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-40"/>
         <source>Copy transaction ID</source>
         <translation>Скопировать ID транзакции</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+39"/>
         <source>Copy quantity</source>
         <translation>Копировать количество</translation>
     </message>
@@ -502,7 +493,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Копировать сдачу</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+469"/>
         <source>highest</source>
         <translation>наивысший</translation>
     </message>
@@ -600,57 +591,66 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>EditAddressDialog</name>
     <message>
-        <location filename="../forms/editaddressdialog.ui" line="+14"/>
-        <source>Edit Address</source>
-        <translation>Изменить адрес</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location filename="../forms/editaddressdialog.ui" line="+385"/>
         <source>&amp;Label</source>
         <translation>&amp;Метка</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+25"/>
         <source>The label associated with this address book entry</source>
         <translation>Метка, связанная с данной записью</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-145"/>
         <source>&amp;Address</source>
         <translation>&amp;Адрес</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-68"/>
+        <source>Edit record</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+93"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
         <translation>Адрес, связанный с данной записью.</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>&amp;Stealth Address</source>
+        <location line="+30"/>
+        <source>Paste from clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+26"/>
+        <location line="+36"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+29"/>
+        <location line="+1"/>
         <source>New receiving address</source>
         <translation>Новый адрес для получения</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
+        <location line="+1"/>
         <source>New sending address</source>
         <translation>Новый адрес для отправки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
+        <location line="+2"/>
         <source>Edit receiving address</source>
         <translation>Изменение адреса для получения</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+1"/>
         <source>Edit sending address</source>
         <translation>Изменение адреса для отправки</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+83"/>
         <source>The entered address &quot;%1&quot; is not a valid TRI address.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -658,10 +658,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+5"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>Введённый адрес «%1» уже находится в адресной книге.</translation>
-    </message>
-    <message>
-        <source>The entered address &quot;%1&quot; is not a valid triangles address.</source>
-        <translation type="vanished">Введённый адрес &quot;%1&quot; не является правильным triangles-адресом.</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -676,10 +672,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 </context>
 <context>
     <name>GUIUtil::HelpMessageBox</name>
-    <message>
-        <source>triangles-Qt</source>
-        <translation type="vanished">triangles-Qt</translation>
-    </message>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <source>version</source>
@@ -725,23 +717,23 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>MRichTextEdit</name>
     <message>
-        <location filename="../plugins/mrichtexteditor/mrichtextedit.ui" line="+56"/>
+        <location filename="../plugins/mrichtexteditor/mrichtextedit.ui" line="+504"/>
         <source>Paragraph formatting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+34"/>
         <source>Undo (CTRL+Z)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -751,7 +743,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Cut</source>
         <translation type="unfinished"></translation>
     </message>
@@ -761,7 +753,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -771,7 +763,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Paste</source>
         <translation type="unfinished"></translation>
     </message>
@@ -781,12 +773,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <source>Bold</source>
         <translation type="unfinished"></translation>
     </message>
@@ -796,7 +788,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Italic</source>
         <translation type="unfinished"></translation>
     </message>
@@ -806,12 +798,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Underline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Strike Out</source>
         <translation type="unfinished"></translation>
     </message>
@@ -821,7 +813,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Bullet list</source>
         <translation type="unfinished"></translation>
     </message>
@@ -831,7 +823,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Ordered list</source>
         <translation type="unfinished"></translation>
     </message>
@@ -841,7 +833,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Decrease indentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -851,7 +843,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Increase indentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -861,12 +853,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>Font size</source>
         <translation type="unfinished"></translation>
     </message>
@@ -908,6 +900,74 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Link URL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="../forms/mainwindow.ui" line="+434"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+217"/>
+        <source>Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Operations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Overview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Send Coins</source>
+        <translation type="unfinished">Отправка</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Receive Coins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Address Book</source>
+        <translation type="unfinished">Адресная книга</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+211"/>
+        <source>Synchronization</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>33333 blocks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -967,22 +1027,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>MessagePage</name>
     <message>
-        <location filename="../forms/messagepage.ui" line="+14"/>
+        <location filename="../forms/messagepage.ui" line="+186"/>
         <source>Address Book</source>
         <translation type="unfinished">Адресная книга</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+114"/>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>These are your sent and received encrypted messages. Click on an item to read it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+215"/>
         <source>Click on a message to view it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+96"/>
         <source>&amp;Back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -992,48 +1057,48 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+523"/>
         <source>&amp;Conversation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+183"/>
         <source>Sign a message to prove you own a TRI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>&amp;Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
-        <location line="+14"/>
+        <location line="+183"/>
+        <location line="+206"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation type="unfinished">Копировать текущий выделенный адрес в буфер обмена</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-183"/>
         <source>&amp;Copy From Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+206"/>
         <source>Copy To &amp;Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+183"/>
         <source>Delete the currently selected address from the list</source>
         <translation type="unfinished">Удалить выбранный адрес из списка</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>&amp;Delete</source>
         <translation type="unfinished">&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="../messagepage.cpp" line="+182"/>
+        <location filename="../messagepage.cpp" line="+197"/>
         <source>Send Secure Message</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1067,11 +1132,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
+        <location line="+131"/>
         <source>Options</source>
         <translation>Опции</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+60"/>
         <source>&amp;Main</source>
         <translation>&amp;Главная</translation>
     </message>
@@ -1086,7 +1152,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Заплатить ко&amp;миссию</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+42"/>
         <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
         <translation>Зарезервированная сумма не участвует в доле, и поэтому может быть потрачена в любое время.</translation>
     </message>
@@ -1096,20 +1162,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Зарезервировать</translation>
     </message>
     <message>
-        <source>Automatically start triangles after logging in to the system.</source>
-        <translation type="vanished">Автоматически запускать triangles после входа в систему</translation>
-    </message>
-    <message>
-        <source>&amp;Start triangles on system login</source>
-        <translation type="vanished">&amp;Запускать triangles при входе в систему</translation>
-    </message>
-    <message>
-        <location line="+41"/>
+        <location line="+63"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>Отключить базы данных блоков и адресов при выходе. Это означает, что их можно будет переместить в другой каталог данных, но завершение работы будет медленнее. Бумажник всегда отключается.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Detach databases at shutdown</source>
         <translation>&amp;Отключать базы данных при выходе</translation>
     </message>
@@ -1119,75 +1177,67 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>&amp;Сеть</translation>
     </message>
     <message>
-        <source>Automatically open the triangles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="vanished">Автоматически открыть порт для triangles-клиента на роутере. Работает только если Ваш роутер поддерживает UPnP, и данная функция включена.</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+26"/>
         <source>Map port using &amp;UPnP</source>
         <translation>Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the triangles network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="vanished">Подключаться к сети triangles через прокси SOCKS (например, при подключении через Tor).</translation>
-    </message>
-    <message>
-        <location line="-43"/>
+        <location line="-82"/>
         <source>Automatically start Triangles after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Start Triangles on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+54"/>
         <source>Automatically open the Triangles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+27"/>
         <source>Connect to the Triangles network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Connect through SOCKS proxy:</source>
         <translation>&amp;Подключаться через SOCKS прокси:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+16"/>
         <source>Proxy &amp;IP:</source>
         <translation>&amp;IP Прокси: </translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
         <translation>IP-адрес прокси (например 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>&amp;Port:</source>
         <translation>По&amp;рт: </translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>Port of the proxy (e.g. 9050)</source>
         <translation>Порт прокси-сервера (например, 9050)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>SOCKS &amp;Version:</source>
         <translation>&amp;Версия SOCKS:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+254"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>Версия SOCKS-прокси (например, 5)</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+54"/>
         <source>&amp;Window</source>
         <translation>&amp;Окно</translation>
     </message>
@@ -1197,7 +1247,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Показывать только иконку в системном лотке после сворачивания окна.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
         <translation>&amp;Cворачивать в системный лоток вместо панели задач</translation>
     </message>
@@ -1207,7 +1257,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Сворачивать вместо закрытия. Если данная опция будет выбрана — приложение закроется только после выбора соответствующего пункта в меню.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>M&amp;inimize on close</source>
         <translation>С&amp;ворачивать при закрытии</translation>
     </message>
@@ -1222,35 +1272,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>&amp;Язык интерфейса:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>The user interface language can be set here. This setting will take effect after restarting Triangles.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+97"/>
         <source>Whether to show TRI addresses in the transaction list or not.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting triangles.</source>
-        <translation type="vanished">Здесь можно выбрать язык интерфейса. Настройки вступят в силу после перезапуска triangles.</translation>
-    </message>
-    <message>
-        <location line="-22"/>
+        <location line="-57"/>
         <source>&amp;Unit to show amounts in:</source>
         <translation>&amp;Отображать суммы в единицах: </translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
         <translation>Выберите единицу измерения монет при отображении и отправке.</translation>
     </message>
     <message>
-        <source>Whether to show triangles addresses in the transaction list or not.</source>
-        <translation type="vanished">Показывать ли адреса triangles в списке транзакций.</translation>
-    </message>
-    <message>
-        <location line="+12"/>
+        <location line="+52"/>
         <source>&amp;Display addresses in transaction list</source>
         <translation>&amp;Показывать адреса в списке транзакций</translation>
     </message>
@@ -1260,27 +1302,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Выключает и включает отображение панели выбора входов.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>Display coin &amp;control features (experts only!)</source>
         <translation>Управление &amp;входами (только для продвинутых пользователей!)</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+91"/>
         <source>&amp;OK</source>
         <translation>О&amp;К</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+27"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Отмена</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>&amp;Apply</source>
         <translation>&amp;Применить</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+55"/>
+        <location filename="../optionsdialog.cpp" line="+58"/>
         <source>default</source>
         <translation>по умолчанию</translation>
     </message>
@@ -1297,10 +1339,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This setting will take effect after restarting triangles.</source>
-        <translation type="vanished">Эта настройка вступит в силу после перезапуска triangles</translation>
-    </message>
-    <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>Адрес прокси неверен.</translation>
@@ -1309,16 +1347,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+429"/>
         <source>Form</source>
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the triangles network after a connection is established, but this process has not completed yet.</source>
-        <translation type="vanished">Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью triangles после подключения, но этот процесс пока не завершён.</translation>
-    </message>
-    <message>
-        <location line="+110"/>
+        <location line="+125"/>
         <source>Stake:</source>
         <translation>Доля:</translation>
     </message>
@@ -1353,7 +1387,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Баланс добытых монет, который ещё не созрел</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+30"/>
         <source>Total:</source>
         <translation>Итого:</translation>
     </message>
@@ -1363,7 +1397,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>Ваш суммарный баланс</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+75"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Последние транзакции&lt;/b&gt;</translation>
     </message>
@@ -1371,10 +1405,10 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+63"/>
         <source>&lt;head&gt;
 &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
-a:link { color:#000; text-decoration: none;font-weight:bold; }
-a:visited { color:#000; text-decoration: none; }
-a:hover { color:#e22104; text-decoration: none; }
-a:active { color:#000; text-decoration: underline; }
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1385,10 +1419,10 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+25"/>
         <source>&lt;head&gt;
 &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
-a:link { color:#000; text-decoration: none;font-weight:bold; }
-a:visited { color:#000; text-decoration: none; }
-a:hover { color:#e22104; text-decoration: none; }
-a:active { color:#000; text-decoration: underline; }
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1396,18 +1430,32 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-225"/>
+        <location line="+28"/>
+        <source>&lt;head&gt;
+&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;http://explorer.triangles.technology&quot;&gt; &amp;#187; TRI block explorer&lt;/a&gt;&lt;/body&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-264"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>Общая сумма всех транзакций, которые до сих пор не подтверждены, и до сих пор не учитываются в текущем балансе</translation>
     </message>
     <message>
         <location line="-116"/>
-        <location line="+260"/>
+        <location line="+271"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Triangles network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-184"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>Общая сумма всех монет, используемых для Proof-of-Stake, и не учитывающихся на балансе</translation>
     </message>
@@ -1479,7 +1527,7 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <location filename="../forms/rpcconsole.ui" line="+679"/>
         <source>Client name</source>
         <translation>Имя клиента</translation>
     </message>
@@ -1490,15 +1538,15 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+23"/>
         <location line="+23"/>
         <location line="+36"/>
-        <location line="+53"/>
+        <location line="+64"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+348"/>
+        <location filename="../rpcconsole.cpp" line="+351"/>
         <source>N/A</source>
         <translation>Н/Д</translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="-228"/>
         <source>Client version</source>
         <translation>Версия клиента</translation>
     </message>
@@ -1508,12 +1556,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>&amp;Информация</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-228"/>
         <source>Triangles - Debug window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+132"/>
+        <source>Debug window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+111"/>
         <source>Triangles Core</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1543,7 +1596,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>В тестовой сети</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+34"/>
         <source>Block chain</source>
         <translation>Цепь блоков</translation>
     </message>
@@ -1568,7 +1621,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+46"/>
         <source>Show the Triangles-Qt help message to get a list with possible Triangles command-line options.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1583,11 +1636,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Параметры командной строки</translation>
     </message>
     <message>
-        <source>Show the triangles-Qt help message to get a list with possible triangles command-line options.</source>
-        <translation type="vanished">Показать помощь по triangles-Qt, чтобы получить список доступных параметров командной строки.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>&amp;Show</source>
         <translation>&amp;Показать</translation>
     </message>
@@ -1597,35 +1646,19 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Консоль</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-311"/>
         <source>Build date</source>
         <translation>Дата сборки</translation>
     </message>
     <message>
-        <source>triangles - Debug window</source>
-        <translation type="vanished">triangles - Окно отладки</translation>
-    </message>
-    <message>
-        <source>triangles Core</source>
-        <translation type="vanished">Ядро triangles</translation>
-    </message>
-    <message>
-        <location line="+200"/>
+        <location line="+211"/>
         <source>Debug log file</source>
         <translation>Отладочный лог-файл</translation>
     </message>
     <message>
-        <source>Open the triangles debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="vanished">Открыть отладочный лог-файл triangles из текущего каталога данных. Это может занять несколько секунд для больших лог-файлов.</translation>
-    </message>
-    <message>
-        <location line="+109"/>
+        <location line="+160"/>
         <source>Clear console</source>
         <translation>Очистить консоль</translation>
-    </message>
-    <message>
-        <source>Welcome to the triangles RPC console.</source>
-        <translation type="vanished">Добро пожаловать в RPC-консоль triangles.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
@@ -1646,8 +1679,8 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+182"/>
+        <location filename="../forms/sendcoinsdialog.ui" line="+429"/>
+        <location filename="../sendcoinsdialog.cpp" line="+229"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1659,12 +1692,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Отправка</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+113"/>
+        <source>Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
         <source>Coin Control Features</source>
         <translation>Выбор входов</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+37"/>
         <source>Inputs...</source>
         <translation>Входы...</translation>
     </message>
@@ -1743,17 +1781,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+61"/>
         <source>custom change address</source>
         <translation>адрес для сдачи</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+131"/>
         <source>Send to multiple recipients at once</source>
         <translation>Отправить нескольким получателям одновременно</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Add &amp;Recipient</source>
         <translation>&amp;Добавить получателя</translation>
     </message>
@@ -1763,7 +1801,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Удалить все поля транзакции</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
         <translation>Очистить &amp;всё</translation>
     </message>
@@ -1778,30 +1816,22 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>123.456 hack</source>
-        <translation type="vanished">123.456 hack</translation>
-    </message>
-    <message>
         <location line="+31"/>
         <source>Confirm the send action</source>
         <translation>Подтвердить отправку</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>S&amp;end</source>
         <translation>&amp;Отправить</translation>
     </message>
     <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">Введите triangles-адрес (например TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location filename="../sendcoinsdialog.cpp" line="-178"/>
+        <location filename="../sendcoinsdialog.cpp" line="-224"/>
         <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+34"/>
         <source>Copy quantity</source>
         <translation type="unfinished">Копировать количество</translation>
     </message>
@@ -1846,7 +1876,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>&lt;b&gt;%1&lt;/b&gt; адресату %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Confirm send coins</source>
         <translation>Подтвердите отправку монет</translation>
     </message>
@@ -1861,7 +1891,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation> и </translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+50"/>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>Адрес получателя неверный, пожалуйста, перепроверьте.</translation>
     </message>
@@ -1919,53 +1949,48 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <location filename="../forms/sendcoinsentry.ui" line="+429"/>
         <source>Form</source>
         <translation>Форма</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+223"/>
         <source>A&amp;mount:</source>
         <translation>Ко&amp;личество:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-201"/>
         <source>Pay &amp;To:</source>
         <translation>Полу&amp;чатель:</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+177"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Введите метку для данного адреса (для добавления в адресную книгу)</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>N&amp;arration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+60"/>
         <source>Enter a short note to send with payment (max 24 characters)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-82"/>
         <source>&amp;Label:</source>
         <translation>&amp;Метка:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="-131"/>
         <source>The address to send the payment to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation>Адрес получателя платежа (например TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Choose address from address book</source>
         <translation>Выберите адрес из адресной книги</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
@@ -1975,7 +2000,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Вставить адрес из буфера обмена</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
@@ -1983,10 +2008,6 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+7"/>
         <source>Remove this recipient</source>
         <translation>Удалить этого получателя</translation>
-    </message>
-    <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">Введите triangles-адрес (например TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -2007,37 +2028,42 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+130"/>
+        <source>Send messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+73"/>
         <source>Address &amp;From:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+32"/>
         <source>Choose address from address book</source>
         <translation type="unfinished">Выберите адрес из адресной книги</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+422"/>
         <source>Paste address from clipboard</source>
         <translation type="unfinished">Вставить адрес из буфера обмена</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+64"/>
         <source>Send to multiple recipients at once</source>
         <translation type="unfinished">Отправить нескольким получателям одновременно</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Add &amp;Recipient</source>
         <translation type="unfinished">&amp;Добавить получателя</translation>
     </message>
@@ -2047,7 +2073,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Удалить все поля транзакции</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
         <translation type="unfinished">Очистить &amp;всё</translation>
     </message>
@@ -2057,17 +2083,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Подтвердить отправку</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+22"/>
         <source>S&amp;end</source>
         <translation type="unfinished">&amp;Отправить</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sendmessagesdialog.cpp" line="+37"/>
+        <location filename="../sendmessagesdialog.cpp" line="+40"/>
         <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2077,7 +2103,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">&lt;b&gt;%1&lt;/b&gt; адресату %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Confirm send messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2092,7 +2118,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"> и </translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+40"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -2129,22 +2155,22 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendMessagesEntry</name>
     <message>
-        <location filename="../forms/sendmessagesentry.ui" line="+14"/>
+        <location filename="../forms/sendmessagesentry.ui" line="+429"/>
         <source>Form</source>
         <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>The address to send the payment to  (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <location line="+33"/>
+        <source>The address to send the message to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Choose address from address book</source>
         <translation type="unfinished">Выберите адрес из адресной книги</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation type="unfinished">Alt+A</translation>
     </message>
@@ -2154,7 +2180,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Вставить адрес из буфера обмена</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
@@ -2164,28 +2190,28 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Удалить этого получателя</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+39"/>
         <source>&amp;Message:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Send &amp;To:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+132"/>
         <location filename="../sendmessagesentry.cpp" line="+27"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation type="unfinished">Введите метку для данного адреса (для добавления в адресную книгу)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>&amp;Label:</source>
         <translation type="unfinished">&amp;Метка:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;Public Key:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2206,203 +2232,134 @@ a:active { color:#000; text-decoration: underline; }
     </message>
 </context>
 <context>
-    <name>SignVerifyMessageDialog</name>
+    <name>SignMessagePage</name>
     <message>
-        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
-        <source>Signatures - Sign / Verify a Message</source>
-        <translation>Подписи - подписать/проверить сообщение</translation>
+        <location filename="../forms/signmessagepage.ui" line="+429"/>
+        <source>Form</source>
+        <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+124"/>
-        <source>&amp;Sign Message</source>
-        <translation>&amp;Подписать сообщение</translation>
+        <location line="+121"/>
+        <source>Sign Message</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-118"/>
-        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Вы можете подписывать сообщения своими адресами, чтобы доказать владение ими. Будьте осторожны, не подписывайте что-то неопределённое, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
+        <location line="+76"/>
+        <source>Address</source>
+        <translation type="unfinished">Адрес</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>The address to sign the message with (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation>Адрес, которым вы хотите подписать сообщение  (напр. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+203"/>
-        <source>Choose an address from the address book</source>
-        <translation>Выберите адрес из адресной книги</translation>
-    </message>
-    <message>
-        <location line="-193"/>
-        <location line="+203"/>
-        <source>Alt+A</source>
-        <translation>Alt+A</translation>
-    </message>
-    <message>
-        <location line="-193"/>
+        <location line="+25"/>
         <source>Paste address from clipboard</source>
-        <translation>Вставить адрес из буфера обмена</translation>
+        <translation type="unfinished">Вставить адрес из буфера обмена</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+33"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+20"/>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished">Выберите адрес из адресной книги</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address to sign the message with (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Enter the message you want to sign here</source>
-        <translation>Введите сообщение для подписи</translation>
+        <translation type="unfinished">Введите сообщение для подписи</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+32"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>Скопировать текущую подпись в системный буфер обмена</translation>
+        <translation type="unfinished">Скопировать текущую подпись в системный буфер обмена</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Sign the message to prove you own this TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+146"/>
-        <source>Verify the message to ensure it was signed with the specified TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sign the message to prove you own this triangles address</source>
-        <translation type="vanished">Подписать сообщение, чтобы доказать владение адресом triangles</translation>
-    </message>
-    <message>
-        <location line="-129"/>
+        <location line="+142"/>
         <source>Reset all sign message fields</source>
-        <translation>Сбросить значения всех полей подписывания сообщений</translation>
+        <translation type="unfinished">Сбросить значения всех полей подписывания сообщений</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
-        <translation>Очистить &amp;всё</translation>
+        <translation type="unfinished">Очистить &amp;всё</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
-        <source>&amp;Verify Message</source>
-        <translation>&amp;Проверить сообщение</translation>
-    </message>
-    <message>
-        <location line="-64"/>
-        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>Введите ниже адрес для подписи, сообщение (убедитесь, что переводы строк, пробелы, табы и т.п. в точности скопированы) и подпись, чтобы проверить сообщение. Убедитесь, что не скопировали лишнего в подпись, по сравнению с самим подписываемым сообщением, чтобы не стать жертвой атаки &quot;man-in-the-middle&quot;.</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>The address the message was signed with (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation>Адрес, которым было подписано сообщение (напр. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <source>Verify the message to ensure it was signed with the specified triangles address</source>
-        <translation type="vanished">Проверить сообщение, чтобы убедиться, что оно было подписано указанным адресом triangles</translation>
-    </message>
-    <message>
-        <location line="+57"/>
-        <source>Reset all verify message fields</source>
-        <translation>Сбросить все поля проверки сообщения</translation>
-    </message>
-    <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">Введите адрес triangles (напр. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location filename="../signverifymessagedialog.cpp" line="+28"/>
-        <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>Нажмите &quot;Подписать сообщение&quot; для создания подписи</translation>
-    </message>
-    <message>
-        <source>Enter triangles signature</source>
-        <translation type="vanished">Введите подпись triangles</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
+        <location line="+16"/>
+        <source>Sign the message to prove you own this Triangles address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Enter a TRI address (e.g. w)</source>
+        <location line="+23"/>
+        <source>Sign &amp;Message</source>
+        <translation type="unfinished">&amp;Подписать сообщение</translation>
+    </message>
+    <message>
+        <location filename="../signmessagepage.cpp" line="+28"/>
+        <source>Enter a Triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter TRI signature</source>
-        <translation type="unfinished"></translation>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation type="unfinished">Нажмите &quot;Подписать сообщение&quot; для создания подписи</translation>
     </message>
     <message>
-        <location line="+82"/>
-        <location line="+81"/>
+        <location line="+12"/>
+        <location line="+53"/>
         <source>The entered address is invalid.</source>
-        <translation>Введённый адрес неверен</translation>
+        <translation type="unfinished">Введённый адрес неверен</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+8"/>
-        <location line="+73"/>
+        <location line="-53"/>
+        <location line="+53"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>Пожалуйста, проверьте адрес и попробуйте ещё раз.</translation>
+        <translation type="unfinished">Пожалуйста, проверьте адрес и попробуйте ещё раз.</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+81"/>
+        <location line="+0"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>Введённый адрес не связан с ключом</translation>
+        <translation type="unfinished">Введённый адрес не связан с ключом</translation>
     </message>
     <message>
-        <location line="-73"/>
+        <location line="+8"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation>Разблокировка бумажника была отменена.</translation>
+        <translation type="unfinished">Разблокировка бумажника была отменена.</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>Для введённого адреса недоступен закрытый ключ</translation>
+        <translation type="unfinished">Для введённого адреса недоступен закрытый ключ</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>Не удалось подписать сообщение</translation>
+        <translation type="unfinished">Не удалось подписать сообщение</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>Сообщение подписано</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>The signature could not be decoded.</source>
-        <translation>Подпись не может быть раскодирована.</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+13"/>
-        <source>Please check the signature and try again.</source>
-        <translation>Пожалуйста, проверьте подпись и попробуйте ещё раз.</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The signature did not match the message digest.</source>
-        <translation>Подпись не соответствует отпечатку сообщения.</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Message verification failed.</source>
-        <translation>Проверка сообщения не удалась.</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Message verified.</source>
-        <translation>Сообщение проверено.</translation>
+        <translation type="unfinished">Сообщение подписано</translation>
     </message>
 </context>
 <context>
@@ -2552,12 +2509,8 @@ a:active { color:#000; text-decoration: underline; }
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 60 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="unfinished">Сгенерированные монеты должны подождать 510 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас. {60 ?}</translation>
-    </message>
-    <message>
-        <source>Generated coins must mature 510 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="vanished">Сгенерированные монеты должны подождать 510 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
+        <source>Generated coins must mature 7 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished">Сгенерированные монеты должны подождать 7 блоков, прежде чем они могут быть потрачены. Когда Вы сгенерировали этот блок, он был отправлен в сеть для добавления в цепочку блоков. Если данная процедура не удастся, статус изменится на «не подтверждено», и монеты будут недействительны. Это иногда происходит в случае, если другой узел сгенерирует блок на несколько секунд раньше вас.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2604,11 +2557,12 @@ a:active { color:#000; text-decoration: underline; }
     <name>TransactionDescDialog</name>
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
+        <location line="+136"/>
         <source>Transaction details</source>
         <translation>Детали транзакции</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Данный диалог показывает детализированную статистику по выбранной транзакции</translation>
     </message>
@@ -2616,7 +2570,7 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+227"/>
+        <location filename="../transactiontablemodel.cpp" line="+228"/>
         <source>Date</source>
         <translation>Дата</translation>
     </message>
@@ -2636,12 +2590,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Количество</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+59"/>
         <source>Open until %1</source>
         <translation>Открыто до %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
+        <source>Confirming (%1 of %2 confirmations)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Confirmed (%1 confirmations)</source>
         <translation>Подтверждено (%1 подтверждений)</translation>
     </message>
@@ -2655,12 +2614,7 @@ a:active { color:#000; text-decoration: underline; }
         </translation>
     </message>
     <message>
-        <location line="-57"/>
-        <source>Narration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+63"/>
+        <location line="+6"/>
         <source>Offline</source>
         <translation>Оффлайн</translation>
     </message>
@@ -2670,12 +2624,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Не подтверждено</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Confirming (%1 of %2 recommended confirmations)</source>
-        <translation>Подтверждается (%1 из %2 рекомендованных подтверждений)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Conflicted</source>
         <translation>Конфликт</translation>
     </message>
@@ -2753,13 +2702,13 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+55"/>
-        <location line="+16"/>
+        <location filename="../transactionview.cpp" line="+61"/>
+        <location line="+17"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
     <message>
-        <location line="-15"/>
+        <location line="-16"/>
         <source>Today</source>
         <translation>Сегодня</translation>
     </message>
@@ -2789,7 +2738,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Промежуток...</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Received with</source>
         <translation>Получено на</translation>
     </message>
@@ -2814,17 +2763,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Другое</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Enter address or label to search</source>
         <translation>Введите адрес или метку для поиска</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Min amount</source>
         <translation>Мин. сумма</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <source>Copy address</source>
         <translation>Копировать адрес</translation>
     </message>
@@ -2854,7 +2803,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Показать подробности транзакции</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+165"/>
         <source>Export Transaction Data</source>
         <translation>Экспортировать данные транзакций</translation>
     </message>
@@ -2920,11 +2869,20 @@ a:active { color:#000; text-decoration: underline; }
     </message>
 </context>
 <context>
-    <name>Triangles-core</name>
+    <name>TransactionsPage</name>
     <message>
-        <source>triangles version</source>
-        <translation type="vanished">Версия</translation>
+        <location filename="../forms/transactionspage.ui" line="+240"/>
+        <source>Form</source>
+        <translation type="unfinished">Форма</translation>
     </message>
+    <message>
+        <location line="+116"/>
+        <source>Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Triangles-core</name>
     <message>
         <location filename="../trianglesstrings.cpp" line="+34"/>
         <source>Usage:</source>
@@ -3120,10 +3078,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Внимание: установлено очень большое значение -paytxfee. Это комиссия, которую вы заплатите при проведении транзакции.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong triangles will not work properly.</source>
-        <translation type="vanished">Внимание: убедитесь, что дата и время на Вашем компьютере выставлены верно. Если Ваши часы идут неправильно, triangles будет работать некорректно.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -3448,14 +3402,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <translation>Кошелек %s находится вне рабочей директории %s.</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s.  triangles is probably already running.</source>
-        <translation type="vanished">Невозможно установить блокировку на рабочую директорию %s.  Возможно, бумажник уже запущен.</translation>
-    </message>
-    <message>
-        <source>triangles</source>
-        <translation type="vanished">triangles</translation>
-    </message>
-    <message>
         <location line="+43"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Невозможно привязаться к %s на этом компьютере (bind вернул ошибку %d, %s)</translation>
@@ -3484,14 +3430,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Ошибка загрузки wallet.dat: Бумажник поврежден</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of triangles</source>
-        <translation type="vanished">Ошибка загрузки wallet.dat: бумажник требует более новую версию triangles</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart triangles to complete</source>
-        <translation type="vanished">Необходимо перезаписать бумажник, перезапустите triangles для завершения операции</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3557,10 +3495,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Добавить узел для подключения и пытаться поддерживать соединение открытым</translation>
-    </message>
-    <message>
-        <source>Unable to bind to %s on this computer. triangles is probably already running.</source>
-        <translation type="vanished">Невозможно привязаться к %s на этом компьютере.  Возможно, triangles уже работает.</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3645,67 +3579,57 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../trianglesgui.cpp" line="+94"/>
+        <location filename="../trianglesgui.cpp" line="+256"/>
+        <location line="+6"/>
         <source>Triangles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-6"/>
+        <location line="+6"/>
         <source>Wallet</source>
         <translation type="unfinished">Бумажник</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+168"/>
+        <location line="+793"/>
         <source>&amp;Overview</source>
         <translation type="unfinished">О&amp;бзор</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-792"/>
         <source>Show general overview of wallet</source>
         <translation type="unfinished">Показать общий обзор действий с бумажником</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>&amp;Send coins</source>
-        <translation type="unfinished">Отп&amp;равка монет</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Send coins to a TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>&amp;Receive coins</source>
-        <translation type="unfinished">&amp;Получение монет</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+14"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation type="unfinished">Показать список адресов для получения платежей</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+821"/>
         <source>&amp;Transactions</source>
         <translation type="unfinished">&amp;Транзакции</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-820"/>
         <source>Browse transaction history</source>
         <translation type="unfinished">Показать историю транзакций</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+815"/>
         <source>&amp;Address Book</source>
         <translation type="unfinished">&amp;Адресная книга</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-814"/>
         <source>Edit the list of stored addresses and labels</source>
         <translation type="unfinished">Изменить список сохранённых адресов и меток к ним</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>&amp;Messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3715,22 +3639,84 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>E&amp;xit</source>
-        <translation type="unfinished">В&amp;ыход</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Quit application</source>
-        <translation type="unfinished">Закрыть приложение</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;About Triangles</source>
+        <location line="+34"/>
+        <location line="+2"/>
+        <source>&amp;Show / Hide Triangles wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Show or hide the main Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+304"/>
+        <source>%n blocks</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Processed %1 blocks of transaction history.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+108"/>
+        <source>&lt;font color=&apos;#f26522&apos;&gt;This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  &lt;/font&gt;Do you want to pay the fee?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+295"/>
+        <source>Options</source>
+        <translation type="unfinished">Опции</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>E&amp;xit</source>
+        <translation type="unfinished">В&amp;ыход</translation>
+    </message>
+    <message>
+        <location line="-743"/>
+        <source>Quit application</source>
+        <translation type="unfinished">Закрыть приложение</translation>
+    </message>
+    <message>
+        <location line="-47"/>
+        <source>&amp;Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send coins to a Triangles address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Receive Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>E&amp;xit Triangles wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+2"/>
+        <location line="+863"/>
+        <source>&amp;About Triangles</source>
+        <translation type="unfinished">&amp;О triangles</translation>
+    </message>
+    <message>
+        <location line="-862"/>
         <source>Show information about Triangles</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3755,22 +3741,13 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>&amp;Show / Hide</source>
-        <translation type="unfinished">&amp;Показать / Скрыть</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+769"/>
         <source>&amp;Encrypt Wallet...</source>
         <translation type="unfinished">&amp;Зашифровать бумажник</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Encrypt or decrypt wallet</source>
-        <translation type="unfinished">Зашифровать или расшифровать бумажник</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-766"/>
         <source>&amp;Backup Wallet...</source>
         <translation type="unfinished">&amp;Сделать резервную копию бумажника</translation>
     </message>
@@ -3781,23 +3758,35 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
+        <location line="+767"/>
         <source>&amp;Change Passphrase...</source>
         <translation type="unfinished">&amp;Изменить пароль</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-766"/>
         <source>Change the passphrase used for wallet encryption</source>
         <translation type="unfinished">Изменить пароль шифрования бумажника</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+763"/>
         <source>&amp;Unlock Wallet...</source>
         <translation type="unfinished">&amp;Разблокировать бумажник</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-762"/>
         <source>Unlock wallet</source>
         <translation type="unfinished">Разблокировать бумажник</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Unlock Wallet for staking...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unlock wallet for staking</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3811,36 +3800,50 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
+        <location line="+760"/>
         <source>Sign &amp;message...</source>
         <translation type="unfinished">&amp;Подписать сообщение</translation>
     </message>
     <message>
+        <location line="-759"/>
+        <source>Sign messages with your Triangles addresses to prove you own them</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <location line="+759"/>
         <source>&amp;Verify message...</source>
         <translation type="unfinished">&amp;Проверить сообщение...</translation>
     </message>
     <message>
+        <location line="-758"/>
+        <source>Verify messages to ensure they were signed with specified Triangles addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+2"/>
+        <location line="+703"/>
         <source>&amp;Export...</source>
         <translation type="unfinished">&amp;Экспорт...</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-702"/>
         <source>Export the data in the current tab to a file</source>
         <translation type="unfinished">Экспортировать данные из вкладки в файл</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+826"/>
         <source>&amp;Debug window</source>
         <translation type="unfinished">&amp;Окно отладки</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-825"/>
         <source>Open debugging and diagnostic console</source>
         <translation type="unfinished">Открыть консоль отладки и диагностики</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+28"/>
         <source>&amp;File</source>
         <translation type="unfinished">&amp;Файл</translation>
     </message>
@@ -3865,19 +3868,17 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished">Панель действий</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="-327"/>
         <source>[testnet]</source>
         <translation type="unfinished">[тестовая сеть]</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+77"/>
+        <location line="+411"/>
         <source>Triangles client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
+        <location line="+106"/>
         <source>%n active connection(s) to Triangles network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -3886,12 +3887,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
         </translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+18"/>
         <source>Synchronizing with network...</source>
         <translation type="unfinished">Синхронизация с сетью...</translation>
     </message>
     <message numerus="yes">
-        <location line="+2"/>
+        <location line="+9"/>
         <source>~%n block(s) remaining</source>
         <translation type="unfinished">
             <numerusform>остался ~%n блок</numerusform>
@@ -3900,17 +3901,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
         </translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
         <translation type="unfinished">Загружено %1 из %2 блоков истории операций (%3% завершено).</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Downloaded %1 blocks of transaction history.</source>
-        <translation type="unfinished">Загружено %1 блоков истории транзакций.</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Current difficulty is %1.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3966,17 +3962,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished">Последний полученный блок был сгенерирован %1.</translation>
     </message>
     <message>
-        <location line="+59"/>
-        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation type="unfinished">Данная транзакция превышает предельно допустимый размер.  Но Вы можете всё равно совершить её, добавив комиссию в %1, которая отправится тем узлам, которые обработают Вашу транзакцию, и поможет поддержать сеть.  Вы хотите добавить комиссию?</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+66"/>
         <source>Confirm transaction fee</source>
         <translation type="unfinished">Подтвердите комиссию</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+52"/>
         <source>Sent transaction</source>
         <translation type="unfinished">Исходящая транзакция</translation>
     </message>
@@ -4013,29 +4004,50 @@ Message: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+110"/>
-        <location line="+15"/>
+        <location line="+122"/>
+        <location line="+75"/>
         <source>URI handling</source>
         <translation type="unfinished">Обработка URI</translation>
     </message>
     <message>
-        <location line="-15"/>
-        <location line="+15"/>
+        <location line="-75"/>
+        <location line="+75"/>
         <source>URI can not be parsed! This can be caused by an invalid TRI address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+53"/>
+        <source>Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Receive Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Lock Wallet...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+112"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked for staking&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation type="unfinished">Бумажник &lt;b&gt;зашифрован&lt;/b&gt; и в настоящее время &lt;b&gt;разблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation type="unfinished">Бумажник &lt;b&gt;зашифрован&lt;/b&gt; и в настоящее время &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-177"/>
+        <location line="+204"/>
         <source>Backup Wallet</source>
         <translation type="unfinished">Сделать резервную копию бумажника</translation>
     </message>
@@ -4046,16 +4058,26 @@ Message: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Backup Failed</source>
-        <translation type="unfinished">Резервное копирование не удалось</translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation type="unfinished">При попытке сохранения данных бумажника в новое место произошла ошибка.</translation>
     </message>
+    <message>
+        <location line="+0"/>
+        <source>Backup failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup successful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The wallet data was successfully saved to the new location.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location line="+76"/>
+        <location line="+90"/>
         <source>%n second(s)</source>
         <translation type="unfinished">
             <numerusform>%n секунда</numerusform>
@@ -4120,55 +4142,128 @@ Message: %4
         <source>Not staking</source>
         <translation type="unfinished">Не участвуем в доле</translation>
     </message>
+</context>
+<context>
+    <name>VerifyMessagePage</name>
     <message>
-        <source>Show information about triangles</source>
-        <translation type="vanished">Показать информацию о triangles&apos;е</translation>
+        <location filename="../forms/verifymessagepage.ui" line="+429"/>
+        <source>Form</source>
+        <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <source>Send coins to a triangles address</source>
-        <translation type="vanished">Отправить монеты на указанный адрес triangles</translation>
+        <location line="+121"/>
+        <source>Verify Message</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Modify configuration options for triangles</source>
-        <translation type="vanished">Изменить параметры конфигурации triangles</translation>
+        <location line="+78"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished">Выберите адрес из адресной книги</translation>
     </message>
     <message>
-        <source>triangles</source>
-        <translation type="vanished">triangles</translation>
+        <location line="+33"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
-        <source>&amp;About triangles</source>
-        <translation type="vanished">&amp;О triangles</translation>
+        <location line="+47"/>
+        <source>The address the message was signed with (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>triangles client</source>
-        <translation type="vanished">triangles клиент</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to triangles network</source>
-        <translation type="vanished">
-            <numerusform>%n активное соединение с сетью</numerusform>
-            <numerusform>%n активных соединений с сетью</numerusform>
-            <numerusform>%n активных соединений с сетью</numerusform>
-        </translation>
+        <location line="+52"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>About triangles card</source>
-        <translation type="vanished">О карте triangles</translation>
+        <location line="+49"/>
+        <source>Address</source>
+        <translation type="unfinished">Адрес</translation>
     </message>
     <message>
-        <source>URI can not be parsed! This can be caused by an invalid triangles address or malformed URI parameters.</source>
-        <translation type="vanished">Не удалось обработать URI! Это может быть связано с неверным адресом triangles или неправильными параметрами URI.</translation>
+        <location line="+23"/>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A fatal error occurred. triangles can no longer continue safely and will quit.</source>
-        <translation type="vanished">Произошла неисправимая ошибка. triangles не может безопасно продолжать работу и будет закрыт.</translation>
+        <location line="+121"/>
+        <source>Reset all verify message fields</source>
+        <translation type="unfinished">Сбросить все поля проверки сообщения</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Clear &amp;All</source>
+        <translation type="unfinished">Очистить &amp;всё</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Verify the message to ensure it was signed with the specified Triangles address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Verify &amp;Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../verifymessagepage.cpp" line="+28"/>
+        <source>Enter a Triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter Triangles signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+45"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">Введённый адрес неверен</translation>
+    </message>
+    <message>
+        <location line="-45"/>
+        <location line="+45"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">Пожалуйста, проверьте адрес и попробуйте ещё раз.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">Введённый адрес не связан с ключом</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The signature could not be decoded.</source>
+        <translation type="unfinished">Подпись не может быть раскодирована.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation type="unfinished">Пожалуйста, проверьте подпись и попробуйте ещё раз.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation type="unfinished">Подпись не соответствует отпечатку сообщения.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation type="unfinished">Проверка сообщения не удалась.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation type="unfinished">Сообщение проверено.</translation>
     </message>
 </context>
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+346"/>
+        <location filename="../walletmodel.cpp" line="+249"/>
         <source>Sending...</source>
         <translation>Отправка....</translation>
     </message>

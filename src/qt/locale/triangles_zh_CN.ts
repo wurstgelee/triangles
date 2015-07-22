@@ -4,35 +4,27 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../forms/aboutdialog.ui" line="+14"/>
+        <location filename="../forms/aboutdialog.ui" line="+441"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+153"/>
         <source>About Triangles</source>
         <translation>关于黑币</translation>
     </message>
     <message>
-        <source>&lt;b&gt;triangles&lt;/b&gt; version</source>
-        <translation type="vanished">黑币客户端 版本</translation>
+        <location line="+565"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team
-Copyright © 2014 The triangles developers</source>
-        <translation type="vanished">版权所有 © 2009-2014 比特币Triangles开发组
-版权所有 © 2012-2014 新星币Triangles开发组
-版权所有 © 2014 黑币triangles开发组</translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="-457"/>
         <source>&lt;b&gt;Triangles&lt;/b&gt; version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+170"/>
         <source>
 This is experimental software.
 
@@ -50,60 +42,57 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressBookPage</name>
     <message>
-        <location filename="../forms/addressbookpage.ui" line="+14"/>
+        <location filename="../forms/addressbookpage.ui" line="+186"/>
         <source>Address Book</source>
         <translation>地址簿</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+158"/>
+        <source>Address book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>These are your Triangles addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+269"/>
         <source>Double-click to edit address or label</source>
         <translation>双击编辑地址或标签</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+50"/>
         <source>Create a new address</source>
         <translation>创建新地址</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>复制当前选中的地址到系统剪贴板</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+65"/>
         <source>Sign a message to prove you own a TRI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-76"/>
         <source>&amp;New Address</source>
         <translation>新建地址(&amp;N)</translation>
     </message>
     <message>
-        <source>These are your triangles addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="vanished">这是您用来接收支付的黑币地址列表。为不同的支付方建立不同的地址以便于了解支付来源。</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Copy Address</source>
         <translation>复制地址(&amp;C)</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+31"/>
         <source>Show &amp;QR Code</source>
         <translation>显示二维码(&amp;Q)</translation>
     </message>
     <message>
-        <source>Sign a message to prove you own a triangles address</source>
-        <translation type="vanished">对信息进行签名以证明您对该黑币地址的所有权</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Sign &amp;Message</source>
         <translation>签名(&amp;M)</translation>
     </message>
@@ -113,13 +102,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Delete the currently selected address from the list</source>
         <translation>从列表中删除选中的地址</translation>
-    </message>
-    <message>
-        <source>Verify a message to ensure it was signed with a specified triangles address</source>
-        <translation type="vanished">验证信息以保证其经过指定黑币地址的签名</translation>
     </message>
     <message>
         <location line="-11"/>
@@ -127,12 +112,17 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>验证消息(&amp;V)</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Delete</source>
         <translation>删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+65"/>
+        <location filename="../addressbookpage.cpp" line="+66"/>
+        <source>Triangles receiving addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Copy &amp;Label</source>
         <translation>复制标签(&amp;L)</translation>
     </message>
@@ -142,7 +132,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>编辑(&amp;E)</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+265"/>
         <source>Export Address Book Data</source>
         <translation>导出地址簿数据</translation>
     </message>
@@ -165,7 +155,7 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+156"/>
+        <location filename="../addresstablemodel.cpp" line="+146"/>
         <source>Label</source>
         <translation>标签</translation>
     </message>
@@ -188,32 +178,32 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>密码对话框</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+209"/>
+        <source>Change password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+115"/>
         <source>Enter passphrase</source>
         <translation>输入密码</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>New passphrase</source>
         <translation>新密码</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Repeat new passphrase</source>
         <translation>重复新密码</translation>
     </message>
     <message>
-        <location line="+33"/>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>在系统允许的情况下用于防止sendmoney欺诈，并未提供真正的安全防护措施。</translation>
+        <location line="+47"/>
+        <source>Unlock for staking only</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>For staking only</source>
-        <translation>仅用于权益增值</translation>
-    </message>
-    <message>
-        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <location filename="../askpassphrasedialog.cpp" line="+42"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>输入钱包的新密码。&lt;br/&gt;使用的密码请至少包含&lt;b&gt;10个以上随机字符&lt;/&gt;，或者是&lt;b&gt;8个以上的单词&lt;/b&gt;。</translation>
     </message>
@@ -223,7 +213,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>加密钱包</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>此操作需要您首先使用密码解锁该钱包。</translation>
     </message>
@@ -233,7 +223,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>解锁钱包</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
         <translation>该操作需要您首先使用密码解密钱包。</translation>
     </message>
@@ -243,7 +233,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>解密钱包</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Change passphrase</source>
         <translation>更改密码</translation>
     </message>
@@ -288,10 +278,6 @@ This product includes software developed by the OpenSSL Project for use in the O
         <location line="+60"/>
         <source>Wallet encrypted</source>
         <translation>钱包已加密</translation>
-    </message>
-    <message>
-        <source>triangles will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="vanished">黑币客户端即将关闭以完成加密过程。请记住，加密钱包并不能完全防止您的电子货币被入侵您计算机的木马软件盗窃。</translation>
     </message>
     <message>
         <location line="-45"/>
@@ -346,12 +332,17 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>CoinControlDialog</name>
     <message>
-        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <location filename="../forms/coincontroldialog.ui" line="+17"/>
         <source>Coin Control</source>
         <translation>黑币控制</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+178"/>
+        <source>Triangles Coin Control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Quantity:</source>
         <translation>总量：</translation>
     </message>
@@ -361,7 +352,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>字节：</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+51"/>
         <source>Amount:</source>
         <translation>金额：</translation>
     </message>
@@ -381,7 +372,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>低输出</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+551"/>
+        <location filename="../coincontroldialog.cpp" line="+720"/>
         <source>no</source>
         <translation>否</translation>
     </message>
@@ -396,22 +387,22 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>变更 : </translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+94"/>
         <source>(un)select all</source>
         <translation>(不)全选</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+51"/>
         <source>Tree mode</source>
         <translation>树状模式</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+57"/>
         <source>List mode</source>
         <translation>列表模式</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+233"/>
         <source>Amount</source>
         <translation>金额</translation>
     </message>
@@ -446,7 +437,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>优先级</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="-515"/>
+        <location filename="../coincontroldialog.cpp" line="-682"/>
         <source>Copy address</source>
         <translation>复制地址</translation>
     </message>
@@ -457,17 +448,17 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <location line="+26"/>
+        <location line="+41"/>
         <source>Copy amount</source>
         <translation>复制金额</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-40"/>
         <source>Copy transaction ID</source>
         <translation>复制交易编号</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+39"/>
         <source>Copy quantity</source>
         <translation>复制金额</translation>
     </message>
@@ -502,7 +493,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>复制零钱</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+469"/>
         <source>highest</source>
         <translation>最高</translation>
     </message>
@@ -607,57 +598,66 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>EditAddressDialog</name>
     <message>
-        <location filename="../forms/editaddressdialog.ui" line="+14"/>
-        <source>Edit Address</source>
-        <translation>编辑地址</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location filename="../forms/editaddressdialog.ui" line="+385"/>
         <source>&amp;Label</source>
         <translation>标签(&amp;L)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+25"/>
         <source>The label associated with this address book entry</source>
         <translation>地址簿内该项目对应的标签</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-145"/>
         <source>&amp;Address</source>
         <translation>地址(&amp;A)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-68"/>
+        <source>Edit record</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+93"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
         <translation>地址簿内该项目对应的地址。只有“收款人地址”分类下的地址可以修改。</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>&amp;Stealth Address</source>
+        <location line="+30"/>
+        <source>Paste from clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+26"/>
+        <location line="+36"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+29"/>
+        <location line="+1"/>
         <source>New receiving address</source>
         <translation>新建接收地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
+        <location line="+1"/>
         <source>New sending address</source>
         <translation>新建发送地址</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
+        <location line="+2"/>
         <source>Edit receiving address</source>
         <translation>编辑接收地址</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+1"/>
         <source>Edit sending address</source>
         <translation>编辑发送地址</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+83"/>
         <source>The entered address &quot;%1&quot; is not a valid TRI address.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -665,10 +665,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+5"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>输入的地址“%1”已经存在于地址簿中。</translation>
-    </message>
-    <message>
-        <source>The entered address &quot;%1&quot; is not a valid triangles address.</source>
-        <translation type="vanished">“%1” 不是有效的黑币地址。</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -683,10 +679,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 </context>
 <context>
     <name>GUIUtil::HelpMessageBox</name>
-    <message>
-        <source>triangles-Qt</source>
-        <translation type="vanished">黑币客户端triangles-Qt</translation>
-    </message>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <source>version</source>
@@ -732,23 +724,23 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>MRichTextEdit</name>
     <message>
-        <location filename="../plugins/mrichtexteditor/mrichtextedit.ui" line="+56"/>
+        <location filename="../plugins/mrichtexteditor/mrichtextedit.ui" line="+504"/>
         <source>Paragraph formatting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+34"/>
         <source>Undo (CTRL+Z)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -758,7 +750,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Cut</source>
         <translation type="unfinished"></translation>
     </message>
@@ -768,7 +760,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -778,7 +770,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Paste</source>
         <translation type="unfinished"></translation>
     </message>
@@ -788,12 +780,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <source>Bold</source>
         <translation type="unfinished"></translation>
     </message>
@@ -803,7 +795,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Italic</source>
         <translation type="unfinished"></translation>
     </message>
@@ -813,12 +805,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Underline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Strike Out</source>
         <translation type="unfinished"></translation>
     </message>
@@ -828,7 +820,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Bullet list</source>
         <translation type="unfinished"></translation>
     </message>
@@ -838,7 +830,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Ordered list</source>
         <translation type="unfinished"></translation>
     </message>
@@ -848,7 +840,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Decrease indentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -858,7 +850,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Increase indentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -868,12 +860,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>Font size</source>
         <translation type="unfinished"></translation>
     </message>
@@ -915,6 +907,74 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <message>
         <location line="+1"/>
         <source>Link URL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="../forms/mainwindow.ui" line="+434"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+217"/>
+        <source>Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Operations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Overview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Send Coins</source>
+        <translation type="unfinished">发送货币</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Receive Coins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Address Book</source>
+        <translation type="unfinished">地址簿</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+211"/>
+        <source>Synchronization</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>33333 blocks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -974,22 +1034,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>MessagePage</name>
     <message>
-        <location filename="../forms/messagepage.ui" line="+14"/>
+        <location filename="../forms/messagepage.ui" line="+186"/>
         <source>Address Book</source>
         <translation type="unfinished">地址簿</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+114"/>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>These are your sent and received encrypted messages. Click on an item to read it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+215"/>
         <source>Click on a message to view it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+96"/>
         <source>&amp;Back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -999,48 +1064,48 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+523"/>
         <source>&amp;Conversation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+183"/>
         <source>Sign a message to prove you own a TRI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>&amp;Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
-        <location line="+14"/>
+        <location line="+183"/>
+        <location line="+206"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation type="unfinished">复制当前选中的地址到系统剪贴板</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-183"/>
         <source>&amp;Copy From Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+206"/>
         <source>Copy To &amp;Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+183"/>
         <source>Delete the currently selected address from the list</source>
         <translation type="unfinished">从列表中删除选中的地址</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>&amp;Delete</source>
         <translation type="unfinished">删除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../messagepage.cpp" line="+182"/>
+        <location filename="../messagepage.cpp" line="+197"/>
         <source>Send Secure Message</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1074,11 +1139,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
+        <location line="+131"/>
         <source>Options</source>
         <translation>选项</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+60"/>
         <source>&amp;Main</source>
         <translation>主要(&amp;M)</translation>
     </message>
@@ -1093,7 +1159,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>支付交易费用(&amp;F)</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+42"/>
         <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
         <translation>保留金额不参与权益累积，可以随时使用。</translation>
     </message>
@@ -1103,20 +1169,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>保留</translation>
     </message>
     <message>
-        <source>Automatically start triangles after logging in to the system.</source>
-        <translation type="vanished">开机自动启动黑币客户端</translation>
-    </message>
-    <message>
-        <source>&amp;Start triangles on system login</source>
-        <translation type="vanished">开机时自动启动黑币客户端(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+41"/>
+        <location line="+63"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>关机时断开区块和地址数据连接使得它们可以被移动到其他目录。这样做会使关机速度变慢。钱包数据总是断开存储的。</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Detach databases at shutdown</source>
         <translation>关机时断开区块和地址数据库连接(&amp;D)</translation>
     </message>
@@ -1126,75 +1184,67 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>网络(&amp;N)</translation>
     </message>
     <message>
-        <source>Automatically open the triangles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="vanished">路由器自动打开黑币客户端端口。该功能仅在路由器开启UPnP支持时有效。</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+26"/>
         <source>Map port using &amp;UPnP</source>
         <translation>使用 &amp;UPnP 映射端口</translation>
     </message>
     <message>
-        <source>Connect to the triangles network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="vanished">经SOCKS代理连接到黑币网络(例如使用Tor)</translation>
-    </message>
-    <message>
-        <location line="-43"/>
+        <location line="-82"/>
         <source>Automatically start Triangles after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Start Triangles on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+54"/>
         <source>Automatically open the Triangles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+27"/>
         <source>Connect to the Triangles network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Connect through SOCKS proxy:</source>
         <translation>经SOCKS代理连接(&amp;C)</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+16"/>
         <source>Proxy &amp;IP:</source>
         <translation>代理服务器 &amp;IP：</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
         <translation>代理地址(如：127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>&amp;Port:</source>
         <translation>端口(&amp;P)：</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>Port of the proxy (e.g. 9050)</source>
         <translation>代理端口（例如 9050）</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>SOCKS &amp;Version:</source>
         <translation>Socks 版本(&amp;V)：</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+254"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>Socks 代理版本（例如 5）</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+54"/>
         <source>&amp;Window</source>
         <translation>窗口(&amp;W)</translation>
     </message>
@@ -1204,7 +1254,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>最小化窗口后仅显示托盘图标</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
         <translation>最小化到托盘(&amp;M)</translation>
     </message>
@@ -1214,7 +1264,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>当窗口关闭时程序最小化而不是退出。当使用该选项时，程序只能通过在菜单中选择退出来关闭</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>M&amp;inimize on close</source>
         <translation>单击关闭按钮最小化(&amp;I)</translation>
     </message>
@@ -1229,35 +1279,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>用户界面语言(&amp;L)：</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>The user interface language can be set here. This setting will take effect after restarting Triangles.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+97"/>
         <source>Whether to show TRI addresses in the transaction list or not.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting triangles.</source>
-        <translation type="vanished">在此设置用户界面语言。重启黑币客户端后设置生效。</translation>
-    </message>
-    <message>
-        <location line="-22"/>
+        <location line="-57"/>
         <source>&amp;Unit to show amounts in:</source>
         <translation>黑币金额单位(&amp;U)：</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
         <translation>选择黑币单位。</translation>
     </message>
     <message>
-        <source>Whether to show triangles addresses in the transaction list or not.</source>
-        <translation type="vanished">是否在交易列表中显示黑币地址</translation>
-    </message>
-    <message>
-        <location line="+12"/>
+        <location line="+52"/>
         <source>&amp;Display addresses in transaction list</source>
         <translation>在交易清单中显示黑币地址(&amp;D)</translation>
     </message>
@@ -1267,27 +1309,27 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>是否需要交易源地址控制功能。</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>Display coin &amp;control features (experts only!)</source>
         <translation>显示黑币控制选项(仅用于专家用户)</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+91"/>
         <source>&amp;OK</source>
         <translation>确定(&amp;O)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+27"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>&amp;Apply</source>
         <translation>应用(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+55"/>
+        <location filename="../optionsdialog.cpp" line="+58"/>
         <source>default</source>
         <translation>默认</translation>
     </message>
@@ -1304,10 +1346,6 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This setting will take effect after restarting triangles.</source>
-        <translation type="vanished">重启客户端后设置生效</translation>
-    </message>
-    <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>提供的代理服务器地址无效。</translation>
@@ -1316,16 +1354,12 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+429"/>
         <source>Form</source>
         <translation>表单</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the triangles network after a connection is established, but this process has not completed yet.</source>
-        <translation type="vanished">所显示的信息尚未更新，建立连接后钱包客户端会自动和网络进行同步，但目前该过程尚未完成。</translation>
-    </message>
-    <message>
-        <location line="+110"/>
+        <location line="+125"/>
         <source>Stake:</source>
         <translation>用于权益累积：</translation>
     </message>
@@ -1360,7 +1394,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>尚未成熟的挖矿收入余额</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+30"/>
         <source>Total:</source>
         <translation>总额：</translation>
     </message>
@@ -1370,7 +1404,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <translation>您当前的总余额</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+75"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;最近交易记录&lt;/b&gt;</translation>
     </message>
@@ -1378,10 +1412,10 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
         <location line="+63"/>
         <source>&lt;head&gt;
 &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
-a:link { color:#000; text-decoration: none;font-weight:bold; }
-a:visited { color:#000; text-decoration: none; }
-a:hover { color:#e22104; text-decoration: none; }
-a:active { color:#000; text-decoration: underline; }
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1392,10 +1426,10 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+25"/>
         <source>&lt;head&gt;
 &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
-a:link { color:#000; text-decoration: none;font-weight:bold; }
-a:visited { color:#000; text-decoration: none; }
-a:hover { color:#e22104; text-decoration: none; }
-a:active { color:#000; text-decoration: underline; }
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1403,18 +1437,32 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-225"/>
+        <location line="+28"/>
+        <source>&lt;head&gt;
+&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;http://explorer.triangles.technology&quot;&gt; &amp;#187; TRI block explorer&lt;/a&gt;&lt;/body&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-264"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>尚未确认的交易总额（不计入目前钱包余额）</translation>
     </message>
     <message>
         <location line="-116"/>
-        <location line="+260"/>
+        <location line="+271"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Triangles network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-184"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>正在进行权益累积的货币总额（不计入目前钱包余额）</translation>
     </message>
@@ -1486,7 +1534,7 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <location filename="../forms/rpcconsole.ui" line="+679"/>
         <source>Client name</source>
         <translation>客户端名称</translation>
     </message>
@@ -1497,15 +1545,15 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+23"/>
         <location line="+23"/>
         <location line="+36"/>
-        <location line="+53"/>
+        <location line="+64"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+348"/>
+        <location filename="../rpcconsole.cpp" line="+351"/>
         <source>N/A</source>
         <translation>不可用</translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="-228"/>
         <source>Client version</source>
         <translation>客户端版本</translation>
     </message>
@@ -1515,12 +1563,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>信息(&amp;I)</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-228"/>
         <source>Triangles - Debug window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+132"/>
+        <source>Debug window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+111"/>
         <source>Triangles Core</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1550,7 +1603,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>测试网</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+34"/>
         <source>Block chain</source>
         <translation>数据链</translation>
     </message>
@@ -1575,7 +1628,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+46"/>
         <source>Show the Triangles-Qt help message to get a list with possible Triangles command-line options.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1590,11 +1643,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>命令行选项</translation>
     </message>
     <message>
-        <source>Show the triangles-Qt help message to get a list with possible triangles command-line options.</source>
-        <translation type="vanished">显示关于命令行选项的帮助信息。</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>&amp;Show</source>
         <translation>显示(&amp;S)</translation>
     </message>
@@ -1604,35 +1653,19 @@ a:active { color:#000; text-decoration: underline; }
         <translation>控制台(&amp;C)</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-311"/>
         <source>Build date</source>
         <translation>创建时间</translation>
     </message>
     <message>
-        <source>triangles - Debug window</source>
-        <translation type="vanished">黑币客户端-调试窗口</translation>
-    </message>
-    <message>
-        <source>triangles Core</source>
-        <translation type="vanished">黑币核心进程</translation>
-    </message>
-    <message>
-        <location line="+200"/>
+        <location line="+211"/>
         <source>Debug log file</source>
         <translation>调试日志文件</translation>
     </message>
     <message>
-        <source>Open the triangles debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="vanished">打开调试日志文件，对于较大的文件，这可能持续几秒钟。</translation>
-    </message>
-    <message>
-        <location line="+109"/>
+        <location line="+160"/>
         <source>Clear console</source>
         <translation>清空控制台</translation>
-    </message>
-    <message>
-        <source>Welcome to the triangles RPC console.</source>
-        <translation type="vanished">欢迎使用黑币RPC控制台。</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
@@ -1653,8 +1686,8 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+182"/>
+        <location filename="../forms/sendcoinsdialog.ui" line="+429"/>
+        <location filename="../sendcoinsdialog.cpp" line="+229"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1666,12 +1699,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>发送货币</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+113"/>
+        <source>Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
         <source>Coin Control Features</source>
         <translation>交易源地址控制功能</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+37"/>
         <source>Inputs...</source>
         <translation>输入...</translation>
     </message>
@@ -1705,10 +1743,6 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+51"/>
         <source>Amount:</source>
         <translation>金额：</translation>
-    </message>
-    <message>
-        <source>0.00 hack</source>
-        <translation type="vanished">123.456 hack {0.00 ?}</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1754,17 +1788,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>零钱</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+61"/>
         <source>custom change address</source>
         <translation>自定义零钱地址</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+131"/>
         <source>Send to multiple recipients at once</source>
         <translation>一次发送给多个接收者</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Add &amp;Recipient</source>
         <translation>添加收款人(&amp;R)</translation>
     </message>
@@ -1774,7 +1808,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>删除所有交易区域</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
         <translation>清除所有(&amp;A)</translation>
     </message>
@@ -1789,30 +1823,22 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>123.456 hack</source>
-        <translation type="vanished">123.456 hack</translation>
-    </message>
-    <message>
         <location line="+31"/>
         <source>Confirm the send action</source>
         <translation>确认并发送货币</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>S&amp;end</source>
         <translation>发送(&amp;E)</translation>
     </message>
     <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">输入黑币地址(例如：TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location filename="../sendcoinsdialog.cpp" line="-178"/>
+        <location filename="../sendcoinsdialog.cpp" line="-224"/>
         <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+34"/>
         <source>Copy quantity</source>
         <translation>复制金额</translation>
     </message>
@@ -1857,7 +1883,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>&lt;b&gt;%1&lt;/b&gt; 至 %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Confirm send coins</source>
         <translation>确认发送货币</translation>
     </message>
@@ -1872,7 +1898,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>和</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+50"/>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>收款人地址不合法，请检查。</translation>
     </message>
@@ -1917,10 +1943,6 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WARNING: Invalid triangles address</source>
-        <translation type="vanished">警告：无效的黑币地址</translation>
-    </message>
-    <message>
         <location line="+13"/>
         <source>(no label)</source>
         <translation>(没有标签)</translation>
@@ -1934,53 +1956,48 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <location filename="../forms/sendcoinsentry.ui" line="+429"/>
         <source>Form</source>
         <translation>表单</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+223"/>
         <source>A&amp;mount:</source>
         <translation>金额(&amp;M)</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-201"/>
         <source>Pay &amp;To:</source>
         <translation>付给(&amp;T)：</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+177"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>为这个地址输入一个标签，以便将它添加到您的地址簿</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>N&amp;arration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+60"/>
         <source>Enter a short note to send with payment (max 24 characters)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-82"/>
         <source>&amp;Label:</source>
         <translation>标签(&amp;L)：</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="-131"/>
         <source>The address to send the payment to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation>收款人地址(例：TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Choose address from address book</source>
         <translation>从地址簿选择地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
@@ -1990,7 +2007,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>从剪贴板粘贴地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
@@ -1998,10 +2015,6 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+7"/>
         <source>Remove this recipient</source>
         <translation>删除收款人</translation>
-    </message>
-    <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">输入一个黑币地址 (例：TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -2022,37 +2035,42 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+130"/>
+        <source>Send messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+73"/>
         <source>Address &amp;From:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+32"/>
         <source>Choose address from address book</source>
         <translation type="unfinished">从地址簿选择地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+422"/>
         <source>Paste address from clipboard</source>
         <translation type="unfinished">从剪贴板粘贴地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+64"/>
         <source>Send to multiple recipients at once</source>
         <translation type="unfinished">一次发送给多个接收者</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Add &amp;Recipient</source>
         <translation type="unfinished">添加收款人(&amp;R)</translation>
     </message>
@@ -2062,7 +2080,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">删除所有交易区域</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
         <translation type="unfinished">清除所有(&amp;A)</translation>
     </message>
@@ -2072,17 +2090,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">确认并发送货币</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+22"/>
         <source>S&amp;end</source>
         <translation type="unfinished">发送(&amp;E)</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sendmessagesdialog.cpp" line="+37"/>
+        <location filename="../sendmessagesdialog.cpp" line="+40"/>
         <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2092,7 +2110,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">&lt;b&gt;%1&lt;/b&gt; 至 %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Confirm send messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2107,7 +2125,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">和</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+40"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -2144,22 +2162,22 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendMessagesEntry</name>
     <message>
-        <location filename="../forms/sendmessagesentry.ui" line="+14"/>
+        <location filename="../forms/sendmessagesentry.ui" line="+429"/>
         <source>Form</source>
         <translation type="unfinished">表单</translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>The address to send the payment to  (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <location line="+33"/>
+        <source>The address to send the message to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Choose address from address book</source>
         <translation type="unfinished">从地址簿选择地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation type="unfinished">Alt+A</translation>
     </message>
@@ -2169,7 +2187,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">从剪贴板粘贴地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
@@ -2179,28 +2197,28 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">删除收款人</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+39"/>
         <source>&amp;Message:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Send &amp;To:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+132"/>
         <location filename="../sendmessagesentry.cpp" line="+27"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation type="unfinished">为这个地址输入一个标签，以便将它添加到您的地址簿</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>&amp;Label:</source>
         <translation type="unfinished">标签(&amp;L)：</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;Public Key:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2221,203 +2239,134 @@ a:active { color:#000; text-decoration: underline; }
     </message>
 </context>
 <context>
-    <name>SignVerifyMessageDialog</name>
+    <name>SignMessagePage</name>
     <message>
-        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
-        <source>Signatures - Sign / Verify a Message</source>
-        <translation>签名 - 为消息签名/验证签名消息</translation>
+        <location filename="../forms/signmessagepage.ui" line="+429"/>
+        <source>Form</source>
+        <translation type="unfinished">表单</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+124"/>
-        <source>&amp;Sign Message</source>
-        <translation>签名消息(&amp;S)</translation>
+        <location line="+121"/>
+        <source>Sign Message</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-118"/>
-        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>您可以用你的地址对消息进行签名，以证明您是该地址的所有人。注意不要对模棱两可的消息签名，以免遭受钓鱼式攻击。请确保消息内容准确的表达了您的真实意愿。</translation>
+        <location line="+76"/>
+        <source>Address</source>
+        <translation type="unfinished">地址</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>The address to sign the message with (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation>用来签名该消息的地址(例： TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+203"/>
-        <source>Choose an address from the address book</source>
-        <translation>从地址簿里选择一个地址</translation>
-    </message>
-    <message>
-        <location line="-193"/>
-        <location line="+203"/>
-        <source>Alt+A</source>
-        <translation>Alt+A</translation>
-    </message>
-    <message>
-        <location line="-193"/>
+        <location line="+25"/>
         <source>Paste address from clipboard</source>
-        <translation>从剪贴板粘贴地址</translation>
+        <translation type="unfinished">从剪贴板粘贴地址</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+33"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+20"/>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished">从地址簿里选择一个地址</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address to sign the message with (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Enter the message you want to sign here</source>
-        <translation>请输入您要发送的签名消息</translation>
+        <translation type="unfinished">请输入您要发送的签名消息</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+32"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>复制当前签名至剪切板</translation>
+        <translation type="unfinished">复制当前签名至剪切板</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Sign the message to prove you own this TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+146"/>
-        <source>Verify the message to ensure it was signed with the specified TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sign the message to prove you own this triangles address</source>
-        <translation type="vanished">对该消息进行签名以证明您对该黑币地址的所有权</translation>
-    </message>
-    <message>
-        <location line="-129"/>
+        <location line="+142"/>
         <source>Reset all sign message fields</source>
-        <translation>清空所有签名消息栏</translation>
+        <translation type="unfinished">清空所有签名消息栏</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
-        <translation>清除所有(&amp;A)</translation>
+        <translation type="unfinished">清除所有(&amp;A)</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
-        <source>&amp;Verify Message</source>
-        <translation>验证消息(&amp;V)</translation>
-    </message>
-    <message>
-        <location line="-64"/>
-        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>在下面输入签名地址，消息（请确保换行符、空格符、制表符等等一个不漏）和签名以验证消息。请确保签名信息准确，提防中间人攻击。</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>The address the message was signed with (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation>用来签名该消息的黑币地址(例： TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <source>Verify the message to ensure it was signed with the specified triangles address</source>
-        <translation type="vanished">确认该消息以保证它经由指定的黑币地址签名</translation>
-    </message>
-    <message>
-        <location line="+57"/>
-        <source>Reset all verify message fields</source>
-        <translation>清空所有验证消息栏</translation>
-    </message>
-    <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">输入黑币地址(例： TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location filename="../signverifymessagedialog.cpp" line="+28"/>
-        <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>单击“签名消息“产生签名。</translation>
-    </message>
-    <message>
-        <source>Enter triangles signature</source>
-        <translation type="vanished">输入黑币签名</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
+        <location line="+16"/>
+        <source>Sign the message to prove you own this Triangles address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Enter a TRI address (e.g. w)</source>
+        <location line="+23"/>
+        <source>Sign &amp;Message</source>
+        <translation type="unfinished">签名(&amp;M)</translation>
+    </message>
+    <message>
+        <location filename="../signmessagepage.cpp" line="+28"/>
+        <source>Enter a Triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter TRI signature</source>
-        <translation type="unfinished"></translation>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation type="unfinished">单击“签名消息“产生签名。</translation>
     </message>
     <message>
-        <location line="+82"/>
-        <location line="+81"/>
+        <location line="+12"/>
+        <location line="+53"/>
         <source>The entered address is invalid.</source>
-        <translation>输入的地址非法。</translation>
+        <translation type="unfinished">输入的地址非法。</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+8"/>
-        <location line="+73"/>
+        <location line="-53"/>
+        <location line="+53"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>请检查地址后重试。</translation>
+        <translation type="unfinished">请检查地址后重试。</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+81"/>
+        <location line="+0"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>输入的地址没有关联的公私钥对。</translation>
+        <translation type="unfinished">输入的地址没有关联的公私钥对。</translation>
     </message>
     <message>
-        <location line="-73"/>
+        <location line="+8"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation>钱包解锁动作取消。</translation>
+        <translation type="unfinished">钱包解锁动作取消。</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>找不到输入地址关联的私钥。</translation>
+        <translation type="unfinished">找不到输入地址关联的私钥。</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>消息签名失败。</translation>
+        <translation type="unfinished">消息签名失败。</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>消息已签名。</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>The signature could not be decoded.</source>
-        <translation>签名无法解码。</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+13"/>
-        <source>Please check the signature and try again.</source>
-        <translation>请检查签名后重试。</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The signature did not match the message digest.</source>
-        <translation>签名与消息摘要不匹配。</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Message verification failed.</source>
-        <translation>消息验证失败。</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Message verified.</source>
-        <translation>消息验证成功。</translation>
+        <translation type="unfinished">消息已签名。</translation>
     </message>
 </context>
 <context>
@@ -2561,12 +2510,8 @@ a:active { color:#000; text-decoration: underline; }
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 60 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="unfinished">通过权益累积获得的金额需要在510个块确认后方可使用。此数据块生成时，将被广播到网络并加入区块链。如果未能成功加入区块链，其状态会显示为“未接受”，该部分金额也不可被使用。如果其他节点在您生成区块后的几秒钟内也生成了区块，这种情况会偶尔发生。 {60 ?}</translation>
-    </message>
-    <message>
-        <source>Generated coins must mature 510 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="vanished">通过权益累积获得的金额需要在510个块确认后方可使用。此数据块生成时，将被广播到网络并加入区块链。如果未能成功加入区块链，其状态会显示为“未接受”，该部分金额也不可被使用。如果其他节点在您生成区块后的几秒钟内也生成了区块，这种情况会偶尔发生。</translation>
+        <source>Generated coins must mature 7 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished">通过权益累积获得的金额需要在7个块确认后方可使用。此数据块生成时，将被广播到网络并加入区块链。如果未能成功加入区块链，其状态会显示为“未接受”，该部分金额也不可被使用。如果其他节点在您生成区块后的几秒钟内也生成了区块，这种情况会偶尔发生。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2613,11 +2558,12 @@ a:active { color:#000; text-decoration: underline; }
     <name>TransactionDescDialog</name>
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
+        <location line="+136"/>
         <source>Transaction details</source>
         <translation>交易细节</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>当前面板显示了交易的详细信息</translation>
     </message>
@@ -2625,7 +2571,7 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+227"/>
+        <location filename="../transactiontablemodel.cpp" line="+228"/>
         <source>Date</source>
         <translation>日期</translation>
     </message>
@@ -2645,12 +2591,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>数量</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+59"/>
         <source>Open until %1</source>
         <translation>至 %1 个数据块时开启</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
+        <source>Confirming (%1 of %2 confirmations)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Confirmed (%1 confirmations)</source>
         <translation>已确认 (%1 条确认信息)</translation>
     </message>
@@ -2662,12 +2613,7 @@ a:active { color:#000; text-decoration: underline; }
         </translation>
     </message>
     <message>
-        <location line="-57"/>
-        <source>Narration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+63"/>
+        <location line="+6"/>
         <source>Offline</source>
         <translation>掉线</translation>
     </message>
@@ -2677,12 +2623,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>未确认的 </translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Confirming (%1 of %2 recommended confirmations)</source>
-        <translation>确认中 (推荐 %2个确认，已经有 %1个确认)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Conflicted</source>
         <translation>冲突的</translation>
     </message>
@@ -2760,13 +2701,13 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+55"/>
-        <location line="+16"/>
+        <location filename="../transactionview.cpp" line="+61"/>
+        <location line="+17"/>
         <source>All</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location line="-15"/>
+        <location line="-16"/>
         <source>Today</source>
         <translation>今天</translation>
     </message>
@@ -2796,7 +2737,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>范围...</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Received with</source>
         <translation>接收于</translation>
     </message>
@@ -2821,17 +2762,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>其他</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Enter address or label to search</source>
         <translation>输入地址或标签进行搜索</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Min amount</source>
         <translation>最小金额</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <source>Copy address</source>
         <translation>复制地址</translation>
     </message>
@@ -2861,7 +2802,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>显示交易详情</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+165"/>
         <source>Export Transaction Data</source>
         <translation>输出交易数据</translation>
     </message>
@@ -2927,11 +2868,20 @@ a:active { color:#000; text-decoration: underline; }
     </message>
 </context>
 <context>
-    <name>Triangles-core</name>
+    <name>TransactionsPage</name>
     <message>
-        <source>triangles version</source>
-        <translation type="vanished">黑币客户端 版本</translation>
+        <location filename="../forms/transactionspage.ui" line="+240"/>
+        <source>Form</source>
+        <translation type="unfinished">表单</translation>
     </message>
+    <message>
+        <location line="+116"/>
+        <source>Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Triangles-core</name>
     <message>
         <location filename="../trianglesstrings.cpp" line="+34"/>
         <source>Usage:</source>
@@ -3134,10 +3084,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>警告：-paytxfee 交易费设置得太高了！每笔交易都将支付交易费。</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong triangles will not work properly.</source>
-        <translation type="vanished">警告：请确认您计算机的本地时间。如果时钟错误，黑币客户端将不能正常工作。</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -3357,30 +3303,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
 </translation>
     </message>
     <message>
-        <source>%s, you must set a rpcpassword in the configuration file:
- %s
-It is recommended you use the following random password:
-rpcuser=trianglesrpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
-</source>
-        <translation type="vanished">%s, 必须在配置文件里设置rpc密码:
- %s
-建议使用如下的随机密码:
-rpcuser=trianglesrpc
-rpcpassword=%s
-(不需要记住该密码)
-用户名和密码不能重复。
-如果该文件不存在，请自行创建并设为用户本身只读权限。
-建议创建提示以监测可能的问题，如：
-alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
-</translation>
-    </message>
-    <message>
         <location line="-33"/>
         <source>Find peers using internet relay chat (default: 0)</source>
         <translation>寻找使用互联网接力聊天的节点 (默认: 1) {0)?}</translation>
@@ -3505,14 +3427,6 @@ alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
         <translation>钱包 %s 位于数据目录 %s 之外.</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s.  triangles is probably already running.</source>
-        <translation type="vanished">无法从数据目录 %s 获得锁定.  黑币客户端可能已在运行中.</translation>
-    </message>
-    <message>
-        <source>triangles</source>
-        <translation type="vanished">黑币</translation>
-    </message>
-    <message>
         <location line="+43"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>无法绑定本机端口 %s  (返回错误消息 %d, %s)</translation>
@@ -3541,14 +3455,6 @@ alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>wallet.dat 钱包文件加载出错：钱包损坏</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of triangles</source>
-        <translation type="vanished">wallet.dat 钱包文件加载出错：需要新版本的客户端</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart triangles to complete</source>
-        <translation type="vanished">需要重写钱包，重启客户端以完成该操作。</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3614,10 +3520,6 @@ alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
         <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>添加节点并与其保持连接</translation>
-    </message>
-    <message>
-        <source>Unable to bind to %s on this computer. triangles is probably already running.</source>
-        <translation type="vanished">无法绑定到该计算机上的 %s. 黑币客户端可能已在运行中。</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3687,67 +3589,57 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../trianglesgui.cpp" line="+94"/>
+        <location filename="../trianglesgui.cpp" line="+256"/>
+        <location line="+6"/>
         <source>Triangles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-6"/>
+        <location line="+6"/>
         <source>Wallet</source>
         <translation type="unfinished">钱包</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+168"/>
+        <location line="+793"/>
         <source>&amp;Overview</source>
         <translation type="unfinished">概况(&amp;O)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-792"/>
         <source>Show general overview of wallet</source>
         <translation type="unfinished">显示钱包概况</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>&amp;Send coins</source>
-        <translation type="unfinished">发送货币(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Send coins to a TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>&amp;Receive coins</source>
-        <translation type="unfinished">接收黑币(&amp;R)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+14"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation type="unfinished">显示用于接收支付的地址列表</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+821"/>
         <source>&amp;Transactions</source>
         <translation type="unfinished">交易记录(&amp;T)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-820"/>
         <source>Browse transaction history</source>
         <translation type="unfinished">查看交易历史</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+815"/>
         <source>&amp;Address Book</source>
         <translation type="unfinished">地址簿(&amp;A)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-814"/>
         <source>Edit the list of stored addresses and labels</source>
         <translation type="unfinished">管理已储存的地址和标签</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>&amp;Messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3757,22 +3649,82 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>E&amp;xit</source>
-        <translation type="unfinished">退出(&amp;X)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Quit application</source>
-        <translation type="unfinished">退出程序</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;About Triangles</source>
+        <location line="+34"/>
+        <location line="+2"/>
+        <source>&amp;Show / Hide Triangles wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Show or hide the main Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+304"/>
+        <source>%n blocks</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Processed %1 blocks of transaction history.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+108"/>
+        <source>&lt;font color=&apos;#f26522&apos;&gt;This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  &lt;/font&gt;Do you want to pay the fee?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+295"/>
+        <source>Options</source>
+        <translation type="unfinished">选项</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>E&amp;xit</source>
+        <translation type="unfinished">退出(&amp;X)</translation>
+    </message>
+    <message>
+        <location line="-743"/>
+        <source>Quit application</source>
+        <translation type="unfinished">退出程序</translation>
+    </message>
+    <message>
+        <location line="-47"/>
+        <source>&amp;Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send coins to a Triangles address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Receive Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>E&amp;xit Triangles wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+2"/>
+        <location line="+863"/>
+        <source>&amp;About Triangles</source>
+        <translation type="unfinished">关于黑币(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="-862"/>
         <source>Show information about Triangles</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3797,22 +3749,13 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>&amp;Show / Hide</source>
-        <translation type="unfinished">显示 / 隐藏(&amp;S)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+769"/>
         <source>&amp;Encrypt Wallet...</source>
         <translation type="unfinished">加密钱包(&amp;E)...</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Encrypt or decrypt wallet</source>
-        <translation type="unfinished">加密/解密钱包</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-766"/>
         <source>&amp;Backup Wallet...</source>
         <translation type="unfinished">备份钱包(&amp;B)...</translation>
     </message>
@@ -3823,23 +3766,35 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
+        <location line="+767"/>
         <source>&amp;Change Passphrase...</source>
         <translation type="unfinished">更改密码(&amp;C)...</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-766"/>
         <source>Change the passphrase used for wallet encryption</source>
         <translation type="unfinished">更改钱包加密口令</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+763"/>
         <source>&amp;Unlock Wallet...</source>
         <translation type="unfinished">解锁钱包(&amp;U)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-762"/>
         <source>Unlock wallet</source>
         <translation type="unfinished">解锁钱包</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Unlock Wallet for staking...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unlock wallet for staking</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3853,36 +3808,50 @@ If the file does not exist, create it with owner-readable-only file permissions.
     </message>
     <message>
         <location line="+1"/>
+        <location line="+760"/>
         <source>Sign &amp;message...</source>
         <translation type="unfinished">消息签名(&amp;M)...</translation>
     </message>
     <message>
+        <location line="-759"/>
+        <source>Sign messages with your Triangles addresses to prove you own them</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <location line="+759"/>
         <source>&amp;Verify message...</source>
         <translation type="unfinished">验证消息(&amp;V)...</translation>
     </message>
     <message>
+        <location line="-758"/>
+        <source>Verify messages to ensure they were signed with specified Triangles addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+2"/>
+        <location line="+703"/>
         <source>&amp;Export...</source>
         <translation type="unfinished">导出(&amp;E)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-702"/>
         <source>Export the data in the current tab to a file</source>
         <translation type="unfinished">导出当前标签页的数据</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+826"/>
         <source>&amp;Debug window</source>
         <translation type="unfinished">调试窗口(&amp;D)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-825"/>
         <source>Open debugging and diagnostic console</source>
         <translation type="unfinished">打开调试和诊断控制台</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+28"/>
         <source>&amp;File</source>
         <translation type="unfinished">文件(&amp;F)</translation>
     </message>
@@ -3907,48 +3876,41 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished">工具栏</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="-327"/>
         <source>[testnet]</source>
         <translation type="unfinished">[测试网络]</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+77"/>
+        <location line="+411"/>
         <source>Triangles client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
+        <location line="+106"/>
         <source>%n active connection(s) to Triangles network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+18"/>
         <source>Synchronizing with network...</source>
         <translation type="unfinished">正在与网络同步...</translation>
     </message>
     <message numerus="yes">
-        <location line="+2"/>
+        <location line="+9"/>
         <source>~%n block(s) remaining</source>
         <translation type="unfinished">
             <numerusform>~%n 个区块未完成</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
         <translation type="unfinished">交易记录已下载%3% (%1 / %2 个区块)</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Downloaded %1 blocks of transaction history.</source>
-        <translation type="unfinished">已下载 %1 个区块的交易记录</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Current difficulty is %1.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3996,17 +3958,12 @@ If the file does not exist, create it with owner-readable-only file permissions.
         <translation type="unfinished">最近生成的区块接收于%1</translation>
     </message>
     <message>
-        <location line="+59"/>
-        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation type="unfinished">该笔交易数据量太大，需支付%1手续费给执行该笔交易的网络结点。您愿意支付吗？</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+66"/>
         <source>Confirm transaction fee</source>
         <translation type="unfinished">手续费确认</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+52"/>
         <source>Sent transaction</source>
         <translation type="unfinished">发送交易</translation>
     </message>
@@ -4043,29 +4000,50 @@ Message: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+110"/>
-        <location line="+15"/>
+        <location line="+122"/>
+        <location line="+75"/>
         <source>URI handling</source>
         <translation type="unfinished">URI处理</translation>
     </message>
     <message>
-        <location line="-15"/>
-        <location line="+15"/>
+        <location line="-75"/>
+        <location line="+75"/>
         <source>URI can not be parsed! This can be caused by an invalid TRI address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+53"/>
+        <source>Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Receive Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Lock Wallet...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+112"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked for staking&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation type="unfinished">钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;解锁&lt;/b&gt;状态</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation type="unfinished">钱包已被&lt;b&gt;加密&lt;/b&gt;，当前为&lt;b&gt;锁定&lt;/b&gt;状态</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-177"/>
+        <location line="+204"/>
         <source>Backup Wallet</source>
         <translation type="unfinished">备份钱包</translation>
     </message>
@@ -4076,16 +4054,26 @@ Message: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Backup Failed</source>
-        <translation type="unfinished">备份失败</translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation type="unfinished">试图将钱包地址保存到新位置时出现错误</translation>
     </message>
+    <message>
+        <location line="+0"/>
+        <source>Backup failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup successful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The wallet data was successfully saved to the new location.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location line="+76"/>
+        <location line="+90"/>
         <source>%n second(s)</source>
         <translation type="unfinished">
             <numerusform>%n秒</numerusform>
@@ -4142,57 +4130,128 @@ Message: %4
         <source>Not staking</source>
         <translation type="unfinished">未进行权益增值</translation>
     </message>
+</context>
+<context>
+    <name>VerifyMessagePage</name>
     <message>
-        <source>Show information about triangles</source>
-        <translation type="vanished">显示关于黑币的信息</translation>
+        <location filename="../forms/verifymessagepage.ui" line="+429"/>
+        <source>Form</source>
+        <translation type="unfinished">表单</translation>
     </message>
     <message>
-        <source>Send coins to a triangles address</source>
-        <translation type="vanished">向指定的地址发送黑币</translation>
+        <location line="+121"/>
+        <source>Verify Message</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Modify configuration options for triangles</source>
-        <translation type="vanished">更改设置选项</translation>
+        <location line="+78"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished">从地址簿里选择一个地址</translation>
     </message>
     <message>
-        <source>triangles</source>
-        <translation type="vanished">黑币</translation>
+        <location line="+33"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
-        <source>&amp;About triangles</source>
-        <translation type="vanished">关于黑币(&amp;A)</translation>
+        <location line="+47"/>
+        <source>The address the message was signed with (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>triangles client</source>
-        <translation type="vanished">黑币客户端</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to triangles network</source>
-        <translation type="vanished">
-            <numerusform>与黑币网络建立了 %n 个连接</numerusform>
-        </translation>
+        <location line="+52"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>About triangles card</source>
-        <translation type="vanished">关于黑币卡</translation>
+        <location line="+49"/>
+        <source>Address</source>
+        <translation type="unfinished">地址</translation>
     </message>
     <message>
-        <source>Show information about triangles card</source>
-        <translation type="vanished">显示关于黑币卡的信息</translation>
+        <location line="+23"/>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI can not be parsed! This can be caused by an invalid triangles address or malformed URI parameters.</source>
-        <translation type="vanished">无法解析URI：无效的黑币地址或错误的URI参数。</translation>
+        <location line="+121"/>
+        <source>Reset all verify message fields</source>
+        <translation type="unfinished">清空所有验证消息栏</translation>
     </message>
     <message>
-        <source>A fatal error occurred. triangles can no longer continue safely and will quit.</source>
-        <translation type="vanished">发生严重错误，黑币客户端即将关闭。</translation>
+        <location line="+23"/>
+        <source>Clear &amp;All</source>
+        <translation type="unfinished">清除所有(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Verify the message to ensure it was signed with the specified Triangles address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Verify &amp;Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../verifymessagepage.cpp" line="+28"/>
+        <source>Enter a Triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter Triangles signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+45"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">输入的地址非法。</translation>
+    </message>
+    <message>
+        <location line="-45"/>
+        <location line="+45"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">请检查地址后重试。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">输入的地址没有关联的公私钥对。</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The signature could not be decoded.</source>
+        <translation type="unfinished">签名无法解码。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation type="unfinished">请检查签名后重试。</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation type="unfinished">签名与消息摘要不匹配。</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation type="unfinished">消息验证失败。</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation type="unfinished">消息验证成功。</translation>
     </message>
 </context>
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+346"/>
+        <location filename="../walletmodel.cpp" line="+249"/>
         <source>Sending...</source>
         <translation>正在发送</translation>
     </message>

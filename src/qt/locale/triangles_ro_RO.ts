@@ -4,35 +4,27 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../forms/aboutdialog.ui" line="+14"/>
+        <location filename="../forms/aboutdialog.ui" line="+441"/>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+153"/>
         <source>About Triangles</source>
         <translation>Despre triangles</translation>
     </message>
     <message>
-        <source>&lt;b&gt;triangles&lt;/b&gt; version</source>
-        <translation type="vanished">Versiune &lt;b&gt;triangles&lt;/b&gt;</translation>
+        <location line="+565"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team
-Copyright © 2014 The triangles developers</source>
-        <translation type="vanished">Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team
-Copyright © 2014 The triangles developers</translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location line="-457"/>
         <source>&lt;b&gt;Triangles&lt;/b&gt; version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+41"/>
-        <source>Copyright © 2009-2014 The Bitcoin developers
-Copyright © 2014 Triangles team</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+170"/>
         <source>
 This is experimental software.
 
@@ -50,60 +42,57 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
 <context>
     <name>AddressBookPage</name>
     <message>
-        <location filename="../forms/addressbookpage.ui" line="+14"/>
+        <location filename="../forms/addressbookpage.ui" line="+186"/>
         <source>Address Book</source>
         <translation>Agendă</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+158"/>
+        <source>Address book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+19"/>
         <source>These are your Triangles addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+269"/>
         <source>Double-click to edit address or label</source>
         <translation>Dublu-click pentru a edita adresa sau eticheta</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+50"/>
         <source>Create a new address</source>
         <translation>Creează o adresă nouă</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation>Copiază adresa selectată în clipboard</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+65"/>
         <source>Sign a message to prove you own a TRI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="-76"/>
         <source>&amp;New Address</source>
         <translation>Adresă nouă</translation>
     </message>
     <message>
-        <source>These are your triangles addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation type="vanished">Acestea sunt adresele triangles pentru a primi plăți. Poate doriți sa dați o adresa noua fiecarui expeditor pentru a putea ține evidența la cine efectuează plăti.</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copiază adresa</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+31"/>
         <source>Show &amp;QR Code</source>
         <translation>Arată cod &amp;QR</translation>
     </message>
     <message>
-        <source>Sign a message to prove you own a triangles address</source>
-        <translation type="vanished">Semnează un mesaj pentru a dovedi că dețineti o adresă triangles</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Sign &amp;Message</source>
         <translation>Semnează &amp;Mesajul</translation>
     </message>
@@ -113,13 +102,9 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Delete the currently selected address from the list</source>
         <translation>Sterge adresele curent selectate din lista</translation>
-    </message>
-    <message>
-        <source>Verify a message to ensure it was signed with a specified triangles address</source>
-        <translation type="vanished">Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă triangles</translation>
     </message>
     <message>
         <location line="-11"/>
@@ -127,12 +112,17 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>&amp;Verifică mesajul</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Delete</source>
         <translation>Ște&amp;rge</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+65"/>
+        <location filename="../addressbookpage.cpp" line="+66"/>
+        <source>Triangles receiving addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Copy &amp;Label</source>
         <translation>Copiază &amp;eticheta</translation>
     </message>
@@ -142,7 +132,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>&amp;Editează</translation>
     </message>
     <message>
-        <location line="+250"/>
+        <location line="+265"/>
         <source>Export Address Book Data</source>
         <translation>Exportă datele din Agendă</translation>
     </message>
@@ -165,7 +155,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
 <context>
     <name>AddressTableModel</name>
     <message>
-        <location filename="../addresstablemodel.cpp" line="+156"/>
+        <location filename="../addresstablemodel.cpp" line="+146"/>
         <source>Label</source>
         <translation>Etichetă</translation>
     </message>
@@ -188,32 +178,32 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Dialogul pentru fraza de acces</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+209"/>
+        <source>Change password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+115"/>
         <source>Enter passphrase</source>
         <translation>Introdu fraza de acces</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>New passphrase</source>
         <translation>Frază de acces nouă</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>Repeat new passphrase</source>
         <translation>Repetă noua frază de acces</translation>
     </message>
     <message>
-        <location line="+33"/>
-        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
-        <translation>Servește pentru a dezactiva sendmoneyl atunci când sistemul de operare este compromis. Nu oferă nicio garanție reală.</translation>
+        <location line="+47"/>
+        <source>Unlock for staking only</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>For staking only</source>
-        <translation>Doar pentru staking</translation>
-    </message>
-    <message>
-        <location filename="../askpassphrasedialog.cpp" line="+35"/>
+        <location filename="../askpassphrasedialog.cpp" line="+42"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Introdu noua parolă a portofelului electronic.&lt;br/&gt;Te rog folosește &lt;b&gt;minim 10 caractere aleatoare&lt;/b&gt;, sau &lt;b&gt;minim 8 cuvinte&lt;/b&gt;.</translation>
     </message>
@@ -223,7 +213,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Criptează portofelul</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Această acțiune necesită fraza ta de acces pentru deblocarea portofelului.</translation>
     </message>
@@ -233,7 +223,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Deblochează portofelul</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
         <translation>Această acțiune necesită fraza ta de acces pentru decriptarea portofelului.</translation>
     </message>
@@ -243,7 +233,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Decriptează portofelul.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Change passphrase</source>
         <translation>Schimbă fraza de acces</translation>
     </message>
@@ -288,10 +278,6 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <location line="+60"/>
         <source>Wallet encrypted</source>
         <translation>Portofel criptat</translation>
-    </message>
-    <message>
-        <source>triangles will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation type="vanished">triangles se va inchide pentru a termina procesul de encriptie. Amintiți-vă, criptarea portofelul dumneavoastră nu poate proteja pe deplin monedele dvs. de a fi furate de  infectarea cu malware a computerului.</translation>
     </message>
     <message>
         <location line="-45"/>
@@ -346,12 +332,17 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
 <context>
     <name>CoinControlDialog</name>
     <message>
-        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <location filename="../forms/coincontroldialog.ui" line="+17"/>
         <source>Coin Control</source>
         <translation>Controlează moneda</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+178"/>
+        <source>Triangles Coin Control</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Quantity:</source>
         <translation>Cantitate:</translation>
     </message>
@@ -361,7 +352,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Octeţi:</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+51"/>
         <source>Amount:</source>
         <translation>Sumă:</translation>
     </message>
@@ -381,7 +372,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Ieşire minimă: </translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="+551"/>
+        <location filename="../coincontroldialog.cpp" line="+720"/>
         <source>no</source>
         <translation>nu</translation>
     </message>
@@ -396,22 +387,22 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Schimb:</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+94"/>
         <source>(un)select all</source>
         <translation>(de)selectaţi tot</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+51"/>
         <source>Tree mode</source>
         <translation>Modul arborescent</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+57"/>
         <source>List mode</source>
         <translation>Modul lista</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+233"/>
         <source>Amount</source>
         <translation>Sumă</translation>
     </message>
@@ -446,7 +437,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Prioritate</translation>
     </message>
     <message>
-        <location filename="../coincontroldialog.cpp" line="-515"/>
+        <location filename="../coincontroldialog.cpp" line="-682"/>
         <source>Copy address</source>
         <translation>Copiază adresa</translation>
     </message>
@@ -457,17 +448,17 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
     </message>
     <message>
         <location line="+1"/>
-        <location line="+26"/>
+        <location line="+41"/>
         <source>Copy amount</source>
         <translation>Copiază suma</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-40"/>
         <source>Copy transaction ID</source>
         <translation>Copiază ID tranzacție</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+39"/>
         <source>Copy quantity</source>
         <translation>Copiaţi quantitea</translation>
     </message>
@@ -502,7 +493,7 @@ Acest produs include programe dezvoltate de către OpenSSL Project pentru a fi f
         <translation>Copiaţi schimb</translation>
     </message>
     <message>
-        <location line="+317"/>
+        <location line="+469"/>
         <source>highest</source>
         <translation>cel mai mare</translation>
     </message>
@@ -614,57 +605,66 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
 <context>
     <name>EditAddressDialog</name>
     <message>
-        <location filename="../forms/editaddressdialog.ui" line="+14"/>
-        <source>Edit Address</source>
-        <translation>Editează adresa</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location filename="../forms/editaddressdialog.ui" line="+385"/>
         <source>&amp;Label</source>
         <translation>&amp;Etichetă</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+25"/>
         <source>The label associated with this address book entry</source>
         <translation>Eticheta asociată cu această intrare în agendă</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-145"/>
         <source>&amp;Address</source>
         <translation>&amp;Adresă</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-68"/>
+        <source>Edit record</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+93"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
         <translation>Adresa asociată cu această intrare în agendă. Acest lucru poate fi modificat numai pentru adresele de trimitere.</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>&amp;Stealth Address</source>
+        <location line="+30"/>
+        <source>Paste from clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+26"/>
+        <location line="+36"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <location filename="../editaddressdialog.cpp" line="+29"/>
+        <location line="+1"/>
         <source>New receiving address</source>
         <translation>Noua adresă de primire</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
+        <location line="+1"/>
         <source>New sending address</source>
         <translation>Noua adresă de trimitere</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
+        <location line="+2"/>
         <source>Edit receiving address</source>
         <translation>Editează adresa de primire</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+9"/>
+        <location line="+1"/>
         <source>Edit sending address</source>
         <translation>Editează adresa de trimitere</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+83"/>
         <source>The entered address &quot;%1&quot; is not a valid TRI address.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -672,10 +672,6 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <location line="+5"/>
         <source>The entered address &quot;%1&quot; is already in the address book.</source>
         <translation>Adresa introdusă &quot;%1&quot; se află deja în lista de adrese.</translation>
-    </message>
-    <message>
-        <source>The entered address &quot;%1&quot; is not a valid triangles address.</source>
-        <translation type="vanished">Adresa introdusă &quot;%1&quot; nu este o adresă triangles validă</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -690,10 +686,6 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
 </context>
 <context>
     <name>GUIUtil::HelpMessageBox</name>
-    <message>
-        <source>triangles-Qt</source>
-        <translation type="vanished">triangles-Qt</translation>
-    </message>
     <message>
         <location filename="../guiutil.cpp" line="+420"/>
         <source>version</source>
@@ -739,23 +731,23 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
 <context>
     <name>MRichTextEdit</name>
     <message>
-        <location filename="../plugins/mrichtexteditor/mrichtextedit.ui" line="+56"/>
+        <location filename="../plugins/mrichtexteditor/mrichtextedit.ui" line="+504"/>
         <source>Paragraph formatting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+34"/>
         <source>Undo (CTRL+Z)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -765,7 +757,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Cut</source>
         <translation type="unfinished"></translation>
     </message>
@@ -775,7 +767,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -785,7 +777,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Paste</source>
         <translation type="unfinished"></translation>
     </message>
@@ -795,12 +787,12 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Link</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <source>Bold</source>
         <translation type="unfinished"></translation>
     </message>
@@ -810,7 +802,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Italic</source>
         <translation type="unfinished"></translation>
     </message>
@@ -820,12 +812,12 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Underline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+24"/>
         <source>Strike Out</source>
         <translation type="unfinished"></translation>
     </message>
@@ -835,7 +827,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Bullet list</source>
         <translation type="unfinished"></translation>
     </message>
@@ -845,7 +837,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Ordered list</source>
         <translation type="unfinished"></translation>
     </message>
@@ -855,7 +847,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Decrease indentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -865,7 +857,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>Increase indentation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -875,12 +867,12 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+6"/>
         <source>.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+22"/>
         <source>Font size</source>
         <translation type="unfinished"></translation>
     </message>
@@ -922,6 +914,74 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <message>
         <location line="+1"/>
         <source>Link URL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="../forms/mainwindow.ui" line="+434"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+217"/>
+        <source>Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+55"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Operations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Overview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Send Coins</source>
+        <translation type="unfinished">Trimite monede</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Receive Coins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Address Book</source>
+        <translation type="unfinished">Agendă</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+211"/>
+        <source>Synchronization</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>33333 blocks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -981,22 +1041,27 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
 <context>
     <name>MessagePage</name>
     <message>
-        <location filename="../forms/messagepage.ui" line="+14"/>
+        <location filename="../forms/messagepage.ui" line="+186"/>
         <source>Address Book</source>
         <translation type="unfinished">Agendă</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+114"/>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>These are your sent and received encrypted messages. Click on an item to read it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+215"/>
         <source>Click on a message to view it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+96"/>
         <source>&amp;Back</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1006,48 +1071,48 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+523"/>
         <source>&amp;Conversation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+183"/>
         <source>Sign a message to prove you own a TRI address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>&amp;Send</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
-        <location line="+14"/>
+        <location line="+183"/>
+        <location line="+206"/>
         <source>Copy the currently selected address to the system clipboard</source>
         <translation type="unfinished">Copiază adresa selectată în clipboard</translation>
     </message>
     <message>
-        <location line="-11"/>
+        <location line="-183"/>
         <source>&amp;Copy From Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+206"/>
         <source>Copy To &amp;Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+183"/>
         <source>Delete the currently selected address from the list</source>
         <translation type="unfinished">Sterge adresele curent selectate din lista</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>&amp;Delete</source>
         <translation type="unfinished">Ște&amp;rge</translation>
     </message>
     <message>
-        <location filename="../messagepage.cpp" line="+182"/>
+        <location filename="../messagepage.cpp" line="+197"/>
         <source>Send Secure Message</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1081,11 +1146,12 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
     <name>OptionsDialog</name>
     <message>
         <location filename="../forms/optionsdialog.ui" line="+14"/>
+        <location line="+131"/>
         <source>Options</source>
         <translation>Setări</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+60"/>
         <source>&amp;Main</source>
         <translation>&amp;Principal</translation>
     </message>
@@ -1100,7 +1166,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Plăteşte comision pentru tranzacţie &amp;f</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+42"/>
         <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
         <translation>Suma rezervată nu participă la maturare și, prin urmare, se poate cheltui  în orice moment.</translation>
     </message>
@@ -1110,20 +1176,12 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Rezervă</translation>
     </message>
     <message>
-        <source>Automatically start triangles after logging in to the system.</source>
-        <translation type="vanished">Pornește triangles imdiat după logarea în sistem</translation>
-    </message>
-    <message>
-        <source>&amp;Start triangles on system login</source>
-        <translation type="vanished">$Pornește triangles la logarea în sistem</translation>
-    </message>
-    <message>
-        <location line="+41"/>
+        <location line="+63"/>
         <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
         <translation>Detașați bloc și baze de date de adrese la închidere. Acest lucru înseamnă că pot fi mutate într-u  alt director de date, dar incetineste închiderea. Portofelul este întotdeauna detașat.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Detach databases at shutdown</source>
         <translation>&amp;Detasaza baza de date la inchidere</translation>
     </message>
@@ -1133,75 +1191,67 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>&amp;Retea</translation>
     </message>
     <message>
-        <source>Automatically open the triangles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="vanished">Deschide automat portul pentru cientul triangles pe router. Aces lucru este posibil doara daca routerul suporta UPnP si este activat</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+26"/>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapeaza portul folosind &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the triangles network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation type="vanished">Conecteaza la reteaua triangles prinr-un proxy SOCKS(ex. cand te conectezi prin Tor)</translation>
-    </message>
-    <message>
-        <location line="-43"/>
+        <location line="-82"/>
         <source>Automatically start Triangles after logging in to the system.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Start Triangles on system login</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+54"/>
         <source>Automatically open the Triangles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+27"/>
         <source>Connect to the Triangles network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Connect through SOCKS proxy:</source>
         <translation>Conectează-te printr-un proxy socks</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+16"/>
         <source>Proxy &amp;IP:</source>
         <translation>Proxy &amp;IP:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
         <translation>Adresa IP a proxy-ului(ex. 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>&amp;Port:</source>
         <translation>&amp;Port:</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>Port of the proxy (e.g. 9050)</source>
         <translation>Portul pe care se concetează proxy serverul (de exemplu: 9050)</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+14"/>
         <source>SOCKS &amp;Version:</source>
         <translation>SOCKS &amp;Versiune:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+254"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
         <translation>Versiunea SOCKS a proxiului (ex. 5)</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+54"/>
         <source>&amp;Window</source>
         <translation>&amp;Fereastra</translation>
     </message>
@@ -1211,7 +1261,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Afişează doar un icon in tray la ascunderea ferestrei</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
         <translation>&amp;M Ascunde în tray în loc de taskbar</translation>
     </message>
@@ -1221,7 +1271,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Ascunde fereastra în locul părăsirii programului în momentul închiderii ferestrei. Când acestă opţiune e activă, aplicaţia se va opri doar în momentul selectării comenzii Quit din menu.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>M&amp;inimize on close</source>
         <translation>&amp;i Ascunde fereastra în locul închiderii programului</translation>
     </message>
@@ -1236,35 +1286,27 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Interfata &amp; limba userului</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>The user interface language can be set here. This setting will take effect after restarting Triangles.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
+        <location line="+97"/>
         <source>Whether to show TRI addresses in the transaction list or not.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting triangles.</source>
-        <translation type="vanished">Limba interfeței utilizator poate fi setat aici. Această setare va avea efect după repornirea triangles.</translation>
-    </message>
-    <message>
-        <location line="-22"/>
+        <location line="-57"/>
         <source>&amp;Unit to show amounts in:</source>
         <translation>&amp;Unitatea de măsură pentru afişarea sumelor:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
         <translation>Alege subdiviziunea folosită la afişarea interfeţei şi la trimiterea de triangles.</translation>
     </message>
     <message>
-        <source>Whether to show triangles addresses in the transaction list or not.</source>
-        <translation type="vanished">Dacă să arate adrese triangles din lista de tranzacție sau nu.</translation>
-    </message>
-    <message>
-        <location line="+12"/>
+        <location line="+52"/>
         <source>&amp;Display addresses in transaction list</source>
         <translation>&amp;Afişează adresele în lista de tranzacţii</translation>
     </message>
@@ -1274,27 +1316,27 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Dacă să se afişeze controlul caracteristicilor monedei sau nu.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+14"/>
         <source>Display coin &amp;control features (experts only!)</source>
         <translation>Afiseaza &amp;caracteristiclei de control ale monedei(numai experti!)</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+91"/>
         <source>&amp;OK</source>
         <translation>&amp; OK</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+27"/>
         <source>&amp;Cancel</source>
         <translation>&amp; Renunta</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>&amp;Apply</source>
         <translation>&amp;Aplica</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+55"/>
+        <location filename="../optionsdialog.cpp" line="+58"/>
         <source>default</source>
         <translation>Initial</translation>
     </message>
@@ -1311,10 +1353,6 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This setting will take effect after restarting triangles.</source>
-        <translation type="vanished">Aceasta setare va avea efect dupa repornirea triangles.</translation>
-    </message>
-    <message>
         <location line="+29"/>
         <source>The supplied proxy address is invalid.</source>
         <translation>Adresa triangles pe care a-ti specificat-o este invalida</translation>
@@ -1323,16 +1361,12 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../forms/overviewpage.ui" line="+14"/>
+        <location filename="../forms/overviewpage.ui" line="+429"/>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the triangles network after a connection is established, but this process has not completed yet.</source>
-        <translation type="vanished">Informatia afisata poate fi depasita.  Portofel se sincronizează automat cu rețeaua triangles după ce se stabilește o conexiune, dar acest proces nu s-a finalizat încă.</translation>
-    </message>
-    <message>
-        <location line="+110"/>
+        <location line="+125"/>
         <source>Stake:</source>
         <translation>Stake:</translation>
     </message>
@@ -1367,7 +1401,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Balanta minata care nu s-a maturizat inca</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+30"/>
         <source>Total:</source>
         <translation>Total:</translation>
     </message>
@@ -1377,7 +1411,7 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <translation>Balanța totală curentă</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+75"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Tranzacții recente&lt;/b&gt;</translation>
     </message>
@@ -1385,10 +1419,10 @@ Acest lucru înseamnă că o taxă de cel puțin %2 este necesară</translation>
         <location line="+63"/>
         <source>&lt;head&gt;
 &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
-a:link { color:#000; text-decoration: none;font-weight:bold; }
-a:visited { color:#000; text-decoration: none; }
-a:hover { color:#e22104; text-decoration: none; }
-a:active { color:#000; text-decoration: underline; }
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1399,10 +1433,10 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+25"/>
         <source>&lt;head&gt;
 &lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
-a:link { color:#000; text-decoration: none;font-weight:bold; }
-a:visited { color:#000; text-decoration: none; }
-a:hover { color:#e22104; text-decoration: none; }
-a:active { color:#000; text-decoration: underline; }
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1410,18 +1444,32 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-225"/>
+        <location line="+28"/>
+        <source>&lt;head&gt;
+&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+a:link { color:#f26522; text-decoration: none;font-weight:bold; }
+a:visited { color:#f26522; text-decoration: none; }
+a:hover { color:#f26522; text-decoration: underline; }
+a:active { color:#f26522; text-decoration: underline; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=&quot;http://explorer.triangles.technology&quot;&gt; &amp;#187; TRI block explorer&lt;/a&gt;&lt;/body&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-264"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
         <translation>Total al tranzacțiilor care nu au fost confirmate  încă și nu contează față de balanța curentă</translation>
     </message>
     <message>
         <location line="-116"/>
-        <location line="+260"/>
+        <location line="+271"/>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Triangles network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-184"/>
         <source>Total of coins that was staked, and do not yet count toward the current balance</source>
         <translation>Totalul de monede care au fost in stake si nu sunt numarate in balanta curenta</translation>
     </message>
@@ -1493,7 +1541,7 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>RPCConsole</name>
     <message>
-        <location filename="../forms/rpcconsole.ui" line="+46"/>
+        <location filename="../forms/rpcconsole.ui" line="+679"/>
         <source>Client name</source>
         <translation>Nume client</translation>
     </message>
@@ -1504,15 +1552,15 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+23"/>
         <location line="+23"/>
         <location line="+36"/>
-        <location line="+53"/>
+        <location line="+64"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+348"/>
+        <location filename="../rpcconsole.cpp" line="+351"/>
         <source>N/A</source>
         <translation>N/A</translation>
     </message>
     <message>
-        <location line="-217"/>
+        <location line="-228"/>
         <source>Client version</source>
         <translation>Versiune client</translation>
     </message>
@@ -1522,12 +1570,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>&amp;Informație</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="-228"/>
         <source>Triangles - Debug window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+132"/>
+        <source>Debug window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+111"/>
         <source>Triangles Core</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1557,7 +1610,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Pe testnet</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+34"/>
         <source>Block chain</source>
         <translation>Lanț de blocuri</translation>
     </message>
@@ -1582,7 +1635,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+26"/>
+        <location line="+46"/>
         <source>Show the Triangles-Qt help message to get a list with possible Triangles command-line options.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1597,11 +1650,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Optiuni linii de comandă</translation>
     </message>
     <message>
-        <source>Show the triangles-Qt help message to get a list with possible triangles command-line options.</source>
-        <translation type="vanished">Afișa mesajul de ajutor triangles-Qt pentru a obține o listă cu posibile opțiuni de linie de comandă triangles.</translation>
-    </message>
-    <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>&amp;Show</source>
         <translation>&amp;Arată</translation>
     </message>
@@ -1611,35 +1660,19 @@ a:active { color:#000; text-decoration: underline; }
         <translation>&amp;Consolă</translation>
     </message>
     <message>
-        <location line="-260"/>
+        <location line="-311"/>
         <source>Build date</source>
         <translation>Construit la data</translation>
     </message>
     <message>
-        <source>triangles - Debug window</source>
-        <translation type="vanished">triangles - fereastră depanare</translation>
-    </message>
-    <message>
-        <source>triangles Core</source>
-        <translation type="vanished">triangles Core</translation>
-    </message>
-    <message>
-        <location line="+200"/>
+        <location line="+211"/>
         <source>Debug log file</source>
         <translation>Loguri debug</translation>
     </message>
     <message>
-        <source>Open the triangles debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation type="vanished">Deschideti fisierul de depanare triangles din folderul curent. Acest lucru poate dura cateva secunde pentru fisiere de log mari.</translation>
-    </message>
-    <message>
-        <location line="+109"/>
+        <location line="+160"/>
         <source>Clear console</source>
         <translation>Curăță consola</translation>
-    </message>
-    <message>
-        <source>Welcome to the triangles RPC console.</source>
-        <translation type="vanished">Bine ati venit la consola triangles RPC.</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-33"/>
@@ -1660,8 +1693,8 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendCoinsDialog</name>
     <message>
-        <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+182"/>
+        <location filename="../forms/sendcoinsdialog.ui" line="+429"/>
+        <location filename="../sendcoinsdialog.cpp" line="+229"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1673,12 +1706,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Trimite monede</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+113"/>
+        <source>Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+86"/>
         <source>Coin Control Features</source>
         <translation>Caracteristici control ale monedei</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+37"/>
         <source>Inputs...</source>
         <translation>Intrări</translation>
     </message>
@@ -1712,10 +1750,6 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+51"/>
         <source>Amount:</source>
         <translation>Sumă:</translation>
-    </message>
-    <message>
-        <source>0.00 hack</source>
-        <translation type="vanished">123.456 hack {0.00 ?}</translation>
     </message>
     <message>
         <location line="+22"/>
@@ -1761,17 +1795,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Schimbă:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+61"/>
         <source>custom change address</source>
         <translation>personalizează schimbarea adresei</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+131"/>
         <source>Send to multiple recipients at once</source>
         <translation>Trimite simultan către mai mulți destinatari</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Add &amp;Recipient</source>
         <translation>&amp;Adaugă destinatar</translation>
     </message>
@@ -1781,7 +1815,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Scoateți toate câmpuirile de tranzacții</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
         <translation>Șterge &amp;tot</translation>
     </message>
@@ -1796,30 +1830,22 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>123.456 hack</source>
-        <translation type="vanished">123.456 hack</translation>
-    </message>
-    <message>
         <location line="+31"/>
         <source>Confirm the send action</source>
         <translation>Confirmă operațiunea de trimitere</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>S&amp;end</source>
         <translation>&amp;S Trimite</translation>
     </message>
     <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">Introduceți o adresă triangles(ex:TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location filename="../sendcoinsdialog.cpp" line="-178"/>
+        <location filename="../sendcoinsdialog.cpp" line="-224"/>
         <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+34"/>
         <source>Copy quantity</source>
         <translation>Copiaţi quantitea</translation>
     </message>
@@ -1864,7 +1890,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Confirm send coins</source>
         <translation>Confirmă trimiterea de monede</translation>
     </message>
@@ -1879,7 +1905,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>și</translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+50"/>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>Adresa destinatarului nu este validă, vă rugăm să o verificaţi.</translation>
     </message>
@@ -1924,10 +1950,6 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>WARNING: Invalid triangles address</source>
-        <translation type="vanished">Atenție: Adresă triangles invalidă</translation>
-    </message>
-    <message>
         <location line="+13"/>
         <source>(no label)</source>
         <translation>(fără etichetă)</translation>
@@ -1941,53 +1963,48 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendCoinsEntry</name>
     <message>
-        <location filename="../forms/sendcoinsentry.ui" line="+14"/>
+        <location filename="../forms/sendcoinsentry.ui" line="+429"/>
         <source>Form</source>
         <translation>Formular</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+223"/>
         <source>A&amp;mount:</source>
         <translation>Su&amp;mă:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-201"/>
         <source>Pay &amp;To:</source>
         <translation>Plătește că&amp;tre:</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+177"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Introdu o etichetă pentru această adresă pentru a fi adăugată în lista ta de adrese</translation>
     </message>
     <message>
-        <location line="+9"/>
-        <source>N&amp;arration:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+16"/>
+        <location line="+60"/>
         <source>Enter a short note to send with payment (max 24 characters)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-82"/>
         <source>&amp;Label:</source>
         <translation>&amp;Etichetă:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="-131"/>
         <source>The address to send the payment to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation>Adresa catre care trimiteti plata(ex. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Choose address from address book</source>
         <translation>Alegeti adresa din agenda</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
@@ -1997,7 +2014,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Lipește adresa din clipboard</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation>Alt+P</translation>
     </message>
@@ -2005,10 +2022,6 @@ a:active { color:#000; text-decoration: underline; }
         <location line="+7"/>
         <source>Remove this recipient</source>
         <translation>Scoateti acest destinatar</translation>
-    </message>
-    <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">Introduceți o adresă triangles(ex:TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
@@ -2029,37 +2042,42 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+130"/>
+        <source>Send messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+73"/>
         <source>Address &amp;From:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+32"/>
         <source>Choose address from address book</source>
         <translation type="unfinished">Alegeti adresa din agenda</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+422"/>
         <source>Paste address from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lipește adresa din clipboard</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+64"/>
         <source>Send to multiple recipients at once</source>
         <translation type="unfinished">Trimite simultan către mai mulți destinatari</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Add &amp;Recipient</source>
         <translation type="unfinished">&amp;Adaugă destinatar</translation>
     </message>
@@ -2069,9 +2087,9 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Scoateți toate câmpuirile de tranzacții</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Șterge &amp;tot</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -2079,17 +2097,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Confirmă operațiunea de trimitere</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+22"/>
         <source>S&amp;end</source>
         <translation type="unfinished">&amp;S Trimite</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+34"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../sendmessagesdialog.cpp" line="+37"/>
+        <location filename="../sendmessagesdialog.cpp" line="+40"/>
         <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2099,7 +2117,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+11"/>
         <source>Confirm send messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2114,7 +2132,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">și</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+40"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -2151,32 +2169,32 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>SendMessagesEntry</name>
     <message>
-        <location filename="../forms/sendmessagesentry.ui" line="+14"/>
+        <location filename="../forms/sendmessagesentry.ui" line="+429"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
-        <source>The address to send the payment to  (e.g. 4Zo1ga6xuKuQ7JV7M9rGDoxdbYwV5zgQJ5)</source>
+        <location line="+33"/>
+        <source>The address to send the message to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+17"/>
         <source>Choose address from address book</source>
         <translation type="unfinished">Alegeti adresa din agenda</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+A</source>
         <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paste address from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lipește adresa din clipboard</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+30"/>
         <source>Alt+P</source>
         <translation type="unfinished">Alt+P</translation>
     </message>
@@ -2186,28 +2204,28 @@ a:active { color:#000; text-decoration: underline; }
         <translation type="unfinished">Scoateti acest destinatar</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+39"/>
         <source>&amp;Message:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>Send &amp;To:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+29"/>
+        <location line="+132"/>
         <location filename="../sendmessagesentry.cpp" line="+27"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation type="unfinished">Introdu o etichetă pentru această adresă pentru a fi adăugată în lista ta de adrese</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+17"/>
         <source>&amp;Label:</source>
         <translation type="unfinished">&amp;Etichetă:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+16"/>
         <source>&amp;Public Key:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2228,203 +2246,134 @@ a:active { color:#000; text-decoration: underline; }
     </message>
 </context>
 <context>
-    <name>SignVerifyMessageDialog</name>
+    <name>SignMessagePage</name>
     <message>
-        <location filename="../forms/signverifymessagedialog.ui" line="+14"/>
-        <source>Signatures - Sign / Verify a Message</source>
-        <translation>Semnatura- Semneaza/verifica un mesaj</translation>
+        <location filename="../forms/signmessagepage.ui" line="+429"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+13"/>
-        <location line="+124"/>
-        <source>&amp;Sign Message</source>
-        <translation>Semneaza Mesajul</translation>
+        <location line="+121"/>
+        <source>Sign Message</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-118"/>
-        <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Puteti semna mesaje cu adresa dumneavoastra pentru a demostra ca sunteti proprietarul lor. Aveti grija sa nu semnati nimic vag, deoarece atacurile de tip phishing va pot pacali sa le transferati identitatea. Semnati numai declaratiile detaliate cu care sunteti deacord.</translation>
+        <location line="+76"/>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>The address to sign the message with (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation>Adresa cu care semnati mesajul(ex. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location line="+10"/>
-        <location line="+203"/>
-        <source>Choose an address from the address book</source>
-        <translation>Alegeti o adresa din agenda</translation>
-    </message>
-    <message>
-        <location line="-193"/>
-        <location line="+203"/>
-        <source>Alt+A</source>
-        <translation>Alt+A</translation>
-    </message>
-    <message>
-        <location line="-193"/>
+        <location line="+25"/>
         <source>Paste address from clipboard</source>
-        <translation>Lipiţi adresa copiată in clipboard.</translation>
+        <translation type="unfinished">Lipește adresa din clipboard</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+33"/>
         <source>Alt+P</source>
-        <translation>Alt+P</translation>
+        <translation type="unfinished">Alt+P</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+20"/>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished">Alegeti o adresa din agenda</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>The address to sign the message with (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+30"/>
         <source>Enter the message you want to sign here</source>
-        <translation>Introduce mesajul pe care vrei sa il semnezi, aici.</translation>
+        <translation type="unfinished">Introduce mesajul pe care vrei sa il semnezi, aici.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+32"/>
         <source>Copy the current signature to the system clipboard</source>
-        <translation>Copiaza semnatura curenta in clipboard-ul sistemului</translation>
+        <translation type="unfinished">Copiaza semnatura curenta in clipboard-ul sistemului</translation>
     </message>
     <message>
-        <location line="+21"/>
-        <source>Sign the message to prove you own this TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+146"/>
-        <source>Verify the message to ensure it was signed with the specified TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sign the message to prove you own this triangles address</source>
-        <translation type="vanished">Semnează un mesaj pentru a dovedi că dețineti o adresă triangles</translation>
-    </message>
-    <message>
-        <location line="-129"/>
+        <location line="+142"/>
         <source>Reset all sign message fields</source>
-        <translation>Reseteaza toate spatiile mesajelor semnate.</translation>
+        <translation type="unfinished">Reseteaza toate spatiile mesajelor semnate.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <location line="+146"/>
+        <location line="+23"/>
         <source>Clear &amp;All</source>
-        <translation>Şterge &amp;tot</translation>
+        <translation type="unfinished">Șterge &amp;tot</translation>
     </message>
     <message>
-        <location line="-87"/>
-        <location line="+70"/>
-        <source>&amp;Verify Message</source>
-        <translation>Verifica mesajul</translation>
-    </message>
-    <message>
-        <location line="-64"/>
-        <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
-        <translation>Introduceti adresa de semnatura, mesajul (asigurati-va ca ati copiat spatiile, taburile etc. exact) si semnatura dedesubt pentru a verifica mesajul. Aveti grija sa nu cititi mai mult in semnatura decat mesajul in sine, pentru a evita sa fiti pacaliti de un atac de tip man-in-the-middle.</translation>
-    </message>
-    <message>
-        <location line="+21"/>
-        <source>The address the message was signed with (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation>Adresa cu care a fost semnat mesajul(ex. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <source>Verify the message to ensure it was signed with the specified triangles address</source>
-        <translation type="vanished">Verifică un mesaj pentru a vă asigura că a fost semnat cu o anumită adresă triangles</translation>
-    </message>
-    <message>
-        <location line="+57"/>
-        <source>Reset all verify message fields</source>
-        <translation>Reseteaza toate spatiile mesajelor semnate.</translation>
-    </message>
-    <message>
-        <source>Enter a triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
-        <translation type="vanished">Introduceți o adresă triangles(ex:TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</translation>
-    </message>
-    <message>
-        <location filename="../signverifymessagedialog.cpp" line="+28"/>
-        <source>Click &quot;Sign Message&quot; to generate signature</source>
-        <translation>Click &quot;Semneaza msajul&quot; pentru a genera semnatura</translation>
-    </message>
-    <message>
-        <source>Enter triangles signature</source>
-        <translation type="vanished">Introduceti semnatura triangles</translation>
-    </message>
-    <message>
-        <location line="-1"/>
-        <source>Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
+        <location line="+16"/>
+        <source>Sign the message to prove you own this Triangles address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Enter a TRI address (e.g. w)</source>
+        <location line="+23"/>
+        <source>Sign &amp;Message</source>
+        <translation type="unfinished">Semnează &amp;Mesajul</translation>
+    </message>
+    <message>
+        <location filename="../signmessagepage.cpp" line="+28"/>
+        <source>Enter a Triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Enter TRI signature</source>
-        <translation type="unfinished"></translation>
+        <source>Click &quot;Sign Message&quot; to generate signature</source>
+        <translation type="unfinished">Click &quot;Semneaza msajul&quot; pentru a genera semnatura</translation>
     </message>
     <message>
-        <location line="+82"/>
-        <location line="+81"/>
+        <location line="+12"/>
+        <location line="+53"/>
         <source>The entered address is invalid.</source>
-        <translation>Adresa introdusa nu este valida</translation>
+        <translation type="unfinished">Adresa introdusa nu este valida</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+8"/>
-        <location line="+73"/>
+        <location line="-53"/>
+        <location line="+53"/>
         <location line="+8"/>
         <source>Please check the address and try again.</source>
-        <translation>Te rugam verifica adresa si introduce-o din nou</translation>
+        <translation type="unfinished">Te rugam verifica adresa si introduce-o din nou</translation>
     </message>
     <message>
-        <location line="-81"/>
-        <location line="+81"/>
+        <location line="+0"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>Adresa introdusa nu se refera la o cheie.</translation>
+        <translation type="unfinished">Adresa introdusa nu se refera la o cheie.</translation>
     </message>
     <message>
-        <location line="-73"/>
+        <location line="+8"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation>Blocarea portofelului a fost intrerupta</translation>
+        <translation type="unfinished">Blocarea portofelului a fost intrerupta</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Private key for the entered address is not available.</source>
-        <translation>Cheia privata pentru adresa introdusa nu este valida.</translation>
+        <translation type="unfinished">Cheia privata pentru adresa introdusa nu este valida.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Message signing failed.</source>
-        <translation>Semnarea mesajului a esuat</translation>
+        <translation type="unfinished">Semnarea mesajului a esuat</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation>Mesaj Semnat!</translation>
-    </message>
-    <message>
-        <location line="+59"/>
-        <source>The signature could not be decoded.</source>
-        <translation>Aceasta semnatura nu a putut fi decodata</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <location line="+13"/>
-        <source>Please check the signature and try again.</source>
-        <translation>Verifica semnatura si incearca din nou</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The signature did not match the message digest.</source>
-        <translation>Semnatura nu seamana!</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>Message verification failed.</source>
-        <translation>Verificarea mesajului a esuat</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Message verified.</source>
-        <translation>Mesaj verificat</translation>
+        <translation type="unfinished">Mesaj Semnat!</translation>
     </message>
 </context>
 <context>
@@ -2574,12 +2523,8 @@ a:active { color:#000; text-decoration: underline; }
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 60 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="unfinished">Monedele generate trebuie să se maturizeze 510 blocuri înainte de a fi cheltuite. Când ați generat acest bloc,  a fost trimis la rețea pentru a fi adăugat la lanțul de blocuri. În cazul în care nu reușește să intre în lanț, starea sa se ​​va schimba in &quot;nu a fost acceptat&quot;, și nu va putea fi cheltuit. Acest lucru se poate întâmpla din când în când, dacă un alt nod generează un bloc cu câteva secunde inaintea blocului tau. {60 ?}</translation>
-    </message>
-    <message>
-        <source>Generated coins must mature 510 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation type="vanished">Monedele generate trebuie să se maturizeze 510 blocuri înainte de a fi cheltuite. Când ați generat acest bloc,  a fost trimis la rețea pentru a fi adăugat la lanțul de blocuri. În cazul în care nu reușește să intre în lanț, starea sa se ​​va schimba in &quot;nu a fost acceptat&quot;, și nu va putea fi cheltuit. Acest lucru se poate întâmpla din când în când, dacă un alt nod generează un bloc cu câteva secunde inaintea blocului tau.</translation>
+        <source>Generated coins must mature 7 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished">Monedele generate trebuie să se maturizeze 7 blocuri înainte de a fi cheltuite. Când ați generat acest bloc,  a fost trimis la rețea pentru a fi adăugat la lanțul de blocuri. În cazul în care nu reușește să intre în lanț, starea sa se ​​va schimba in &quot;nu a fost acceptat&quot;, și nu va putea fi cheltuit. Acest lucru se poate întâmpla din când în când, dacă un alt nod generează un bloc cu câteva secunde inaintea blocului tau.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2626,11 +2571,12 @@ a:active { color:#000; text-decoration: underline; }
     <name>TransactionDescDialog</name>
     <message>
         <location filename="../forms/transactiondescdialog.ui" line="+14"/>
+        <location line="+136"/>
         <source>Transaction details</source>
         <translation>Detaliile tranzacției</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+78"/>
         <source>This pane shows a detailed description of the transaction</source>
         <translation>Acest panou afișează o descriere detaliată a tranzacției</translation>
     </message>
@@ -2638,7 +2584,7 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+227"/>
+        <location filename="../transactiontablemodel.cpp" line="+228"/>
         <source>Date</source>
         <translation>Data</translation>
     </message>
@@ -2658,12 +2604,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Cantitate</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+59"/>
         <source>Open until %1</source>
         <translation>Deschis până la %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+9"/>
+        <source>Confirming (%1 of %2 confirmations)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Confirmed (%1 confirmations)</source>
         <translation>Confirmat (%1 confirmări)</translation>
     </message>
@@ -2677,12 +2628,7 @@ a:active { color:#000; text-decoration: underline; }
         </translation>
     </message>
     <message>
-        <location line="-57"/>
-        <source>Narration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+63"/>
+        <location line="+6"/>
         <source>Offline</source>
         <translation>Deconectat</translation>
     </message>
@@ -2692,12 +2638,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Neconfirmat</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Confirming (%1 of %2 recommended confirmations)</source>
-        <translation>Confirmare (%1 dintre %2 confirmări recomandate)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Conflicted</source>
         <translation>Conflictual</translation>
     </message>
@@ -2775,13 +2716,13 @@ a:active { color:#000; text-decoration: underline; }
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+55"/>
-        <location line="+16"/>
+        <location filename="../transactionview.cpp" line="+61"/>
+        <location line="+17"/>
         <source>All</source>
         <translation>Toate</translation>
     </message>
     <message>
-        <location line="-15"/>
+        <location line="-16"/>
         <source>Today</source>
         <translation>Astăzi</translation>
     </message>
@@ -2811,7 +2752,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Între...</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Received with</source>
         <translation>Recepționat cu</translation>
     </message>
@@ -2836,17 +2777,17 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Altele</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Enter address or label to search</source>
         <translation>Introdu adresa sau eticheta pentru căutare</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Min amount</source>
         <translation>Cantitatea minimă</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+37"/>
         <source>Copy address</source>
         <translation>Copiază adresa</translation>
     </message>
@@ -2876,7 +2817,7 @@ a:active { color:#000; text-decoration: underline; }
         <translation>Arată detaliile tranzacției</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+165"/>
         <source>Export Transaction Data</source>
         <translation>Exporta datele trazactiei</translation>
     </message>
@@ -2942,11 +2883,20 @@ a:active { color:#000; text-decoration: underline; }
     </message>
 </context>
 <context>
-    <name>Triangles-core</name>
+    <name>TransactionsPage</name>
     <message>
-        <source>triangles version</source>
-        <translation type="vanished">Versiune triangles</translation>
+        <location filename="../forms/transactionspage.ui" line="+240"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+116"/>
+        <source>Transactions</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Triangles-core</name>
     <message>
         <location filename="../trianglesstrings.cpp" line="+34"/>
         <source>Usage:</source>
@@ -3141,10 +3091,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Atentie: setarea -paytxfee este foarte ridicata! Aceasta este taxa tranzactiei pe care o vei plati daca trimiti o tranzactie.</translation>
-    </message>
-    <message>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong triangles will not work properly.</source>
-        <translation type="vanished">Atentie: Va rugam verificati ca timpul si data calculatorului sunt corete. Daca timpul este gresit triangles nu va functiona corect.</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -3364,28 +3310,6 @@ for example: alertnotify=echo %%s | mail -s &quot;Triangles Alert&quot; admin@fo
         <translation>Parola pentru conexiunile JSON-RPC</translation>
     </message>
     <message>
-        <source>%s, you must set a rpcpassword in the configuration file:
- %s
-It is recommended you use the following random password:
-rpcuser=trianglesrpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
-</source>
-        <translation type="vanished">%s, trebuie să configurați o parolă rpc în fișierul de configurare: %s
-Este recomandat să folosiți următoarea parolă generată aleator: rpcuser=trianglesrpc
-rpcpassword=%s
-(nu trebuie să țineți minte această parolă)
-Username-ul și parola NU TREBUIE să fie aceleași.
-Dacă fișierul nu există, creați-l cu drepturi de citire doar de către deținător.
-Este deasemenea recomandat să setați alertnotify pentru a fi notificat de probleme;
-de exemplu: alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo.com
-</translation>
-    </message>
-    <message>
         <location line="-33"/>
         <source>Find peers using internet relay chat (default: 0)</source>
         <translation>Gaseste noduri fosoling irc (implicit: 1) {0)?}</translation>
@@ -3506,14 +3430,6 @@ de exemplu: alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo
         <translation>Portofelul %s este in afara directorului %s</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s.  triangles is probably already running.</source>
-        <translation type="vanished">Nu se poate obtine un lock pe directorul de date &amp;s. Blackoin probabil ruleaza deja.</translation>
-    </message>
-    <message>
-        <source>triangles</source>
-        <translation type="vanished">triangles</translation>
-    </message>
-    <message>
         <location line="+43"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Nu se poate folosi %s pe acest calculator (eroarea returnată este %d, %s)</translation>
@@ -3542,14 +3458,6 @@ de exemplu: alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo
         <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Eroare la încărcarea wallet.dat: Portofel corupt</translation>
-    </message>
-    <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of triangles</source>
-        <translation type="vanished">Eroare la încărcarea wallet.dat: Portofelul necesita o versiune mai noua de triangles</translation>
-    </message>
-    <message>
-        <source>Wallet needed to be rewritten: restart triangles to complete</source>
-        <translation type="vanished">A fost nevoie de rescrierea portofelului: restartați triangles pentru a finaliza</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -3615,10 +3523,6 @@ de exemplu: alertnotify=echo %%s | mail -s &quot;triangles Alert&quot; admin@foo
         <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Adaugă un nod la care te poți conecta pentru a menține conexiunea deschisă</translation>
-    </message>
-    <message>
-        <source>Unable to bind to %s on this computer. triangles is probably already running.</source>
-        <translation type="vanished">Imposibil de conectat %s pe acest computer. Cel mai probabil triangles ruleaza</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -3688,67 +3592,57 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../trianglesgui.cpp" line="+94"/>
+        <location filename="../trianglesgui.cpp" line="+256"/>
+        <location line="+6"/>
         <source>Triangles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-6"/>
+        <location line="+6"/>
         <source>Wallet</source>
         <translation type="unfinished">Portofelul</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+168"/>
+        <location line="+793"/>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Imagine de ansamblu</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-792"/>
         <source>Show general overview of wallet</source>
         <translation type="unfinished">Arată o stare generală de ansamblu a portofelului</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>&amp;Send coins</source>
-        <translation type="unfinished">&amp;Trimite monede</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Send coins to a TRI address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>&amp;Receive coins</source>
-        <translation type="unfinished">Primește monede</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+14"/>
         <source>Show the list of addresses for receiving payments</source>
         <translation type="unfinished">Arată lista de adrese pentru primire plăți</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+821"/>
         <source>&amp;Transactions</source>
         <translation type="unfinished">&amp;Tranzacții</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-820"/>
         <source>Browse transaction history</source>
         <translation type="unfinished">Răsfoiește istoricul tranzacțiilor</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <location line="+815"/>
         <source>&amp;Address Book</source>
         <translation type="unfinished">Agendă</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-814"/>
         <source>Edit the list of stored addresses and labels</source>
         <translation type="unfinished">Editează lista de adrese si etichete stocate</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>&amp;Messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3758,22 +3652,84 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>E&amp;xit</source>
-        <translation type="unfinished">&amp;Ieșire</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Quit application</source>
-        <translation type="unfinished">Închide aplicația</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;About Triangles</source>
+        <location line="+34"/>
+        <location line="+2"/>
+        <source>&amp;Show / Hide Triangles wallet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Show or hide the main Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Encrypt the private keys that belong to your wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+304"/>
+        <source>%n blocks</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Processed %1 blocks of transaction history.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+108"/>
+        <source>&lt;font color=&apos;#f26522&apos;&gt;This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  &lt;/font&gt;Do you want to pay the fee?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+295"/>
+        <source>Options</source>
+        <translation type="unfinished">Setări</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>E&amp;xit</source>
+        <translation type="unfinished">&amp;Ieșire</translation>
+    </message>
+    <message>
+        <location line="-743"/>
+        <source>Quit application</source>
+        <translation type="unfinished">Închide aplicația</translation>
+    </message>
+    <message>
+        <location line="-47"/>
+        <source>&amp;Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send coins to a Triangles address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Receive Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>E&amp;xit Triangles wallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+2"/>
+        <location line="+863"/>
+        <source>&amp;About Triangles</source>
+        <translation type="unfinished">Despre triangles</translation>
+    </message>
+    <message>
+        <location line="-862"/>
         <source>Show information about Triangles</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3798,22 +3754,13 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>&amp;Show / Hide</source>
-        <translation type="unfinished">Arata/Ascunde</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+8"/>
+        <location line="+769"/>
         <source>&amp;Encrypt Wallet...</source>
         <translation type="unfinished">Criptează portofelul electronic...</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Encrypt or decrypt wallet</source>
-        <translation type="unfinished">Criptează sau decriptează portofelul</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-766"/>
         <source>&amp;Backup Wallet...</source>
         <translation type="unfinished">&amp;Fă o copie de siguranță a  portofelului...</translation>
     </message>
@@ -3824,23 +3771,35 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
     </message>
     <message>
         <location line="+1"/>
+        <location line="+767"/>
         <source>&amp;Change Passphrase...</source>
         <translation type="unfinished">S&amp;chimbă parola...</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-766"/>
         <source>Change the passphrase used for wallet encryption</source>
         <translation type="unfinished">Schimbă fraza de acces folosită pentru criptarea portofelului</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+763"/>
         <source>&amp;Unlock Wallet...</source>
         <translation type="unfinished">&amp;Deblochează portofelul</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-762"/>
         <source>Unlock wallet</source>
         <translation type="unfinished">Deblochează portofelul</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>&amp;Unlock Wallet for staking...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unlock wallet for staking</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3854,36 +3813,50 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
     </message>
     <message>
         <location line="+1"/>
+        <location line="+760"/>
         <source>Sign &amp;message...</source>
         <translation type="unfinished">Semnează &amp;mesaj...</translation>
     </message>
     <message>
+        <location line="-759"/>
+        <source>Sign messages with your Triangles addresses to prove you own them</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+1"/>
+        <location line="+759"/>
         <source>&amp;Verify message...</source>
         <translation type="unfinished">&amp;Verifică mesajul...</translation>
     </message>
     <message>
+        <location line="-758"/>
+        <source>Verify messages to ensure they were signed with specified Triangles addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+2"/>
+        <location line="+703"/>
         <source>&amp;Export...</source>
         <translation type="unfinished">&amp;Exportă</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-702"/>
         <source>Export the data in the current tab to a file</source>
         <translation type="unfinished">Exportă datele din tab-ul curent într-un fișier</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
+        <location line="+826"/>
         <source>&amp;Debug window</source>
         <translation type="unfinished">Fereastră &amp;debug</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-825"/>
         <source>Open debugging and diagnostic console</source>
         <translation type="unfinished">Deschide consola de debug și diagnosticare</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+28"/>
         <source>&amp;File</source>
         <translation type="unfinished">&amp;Fișier</translation>
     </message>
@@ -3908,19 +3881,17 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         <translation type="unfinished">Bara de instrumente Actiuni</translation>
     </message>
     <message>
-        <location line="+14"/>
-        <location line="+9"/>
+        <location line="-327"/>
         <source>[testnet]</source>
         <translation type="unfinished">[testnet]</translation>
     </message>
     <message>
-        <location line="+0"/>
-        <location line="+77"/>
+        <location line="+411"/>
         <source>Triangles client</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location line="+70"/>
+        <location line="+106"/>
         <source>%n active connection(s) to Triangles network</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -3929,12 +3900,12 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         </translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+18"/>
         <source>Synchronizing with network...</source>
         <translation type="unfinished">Se sincronizează cu rețeaua...</translation>
     </message>
     <message numerus="yes">
-        <location line="+2"/>
+        <location line="+9"/>
         <source>~%n block(s) remaining</source>
         <translation type="unfinished">
             <numerusform>~%n bloc rămas</numerusform>
@@ -3943,17 +3914,12 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         </translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+7"/>
         <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
         <translation type="unfinished">Descărcat %1 din %2  blocuri din istoricul tranzacțiilor(%3% terminat).</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Downloaded %1 blocks of transaction history.</source>
-        <translation type="unfinished">Descărcat %1 blocuri din istoricul tranzacțiilor.</translation>
-    </message>
-    <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Current difficulty is %1.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4009,17 +3975,12 @@ Dacă fișierul nu există, creează-l cu permisiuni de citire doar de către pr
         <translation type="unfinished">Ultimul bloc primit a fost generat %1.</translation>
     </message>
     <message>
-        <location line="+59"/>
-        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
-        <translation type="unfinished">Această tranzactie este peste limita admisa. Puteți sa trimiteți pentru o taxa de 1%, care este pentru nodurile care proceseaza tranzactia si ajuta la sprijinirea retelei. Vrei să plătești taxa?</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+66"/>
         <source>Confirm transaction fee</source>
         <translation type="unfinished">Confirmă comisinoul tranzacției</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+52"/>
         <source>Sent transaction</source>
         <translation type="unfinished">Tranzacție expediată</translation>
     </message>
@@ -4056,29 +4017,50 @@ Message: %4
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+110"/>
-        <location line="+15"/>
+        <location line="+122"/>
+        <location line="+75"/>
         <source>URI handling</source>
         <translation type="unfinished">Manipulare URI</translation>
     </message>
     <message>
-        <location line="-15"/>
-        <location line="+15"/>
+        <location line="-75"/>
+        <location line="+75"/>
         <source>URI can not be parsed! This can be caused by an invalid TRI address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+53"/>
+        <source>Send Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Receive Triangles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;Lock Wallet...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+112"/>
+        <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked for staking&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation type="unfinished">Portofelul este &lt;b&gt;criptat&lt;/b&gt; iar în momentul de față este &lt;b&gt;deblocat&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation type="unfinished">Portofelul este &lt;b&gt;criptat&lt;/b&gt; iar în momentul de față este &lt;b&gt;blocat&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="-177"/>
+        <location line="+204"/>
         <source>Backup Wallet</source>
         <translation type="unfinished">Fă o copie de siguranță a portofelului</translation>
     </message>
@@ -4089,16 +4071,26 @@ Message: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Backup Failed</source>
-        <translation type="unfinished">Copia de rezerva a esuat</translation>
-    </message>
-    <message>
-        <location line="+0"/>
         <source>There was an error trying to save the wallet data to the new location.</source>
         <translation type="unfinished">Eroare la încercarea de a salva datele portofelului în noua locaţie.</translation>
     </message>
+    <message>
+        <location line="+0"/>
+        <source>Backup failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup successful</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The wallet data was successfully saved to the new location.</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message numerus="yes">
-        <location line="+76"/>
+        <location line="+90"/>
         <source>%n second(s)</source>
         <translation type="unfinished">
             <numerusform>%n secundă</numerusform>
@@ -4163,59 +4155,128 @@ Message: %4
         <source>Not staking</source>
         <translation type="unfinished">Not staking</translation>
     </message>
+</context>
+<context>
+    <name>VerifyMessagePage</name>
     <message>
-        <source>Show information about triangles</source>
-        <translation type="vanished">Arată informații despre triangles</translation>
+        <location filename="../forms/verifymessagepage.ui" line="+429"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Send coins to a triangles address</source>
-        <translation type="vanished">Trimite monede către o adresă triangles</translation>
+        <location line="+121"/>
+        <source>Verify Message</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Modify configuration options for triangles</source>
-        <translation type="vanished">Modifică opțiuni de configurare pentru triangles</translation>
+        <location line="+78"/>
+        <source>Choose an address from the address book</source>
+        <translation type="unfinished">Alegeti o adresa din agenda</translation>
     </message>
     <message>
-        <source>triangles</source>
-        <translation type="vanished">triangles</translation>
+        <location line="+33"/>
+        <source>Alt+A</source>
+        <translation type="unfinished">Alt+A</translation>
     </message>
     <message>
-        <source>&amp;About triangles</source>
-        <translation type="vanished">Despre triangles</translation>
+        <location line="+47"/>
+        <source>The address the message was signed with (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>triangles client</source>
-        <translation type="vanished">Clientul triangles</translation>
-    </message>
-    <message numerus="yes">
-        <source>%n active connection(s) to triangles network</source>
-        <translation type="vanished">
-            <numerusform>%n conexiune activă la reteaua triangles</numerusform>
-            <numerusform>%n conexiuni active la reteaua triangles</numerusform>
-            <numerusform>%n conexiuni active la reteaua triangles</numerusform>
-        </translation>
+        <location line="+52"/>
+        <source>Text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>About triangles card</source>
-        <translation type="vanished">Despre cardul triangles</translation>
+        <location line="+49"/>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show information about triangles card</source>
-        <translation type="vanished">Arată informații despre card triangles</translation>
+        <location line="+23"/>
+        <source>Signature</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>URI can not be parsed! This can be caused by an invalid triangles address or malformed URI parameters.</source>
-        <translation type="vanished">URI nu poate fi parsatt! Cauza poate fi o adresa triangles invalidă sau parametrii URI malformați.</translation>
+        <location line="+121"/>
+        <source>Reset all verify message fields</source>
+        <translation type="unfinished">Reseteaza toate spatiile mesajelor semnate.</translation>
     </message>
     <message>
-        <source>A fatal error occurred. triangles can no longer continue safely and will quit.</source>
-        <translation type="vanished">A apărut o eroare fatală. triangles nu mai poate continua în condiții de siguranță și va iesi.</translation>
+        <location line="+23"/>
+        <source>Clear &amp;All</source>
+        <translation type="unfinished">Șterge &amp;tot</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Verify the message to ensure it was signed with the specified Triangles address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Verify &amp;Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../verifymessagepage.cpp" line="+28"/>
+        <source>Enter a Triangles address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter Triangles signature</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+45"/>
+        <source>The entered address is invalid.</source>
+        <translation type="unfinished">Adresa introdusa nu este valida</translation>
+    </message>
+    <message>
+        <location line="-45"/>
+        <location line="+45"/>
+        <location line="+8"/>
+        <source>Please check the address and try again.</source>
+        <translation type="unfinished">Te rugam verifica adresa si introduce-o din nou</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The entered address does not refer to a key.</source>
+        <translation type="unfinished">Adresa introdusa nu se refera la o cheie.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The signature could not be decoded.</source>
+        <translation type="unfinished">Aceasta semnatura nu a putut fi decodata</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+13"/>
+        <source>Please check the signature and try again.</source>
+        <translation type="unfinished">Verifica semnatura si incearca din nou</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>The signature did not match the message digest.</source>
+        <translation type="unfinished">Semnatura nu seamana!</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Message verification failed.</source>
+        <translation type="unfinished">Verificarea mesajului a esuat</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Message verified.</source>
+        <translation type="unfinished">Mesaj verificat</translation>
     </message>
 </context>
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+346"/>
+        <location filename="../walletmodel.cpp" line="+249"/>
         <source>Sending...</source>
         <translation>Se trimite...</translation>
     </message>

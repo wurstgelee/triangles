@@ -13,7 +13,7 @@
 #include <QPainter>
 
 #define DECORATION_SIZE 64
-#define NUM_ITEMS 3
+#define NUM_ITEMS 5
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
@@ -45,10 +45,6 @@ public:
         bool confirmed = index.data(TransactionTableModel::ConfirmedRole).toBool();
         QVariant value = index.data(Qt::ForegroundRole);
         QColor foreground = option.palette.color(QPalette::Text);
-//        if(qVariantCanConvert<QColor>(value))
-//        {
-//            foreground = qvariant_cast<QColor>(value);
-//        }
 
         painter->setPen(foreground);
         painter->drawText(addressRect, Qt::AlignLeft|Qt::AlignVCenter, address);

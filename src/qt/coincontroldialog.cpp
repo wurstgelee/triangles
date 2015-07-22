@@ -7,6 +7,7 @@
 #include "addresstablemodel.h"
 #include "optionsmodel.h"
 #include "coincontrol.h"
+#include "dialog_move_handler.h"
 
 #include <QApplication>
 #include <QCheckBox>
@@ -31,12 +32,13 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     model(0)
 {
     ui->setupUi(this);
-
+	setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
     // context menu actions
-    QAction *copyAddressAction = new QAction(tr("Copy address"), this);
-    QAction *copyLabelAction = new QAction(tr("Copy label"), this);
-    QAction *copyAmountAction = new QAction(tr("Copy amount"), this);
-             copyTransactionHashAction = new QAction(tr("Copy transaction ID"), this);  // we need to enable/disable this
+    QAction *copyAddressAction = new QAction(QIcon(":/menu_16/copy"), tr("Copy address"), this);
+    QAction *copyLabelAction = new QAction(QIcon(":/menu_16/copy"), tr("Copy label"), this);
+    QAction *copyAmountAction = new QAction(QIcon(":/menu_16/copy"), tr("Copy amount"), this);
+             copyTransactionHashAction = new QAction(QIcon(":/menu_16/copy"), tr("Copy transaction ID"), this);  // we need to enable/disable this
              //lockAction = new QAction(tr("Lock unspent"), this);                        // we need to enable/disable this
              //unlockAction = new QAction(tr("Unlock unspent"), this);                    // we need to enable/disable this
 
@@ -49,6 +51,24 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     //contextMenu->addSeparator();
     //contextMenu->addAction(lockAction);
     //contextMenu->addAction(unlockAction);
+    contextMenu->setStyleSheet("QMenu {\
+                               background-color: #000; \
+                               border: 1px solid #f26522;\
+                               color: #f26522;\
+                           }\
+                           \
+                           QMenu::item {\
+                               background-color: transparent;\
+                           }\
+                           \
+                           QMenu::item:selected {\
+                               color: #f26522;\
+                               background-color: #61280E;\
+                           }\
+                           QMenu::item:disabled {\
+                               color: #61280E;\
+                           }\
+                           ");
 
     // context menu signals
     connect(ui->treeWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showMenu(QPoint)));
@@ -106,8 +126,8 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
 
     ui->treeWidget->setColumnWidth(COLUMN_CHECKBOX, 84);
     ui->treeWidget->setColumnWidth(COLUMN_AMOUNT, 100);
-    ui->treeWidget->setColumnWidth(COLUMN_LABEL, 170);
-    ui->treeWidget->setColumnWidth(COLUMN_ADDRESS, 290);
+    ui->treeWidget->setColumnWidth(COLUMN_LABEL, 180);
+    ui->treeWidget->setColumnWidth(COLUMN_ADDRESS, 300);
     ui->treeWidget->setColumnWidth(COLUMN_DATE, 110);
     ui->treeWidget->setColumnWidth(COLUMN_CONFIRMATIONS, 100);
     ui->treeWidget->setColumnWidth(COLUMN_PRIORITY, 100);
@@ -115,6 +135,43 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     ui->treeWidget->setColumnHidden(COLUMN_VOUT_INDEX, true);     // store vout index in this column, but dont show it
     ui->treeWidget->setColumnHidden(COLUMN_AMOUNT_INT64, true);   // store amount int64_t in this column, but dont show it
     ui->treeWidget->setColumnHidden(COLUMN_PRIORITY_INT64, true); // store priority int64_t in this column, but dont show it
+
+    ui->treeWidget->setStyleSheet("\
+		    CoinControlTreeWidget { \
+			       border: 1px solid #f26522; \
+    		    } \
+        QTreeView::indicator:unchecked{\
+            image: url(:/icons/stylesheet-checkbox-unchecked) 0;\
+            }\
+        QTreeView::indicator:unchecked:disabled{\
+            image: url(:/icons/stylesheet-vline) 0;\
+            }\
+        QTreeView::indicator:checked{\
+            image: url(:/icons/stylesheet-checkbox-checked) 0;\
+            }\
+        QTreeView::indicator:indeterminate{\
+            image: url(:/icons/stylesheet-checkbox-indeterminate) 0;\
+            }\
+        CoinControlTreeWidget::branch:has-siblings:!adjoins-item {\
+            border-image: url(:/icons/stylesheet-vline) 0;\
+            }\
+        CoinControlTreeWidget::branch:has-siblings:adjoins-item {\
+            border-image: url(:/icons/stylesheet-branch-more) 0;\
+            }\
+        CoinControlTreeWidget::branch:!has-children:!has-siblings:adjoins-item {\
+            border-image: url(:/icons/stylesheet-branch-end) 0;\
+            }\
+        CoinControlTreeWidget::branch:has-children:!has-siblings:closed,\
+        CoinControlTreeWidget::branch:closed:has-children:has-siblings {\
+            border-image: none;\
+            image: url(:/icons/stylesheet-branch-closed);\
+            }\
+        CoinControlTreeWidget::branch:open:has-children:!has-siblings,\
+        CoinControlTreeWidget::branch:open:has-children:has-siblings  {\
+            border-image: none;\
+            image: url(:/icons/stylesheet-branch-open);\
+            }\
+        ");
 
     // default view is sorted by amount desc
     sortView(COLUMN_AMOUNT_INT64, Qt::DescendingOrder);
@@ -609,7 +666,7 @@ void CoinControlDialog::updateView()
             itemWalletAddress->setCheckState(COLUMN_CHECKBOX,Qt::Unchecked);
             
             for (int i = 0; i < ui->treeWidget->columnCount(); i++)
-                itemWalletAddress->setBackground(i, QColor(248, 247, 246));
+                itemWalletAddress->setBackground(i, QColor(0, 0, 0));
             
             // label
             itemWalletAddress->setText(COLUMN_LABEL, sWalletLabel);

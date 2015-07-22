@@ -21,7 +21,7 @@ void QValidatedLineEdit::setValid(bool valid)
     }
     else
     {
-        setStyleSheet(STYLE_INVALID);
+        setStyleSheet("border: 1px solid#ff0000;background-color: #1c1c1c;}");
     }
     this->valid = valid;
 }

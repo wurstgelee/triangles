@@ -6,6 +6,10 @@
 class WalletModel;
 class TransactionFilterProxy;
 
+namespace Ui {
+class TransactionsPage;
+}
+
 QT_BEGIN_NAMESPACE
 class QTableView;
 class QComboBox;
@@ -22,8 +26,10 @@ QT_END_NAMESPACE
 class TransactionView : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit TransactionView(QWidget *parent = 0);
+    ~TransactionView();
 
     void setModel(WalletModel *model);
 
@@ -42,7 +48,9 @@ public:
 private:
     WalletModel *model;
     TransactionFilterProxy *transactionProxyModel;
+	Ui::TransactionsPage *ui;
     QTableView *transactionView;
+    bool transactionsSortOrderDown;
 
     QComboBox *dateWidget;
     QComboBox *typeWidget;
@@ -66,7 +74,7 @@ private slots:
     void copyLabel();
     void copyAmount();
     void copyTxID();
-
+ 
 signals:
     void doubleClicked(const QModelIndex&);
 

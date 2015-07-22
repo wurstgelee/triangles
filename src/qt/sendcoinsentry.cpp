@@ -26,6 +26,7 @@ SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
     ui->payTo->setPlaceholderText(tr("Enter a TRI address (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)"));
 	ui->narration->setPlaceholderText(tr("Enter a short note to send with payment. This feature will be enabled later."));
     ui->narration->setEnabled(false);
+    ui->narration->setVisible(false);
 #endif
     setFocusPolicy(Qt::TabFocus);
     setFocusProxy(ui->payTo);

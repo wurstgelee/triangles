@@ -1,4 +1,4 @@
-Triangles (TRI) "Pharao" Version 4.0.0.4 Release, 
+Triangles (TRI) "Black Pharao" Version 4.2.1.0 Release, 
 
 Triangles is a cool new crypto currency that features TOR implementation and secure messaging. 
 

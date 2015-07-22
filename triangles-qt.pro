@@ -1,13 +1,12 @@
 TEMPLATE = app
 TARGET = triangles-qt
 
-VERSION = 4.0.0.4
+VERSION = 4.2.1.0
 INCLUDEPATH += src src/json src/qt src/qt/plugins/mrichtexteditor
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE BOOST_THREAD_PROVIDES_GENERIC_SHARED_MUTEX_ON_WIN __NO_SYSTEM_INCLUDES
 CONFIG += no_include_pwd
 CONFIG += thread
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-lessThan(QT_MAJOR_VERSION, 5): CONFIG += static
+
 QMAKE_CXXFLAGS = -fpermissive
 
 greaterThan(QT_MAJOR_VERSION, 4) {
@@ -96,8 +95,10 @@ contains(USE_UPNP, -) {
     win32:LIBS += -liphlpapi
 }
 
-
-# use: qmake "USE_DBUS=1"
+# use: qmake "USE_DBUS=1" or qmake "USE_DBUS=0"
+linux:count(USE_DBUS, 0) {
+    USE_DBUS=1
+}
 contains(USE_DBUS, 1) {
     message(Building with DBUS (Freedesktop notifications) support)
     DEFINES += USE_DBUS
@@ -117,8 +118,11 @@ contains(USE_IPV6, -) {
 }
 
 contains(TRIANGLES_NEED_QT_PLUGINS, 1) {
+    message(Building with Qt Plugins)
     DEFINES += TRIANGLES_NEED_QT_PLUGINS
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs qtaccessiblewidgets
+} else {
+    message(Building without Qt Plugins)
 }
 
 INCLUDEPATH += src/leveldb/include src/leveldb/helpers
@@ -176,11 +180,7 @@ contains(USE_O3, 1) {
     QMAKE_CFLAGS += -O3
 }
 
-
-    #QMAKE_CXXFLAGS += -msse2
-    #QMAKE_CFLAGS += -msse2
-
-win32-g++ {
+*-g++-32 {
     message("32 platform, adding -msse2 flag")
 
     QMAKE_CXXFLAGS += -msse2
@@ -200,7 +200,6 @@ HEADERS += src/qt/trianglesgui.h \
     src/qt/coincontroltreewidget.h \
     src/qt/sendcoinsdialog.h \
     src/qt/addressbookpage.h \
-    src/qt/signverifymessagedialog.h \
     src/qt/aboutdialog.h \
     src/qt/editaddressdialog.h \
     src/qt/trianglesaddressvalidator.h \
@@ -280,6 +279,9 @@ HEADERS += src/qt/trianglesgui.h \
     src/sph_skein.h \
     src/sph_types.h \
     src/qt/messagepage.h \
+    src/qt/dialog_move_handler.h \
+    src/qt/signmessagepage.h \
+    src/qt/verifymessagepage.h \
     src/qt/messagemodel.h \
     src/qt/sendmessagesdialog.h \
     src/qt/sendmessagesentry.h \
@@ -304,7 +306,6 @@ SOURCES += src/qt/triangles.cpp src/qt/trianglesgui.cpp \
     src/qt/coincontroldialog.cpp \
     src/qt/coincontroltreewidget.cpp \
     src/qt/addressbookpage.cpp \
-    src/qt/signverifymessagedialog.cpp \
     src/qt/aboutdialog.cpp \
     src/qt/editaddressdialog.cpp \
     src/qt/trianglesaddressvalidator.cpp \
@@ -437,6 +438,9 @@ SOURCES += src/qt/triangles.cpp src/qt/trianglesgui.cpp \
     src/qt/qtipcserver.cpp \
     src/qt/rpcconsole.cpp \
     src/qt/messagepage.cpp \
+    src/qt/dialog_move_handler.cpp \
+    src/qt/signmessagepage.cpp \
+    src/qt/verifymessagepage.cpp \
     src/qt/messagemodel.cpp \
     src/qt/sendmessagesdialog.cpp \
     src/qt/sendmessagesentry.cpp \
@@ -457,7 +461,6 @@ FORMS += \
     src/qt/forms/coincontroldialog.ui \
     src/qt/forms/sendcoinsdialog.ui \
     src/qt/forms/addressbookpage.ui \
-    src/qt/forms/signverifymessagedialog.ui \
     src/qt/forms/aboutdialog.ui \
     src/qt/forms/editaddressdialog.ui \
     src/qt/forms/transactiondescdialog.ui \
@@ -469,7 +472,12 @@ FORMS += \
     src/qt/forms/messagepage.ui \
     src/qt/forms/sendmessagesentry.ui \
     src/qt/forms/sendmessagesdialog.ui \
-    src/qt/plugins/mrichtexteditor/mrichtextedit.ui
+    src/qt/plugins/mrichtexteditor/mrichtextedit.ui \
+    src/qt/forms/mainwindow.ui \
+    src/qt/forms/signmessagepage.ui \
+    src/qt/forms/verifymessagepage.ui \
+    src/qt/forms/transactionspage.ui 
+
 
 contains(USE_QRCODE, 1) {
 HEADERS += src/qt/qrcodedialog.h
@@ -503,11 +511,12 @@ OTHER_FILES += \
 # platform specific defaults, if not overridden on command line
 isEmpty(BOOST_LIB_SUFFIX) {
     macx:BOOST_LIB_SUFFIX = -mt
-    windows:BOOST_LIB_SUFFIX = -mgw48-mt-s-1_550
+    windows:BOOST_LIB_SUFFIX = -mt
 }
 
 isEmpty(BOOST_THREAD_LIB_SUFFIX) {
-    BOOST_THREAD_LIB_SUFFIX = $$BOOST_LIB_SUFFIX
+    win32:BOOST_THREAD_LIB_SUFFIX = _win32$$BOOST_LIB_SUFFIX
+    else:BOOST_THREAD_LIB_SUFFIX = $$BOOST_LIB_SUFFIX
 }
 
 isEmpty(BDB_LIB_PATH) {
@@ -577,6 +586,7 @@ LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
 LIBS += -levent -lz
 # -lgdi32 has to happen after -lcrypto (see  #681)
 windows:LIBS += -lws2_32 -lshlwapi -lmswsock -lole32 -loleaut32 -luuid -lgdi32
+
 LIBS += -lboost_system$$BOOST_LIB_SUFFIX -lboost_filesystem$$BOOST_LIB_SUFFIX -lboost_program_options$$BOOST_LIB_SUFFIX -lboost_thread$$BOOST_THREAD_LIB_SUFFIX
 windows:LIBS += -lboost_chrono$$BOOST_LIB_SUFFIX
 

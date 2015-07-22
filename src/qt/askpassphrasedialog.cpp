@@ -1,5 +1,6 @@
 #include "askpassphrasedialog.h"
 #include "ui_askpassphrasedialog.h"
+#include "dialog_move_handler.h"
 
 #include "guiconstants.h"
 #include "walletmodel.h"
@@ -18,6 +19,8 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
     fCapsLock(false)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
     ui->passEdit1->setMaxLength(MAX_PASSPHRASE_SIZE);
     ui->passEdit2->setMaxLength(MAX_PASSPHRASE_SIZE);
     ui->passEdit3->setMaxLength(MAX_PASSPHRASE_SIZE);
@@ -27,36 +30,46 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
     ui->passEdit2->installEventFilter(this);
     ui->passEdit3->installEventFilter(this);
 
+    ui->stakingCheckBox->hide();
+
     switch(mode)
     {
         case Encrypt: // Ask passphrase x2
+            ui->lbTitleIcon_Passphrase->hide();
+            ui->lbTitleIcon_Unlock->hide();
             ui->passLabel1->hide();
             ui->passEdit1->hide();
             ui->warningLabel->setText(tr("Enter the new passphrase to the wallet.<br/>Please use a passphrase of <b>10 or more random characters</b>, or <b>eight or more words</b>."));
-            setWindowTitle(tr("Encrypt wallet"));
+            ui->lbTitle->setText(tr("Encrypt wallet"));
             break;
         case UnlockStaking:
-            ui->stakingCheckBox->setChecked(true);
+            ui->stakingCheckBox->setChecked(false);
             ui->stakingCheckBox->show();
             // fallthru
         case Unlock: // Ask passphrase
+            ui->lbTitleIcon_Lock->hide();
+            ui->lbTitleIcon_Passphrase->hide();
             ui->warningLabel->setText(tr("This operation needs your wallet passphrase to unlock the wallet."));
             ui->passLabel2->hide();
             ui->passEdit2->hide();
             ui->passLabel3->hide();
             ui->passEdit3->hide();
-            setWindowTitle(tr("Unlock wallet"));
+            ui->lbTitle->setText(tr("Unlock wallet"));
             break;
         case Decrypt:   // Ask passphrase
+            ui->lbTitleIcon_Lock->hide();
+            ui->lbTitleIcon_Passphrase->hide();
             ui->warningLabel->setText(tr("This operation needs your wallet passphrase to decrypt the wallet."));
             ui->passLabel2->hide();
             ui->passEdit2->hide();
             ui->passLabel3->hide();
             ui->passEdit3->hide();
-            setWindowTitle(tr("Decrypt wallet"));
+            ui->lbTitle->setText(tr("Decrypt wallet"));
             break;
         case ChangePass: // Ask old passphrase + new passphrase x2
-            setWindowTitle(tr("Change passphrase"));
+            ui->lbTitleIcon_Lock->hide();
+            ui->lbTitleIcon_Unlock->hide();
+            ui->lbTitle->setText(tr("Change passphrase"));
             ui->warningLabel->setText(tr("Enter the old and new passphrase to the wallet."));
             break;
     }
@@ -69,10 +82,7 @@ AskPassphraseDialog::AskPassphraseDialog(Mode mode, QWidget *parent) :
 
 AskPassphraseDialog::~AskPassphraseDialog()
 {
-    // Attempt to overwrite text so that they do not linger around in memory
-    ui->passEdit1->setText(QString(" ").repeated(ui->passEdit1->text().size()));
-    ui->passEdit2->setText(QString(" ").repeated(ui->passEdit2->text().size()));
-    ui->passEdit3->setText(QString(" ").repeated(ui->passEdit3->text().size()));
+    secureClearPassFields();
     delete ui;
 }
 
@@ -103,40 +113,107 @@ void AskPassphraseDialog::accept()
             // Cannot encrypt with empty passphrase
             break;
         }
-        QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm wallet encryption"),
-                 tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR COINS</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
-                 QMessageBox::Yes|QMessageBox::Cancel,
-                 QMessageBox::Cancel);
+
+        QMessageBox* msgBox = new QMessageBox(QMessageBox::Question,
+                                          tr("Confirm wallet encryption"),
+                                          tr("Warning: If you encrypt your wallet and lose your passphrase, you will <b>LOSE ALL OF YOUR COINS</b>!") + "<br><br>" + tr("Are you sure you wish to encrypt your wallet?"),
+                                          QMessageBox::Yes|QMessageBox::Cancel, this,
+                                          Qt::FramelessWindowHint);
+
+
+        msgBox->setIconPixmap(QPixmap(":/msgbox/question"));
+        msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+        msgBox->button(QMessageBox::Yes)->setStyleSheet("\
+                                  QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                      min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                  QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                  QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                  ");
+
+        msgBox->button(QMessageBox::Cancel)->setStyleSheet("\
+                                  QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                      min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                  QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                  QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                  ");
+        int retval = msgBox->exec();
+
         if(retval == QMessageBox::Yes)
         {
             if(newpass1 == newpass2)
             {
                 if(model->setWalletEncrypted(true, newpass1))
                 {
-                    QMessageBox::warning(this, tr("Wallet encrypted"),
-                                         "<qt>" + 
-                                         tr("Triangles will close now to finish the encryption process. "
-                                         "Remember that encrypting your wallet cannot fully protect "
-                                         "your coins from being stolen by malware infecting your computer.") + 
-                                         "<br><br><b>" + 
-                                         tr("IMPORTANT: Any previous backups you have made of your wallet file "
-                                         "should be replaced with the newly generated, encrypted wallet file. "
-                                         "For security reasons, previous backups of the unencrypted wallet file "
-                                         "will become useless as soon as you start using the new, encrypted wallet.") + 
-                                         "</b></qt>");
+
+                    QMessageBox* msgBox = new QMessageBox(QMessageBox::Warning,
+                                                      tr("Wallet encrypted"),
+                                                          "<qt>" +
+                                                          tr("Triangles will close now to finish the encryption process. "
+                                                          "Remember that encrypting your wallet cannot fully protect "
+                                                          "your coins from being stolen by malware infecting your computer.") +
+                                                          "<br><br><b>" +
+                                                          tr("IMPORTANT: Any previous backups you have made of your wallet file "
+                                                          "should be replaced with the newly generated, encrypted wallet file. "
+                                                          "For security reasons, previous backups of the unencrypted wallet file "
+                                                          "will become useless as soon as you start using the new, encrypted wallet.") +
+                                                          "</b></qt>",
+                                                      QMessageBox::Ok, this,
+                                                      Qt::FramelessWindowHint);
+
+                    msgBox->setIconPixmap(QPixmap(":/msgbox/warning"));
+                    msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+                    msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                                      QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                          min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                      QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                      QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                      ");
+
+                    msgBox->exec();
+
                     QApplication::quit();
                 }
                 else
                 {
-                    QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                         tr("Wallet encryption failed due to an internal error. Your wallet was not encrypted."));
+
+                    QMessageBox* msgBox = new QMessageBox(QMessageBox::Critical,
+                                                      tr("Wallet encryption failed"),
+                                                      tr("Wallet encryption failed due to an internal error. Your wallet was not encrypted."),
+                                                      QMessageBox::Ok, this,
+                                                      Qt::FramelessWindowHint);
+
+                    msgBox->setIconPixmap(QPixmap(":/msgbox/critical"));
+                    msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+                    msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                                      QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                          min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                      QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                      QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                      ");
+
+                    msgBox->exec();
                 }
                 QDialog::accept(); // Success
             }
             else
             {
-                QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                     tr("The supplied passphrases do not match."));
+
+                QMessageBox* msgBox = new QMessageBox(QMessageBox::Critical,
+                                                  tr("Wallet encryption failed"),
+                                                  tr("The supplied passphrases do not match."),
+                                                  QMessageBox::Ok, this,
+                                                  Qt::FramelessWindowHint);
+
+                msgBox->setIconPixmap(QPixmap(":/msgbox/critical"));
+                msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+                msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                                  QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                      min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                  QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                  QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                  ");
+
+                msgBox->exec();
             }
         }
         else
@@ -148,8 +225,23 @@ void AskPassphraseDialog::accept()
     case Unlock:
         if(!model->setWalletLocked(false, oldpass))
         {
-            QMessageBox::critical(this, tr("Wallet unlock failed"),
-                                  tr("The passphrase entered for the wallet decryption was incorrect."));
+
+            QMessageBox* msgBox = new QMessageBox(QMessageBox::Critical,
+                                              tr("Wallet unlock failed"),
+                                              tr("The passphrase entered for the wallet decryption was incorrect!"),
+                                              QMessageBox::Ok, this,
+                                              Qt::FramelessWindowHint);
+
+            msgBox->setIconPixmap(QPixmap(":/msgbox/critical"));
+            msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+            msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                              QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                  min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                              QMessageBox QPushButton:hover {background-color: #61280E;}\
+                              QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                              ");
+
+            msgBox->exec();
         }
         else
         {
@@ -160,8 +252,22 @@ void AskPassphraseDialog::accept()
     case Decrypt:
         if(!model->setWalletEncrypted(false, oldpass))
         {
-            QMessageBox::critical(this, tr("Wallet decryption failed"),
-                                  tr("The passphrase entered for the wallet decryption was incorrect."));
+            QMessageBox* msgBox = new QMessageBox(QMessageBox::Critical,
+                                              tr("Wallet decryption failed"),
+                                              tr("The passphrase entered for the wallet decryption was incorrect!"),
+                                              QMessageBox::Ok, this,
+                                              Qt::FramelessWindowHint);
+
+            msgBox->setIconPixmap(QPixmap(":/msgbox/critical"));
+            msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+            msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                              QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                  min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                              QMessageBox QPushButton:hover {background-color: #61280E;}\
+                              QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                              ");
+
+            msgBox->exec();
         }
         else
         {
@@ -173,20 +279,65 @@ void AskPassphraseDialog::accept()
         {
             if(model->changePassphrase(oldpass, newpass1))
             {
-                QMessageBox::information(this, tr("Wallet encrypted"),
-                                     tr("Wallet passphrase was successfully changed."));
+
+                QMessageBox* msgBox = new QMessageBox(QMessageBox::Information,
+                                                  tr("Wallet encrypted"),
+                                                  tr("Wallet passphrase was successfully changed."),
+                                                  QMessageBox::Ok, this,
+                                                  Qt::FramelessWindowHint);
+
+                msgBox->setIconPixmap(QPixmap(":/msgbox/information"));
+                msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+                msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                                  QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                      min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                  QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                  QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                  ");
+
+                msgBox->exec();
+
                 QDialog::accept(); // Success
             }
             else
             {
-                QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                     tr("The passphrase entered for the wallet decryption was incorrect."));
+
+                QMessageBox* msgBox = new QMessageBox(QMessageBox::Critical,
+                                                  tr("Wallet encryption failed"),
+                                                  tr("The passphrase entered for the wallet decryption was incorrect!"),
+                                                  QMessageBox::Ok, this,
+                                                  Qt::FramelessWindowHint);
+
+                msgBox->setIconPixmap(QPixmap(":/msgbox/critical"));
+                msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+                msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                                  QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                      min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                                  QMessageBox QPushButton:hover {background-color: #61280E;}\
+                                  QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                                  ");
+
+                msgBox->exec();
             }
         }
         else
         {
-            QMessageBox::critical(this, tr("Wallet encryption failed"),
-                                 tr("The supplied passphrases do not match."));
+
+            QMessageBox* msgBox = new QMessageBox(QMessageBox::Critical,
+                                              tr("Wallet encryption failed"),
+                                              tr("The supplied passphrases do not match."),
+                                              QMessageBox::Ok, this,
+                                              Qt::FramelessWindowHint);
+
+            msgBox->setIconPixmap(QPixmap(":/msgbox/critical"));
+            msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+            msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                              QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                                  min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                              QMessageBox QPushButton:hover {background-color: #61280E;}\
+                              QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                             ");
+            msgBox->exec();
         }
         break;
     }
@@ -254,4 +405,15 @@ bool AskPassphraseDialog::eventFilter(QObject *object, QEvent *event)
         }
     }
     return QDialog::eventFilter(object, event);
+}
+void AskPassphraseDialog::secureClearPassFields()
+{
+    // Attempt to overwrite text so that they do not linger around in memory
+    ui->passEdit1->setText(QString(" ").repeated(ui->passEdit1->text().size()));
+    ui->passEdit2->setText(QString(" ").repeated(ui->passEdit2->text().size()));
+    ui->passEdit3->setText(QString(" ").repeated(ui->passEdit3->text().size()));
+
+    ui->passEdit1->clear();
+    ui->passEdit2->clear();
+    ui->passEdit3->clear();
 }

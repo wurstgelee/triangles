@@ -5,6 +5,7 @@
 #include "monitoreddatamapper.h"
 #include "netbase.h"
 #include "optionsmodel.h"
+#include "dialog_move_handler.h"
 
 #include <QDir>
 #include <QIntValidator>
@@ -23,6 +24,8 @@ OptionsDialog::OptionsDialog(QWidget *parent) :
     fProxyIpValid(true)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
 
     /* Network elements init */
 #ifndef USE_UPNP
@@ -201,7 +204,22 @@ void OptionsDialog::showRestartWarning_Proxy()
 {
     if(!fRestartWarningDisplayed_Proxy)
     {
-        QMessageBox::warning(this, tr("Warning"), tr("This setting will take effect after restarting Triangles."), QMessageBox::Ok);
+        QMessageBox* msgBox = new QMessageBox(QMessageBox::Warning,
+                                          tr("Warning"),
+                                          tr("This setting will take effect after restarting Triangles!\n" "You shouldn't tamper with proxy settings unless you know exactly what you are doing!"),
+                                          QMessageBox::Ok, this,
+                                          Qt::FramelessWindowHint);
+    
+        msgBox->setIconPixmap(QPixmap(":/msgbox/warning"));
+        msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+        msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+        msgBox->exec();
+                                  
         fRestartWarningDisplayed_Proxy = true;
     }
 }
@@ -210,7 +228,23 @@ void OptionsDialog::showRestartWarning_Lang()
 {
     if(!fRestartWarningDisplayed_Lang)
     {
-        QMessageBox::warning(this, tr("Warning"), tr("This setting will take effect after restarting Triangles."), QMessageBox::Ok);
+        QMessageBox* msgBox = new QMessageBox(QMessageBox::Warning,
+                                          tr("Warning"),
+                                          tr("This setting will take effect after restarting Triangles!"),
+                                          QMessageBox::Ok, this,
+                                          Qt::FramelessWindowHint);
+    
+
+        msgBox->setIconPixmap(QPixmap(":/msgbox/warning"));
+        msgBox->setStyleSheet("QMessageBox { border: 2px solid #e22104;}");
+        msgBox->button(QMessageBox::Ok)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+        msgBox->exec();
+
         fRestartWarningDisplayed_Lang = true;
     }
 }

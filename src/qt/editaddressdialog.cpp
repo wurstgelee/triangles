@@ -8,6 +8,7 @@
 #include "base58.h"
 #include "clientmodel.h"
 #include "trianglesrpc.h"
+#include "dialog_move_handler.h"
 
 #include <QDataWidgetMapper>
 #include <QMessageBox>
@@ -17,6 +18,8 @@ EditAddressDialog::EditAddressDialog(Mode mode, QWidget *parent) :
     ui(new Ui::EditAddressDialog), mapper(0), mode(mode), model(0)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
 
     GUIUtil::setupAddressWidget(ui->addressEdit, this);
 
@@ -24,28 +27,44 @@ EditAddressDialog::EditAddressDialog(Mode mode, QWidget *parent) :
     {
     case NewReceivingAddress:
         setWindowTitle(tr("New receiving address"));
+        ui->lbTitle->setText(tr("New receiving address"));
+        ui->picSend->setVisible(false);
         ui->addressEdit->setEnabled(false);
 		ui->addressEdit->setVisible(false);
-        if (!fTestNet && (pindexBest->nHeight < 27000)) {
-		ui->stealthCB->setEnabled(false); }		
-		if (fTestNet || pindexBest->nHeight > 26999) {
-		ui->stealthCB->setEnabled(true); }
-        ui->stealthCB->setVisible(true);
+        ui->pasteButton->setEnabled(false);
+        ui->pasteButton->setVisible(false);
+        ui->label_address->setVisible(false);
+        ui->stealthCB->setEnabled(false);
+        ui->stealthCB->setVisible(false);
         break;
     case NewSendingAddress:
         setWindowTitle(tr("New sending address"));
-		ui->stealthCB->setVisible(false);
+        ui->lbTitle->setText(tr("New sending address"));
+        ui->picReceive->setVisible(false);
+        ui->stealthCB->setEnabled(false);
+        ui->stealthCB->setVisible(false);
         break;
     case EditReceivingAddress:
         setWindowTitle(tr("Edit receiving address"));
+        ui->picSend->setVisible(false);
+        ui->lbTitle->setText(tr("Edit receiving address"));
         ui->addressEdit->setEnabled(false);
 		ui->addressEdit->setVisible(true);
+        ui->pasteButton->setEnabled(false);
+        ui->pasteButton->setVisible(false);
         ui->stealthCB->setEnabled(false);
-        ui->stealthCB->setVisible(true);
+        ui->stealthCB->setVisible(false);
         break;
     case EditSendingAddress:
         setWindowTitle(tr("Edit sending address"));
-		ui->stealthCB->setVisible(false);
+        ui->lbTitle->setText(tr("Edit sending address"));
+        ui->picReceive->setVisible(false);
+        ui->addressEdit->setEnabled(false);
+        ui->addressEdit->setVisible(true);
+        ui->pasteButton->setEnabled(false);
+        ui->pasteButton->setVisible(false);
+        ui->stealthCB->setEnabled(false);
+        ui->stealthCB->setVisible(false);
         break;
     }
 

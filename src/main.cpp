@@ -3624,7 +3624,7 @@ bool ProcessMessages(CNode* pfrom)
             PrintExceptionContinue(NULL, "ProcessMessages()");
         }
 
-        if (!fRet)
+        if (!fRet && fDebug)
             printf("ProcessMessage(%s, %u bytes) FAILED\n", strCommand.c_str(), nMessageSize);
     }
 

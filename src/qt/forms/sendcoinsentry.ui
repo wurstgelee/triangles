@@ -7,11 +7,441 @@
     <x>0</x>
     <y>0</y>
     <width>729</width>
-    <height>142</height>
+    <height>103</height>
    </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>101</green>
+        <blue>34</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>180</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>140</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>161</red>
+        <green>67</green>
+        <blue>22</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>178</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>101</green>
+        <blue>34</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>180</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>140</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>161</red>
+        <green>67</green>
+        <blue>22</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>178</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>180</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>140</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>161</red>
+        <green>67</green>
+        <blue>22</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>101</green>
+        <blue>34</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#SendCoinsEntry{
+	background-color: #000;
+	border: 1px solid #f26522;
+	}
+
+TrianglesAmountField QAbstractItemView {
+	background-color: #1c1c1c;
+	selection-background-color:#61280E;
+	outline: 0px;
+	selection-color: #f26522; 
+	border: 1px solid #f26522;
+	color:#f26522;
+	}</string>
   </property>
   <property name="frameShape">
    <enum>QFrame::StyledPanel</enum>
@@ -20,24 +450,11 @@
    <enum>QFrame::Sunken</enum>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <property name="spacing">
-    <number>12</number>
-   </property>
-   <item row="6" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>A&amp;mount:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>payAmount</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0">
+   <item row="0" column="0">
     <widget class="QLabel" name="label_2">
+     <property name="styleSheet">
+      <string notr="true">color: #f26522;</string>
+     </property>
      <property name="text">
       <string>Pay &amp;To:</string>
      </property>
@@ -49,71 +466,27 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="1">
-    <widget class="TrianglesAmountField" name="payAmount"/>
-   </item>
-   <item row="4" column="1">
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <property name="spacing">
-      <number>0</number>
-     </property>
-     <item>
-      <widget class="QValidatedLineEdit" name="addAsLabel">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="toolTip">
-        <string>Enter a label for this address to add it to your address book</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>N&amp;arration:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>narration</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="1">
-    <widget class="QValidatedLineEdit" name="narration">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="toolTip">
-      <string>Enter a short note to send with payment (max 24 characters)</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>&amp;Label:</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <property name="buddy">
-      <cstring>addAsLabel</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
+   <item row="0" column="1" colspan="2">
     <layout class="QHBoxLayout" name="payToLayout">
      <property name="spacing">
-      <number>0</number>
+      <number>6</number>
      </property>
      <item>
       <widget class="QValidatedLineEdit" name="payTo">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>22</height>
+        </size>
+       </property>
        <property name="toolTip">
         <string>The address to send the payment to  (e.g. TXc7mPCNFFpinDonuSH5PNVY9S8nBcvGQm)</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+	background-color: #1c1c1c;
+	border: 1px solid #f26522;
+	}</string>
        </property>
        <property name="maxLength">
         <number>34</number>
@@ -125,12 +498,32 @@
        <property name="toolTip">
         <string>Choose address from address book</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QToolButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QToolButton:pressed:flat {
+	color: #000;
+	background-color: #f26522;
+	}
+
+QToolButton:hover {
+	background-color: #61280E;
+	}
+
+QToolButton:!enabled {
+	color: #61280E;
+	}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
        <property name="icon">
         <iconset resource="../triangles.qrc">
-         <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
+         <normaloff>:/menu_16/addressbook</normaloff>:/menu_16/addressbook</iconset>
        </property>
        <property name="shortcut">
         <string>Alt+A</string>
@@ -142,12 +535,32 @@
        <property name="toolTip">
         <string>Paste address from clipboard</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QToolButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QToolButton:pressed:flat {
+	color: #000;
+	background-color: #f26522;
+	}
+
+QToolButton:hover {
+	background-color: #61280E;
+	}
+
+QToolButton:!enabled {
+	color: #61280E;
+	}</string>
+       </property>
        <property name="text">
         <string/>
        </property>
        <property name="icon">
         <iconset resource="../triangles.qrc">
-         <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
+         <normaloff>:/menu_16/paste</normaloff>:/menu_16/paste</iconset>
        </property>
        <property name="shortcut">
         <string>Alt+P</string>
@@ -158,6 +571,26 @@
       <widget class="QToolButton" name="deleteButton">
        <property name="toolTip">
         <string>Remove this recipient</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QToolButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QToolButton:pressed:flat {
+	color: #000;
+	background-color: #f26522;
+	}
+
+QToolButton:hover {
+	background-color: #61280E;
+	}
+
+QToolButton:!enabled {
+	color: #61280E;
+	}</string>
        </property>
        <property name="text">
         <string/>
@@ -170,19 +603,213 @@
      </item>
     </layout>
    </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="styleSheet">
+      <string notr="true">color: #f26522;
+      </string>
+     </property>
+     <property name="text">
+      <string>&amp;Label:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>addAsLabel</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QValidatedLineEdit" name="addAsLabel">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Enter a label for this address to add it to your address book</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	background-color: #1c1c1c;
+	border: 1px solid #f26522;
+	}</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #f26522;
+      </string>
+     </property>
+     <property name="text">
+      <string>A&amp;mount:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="buddy">
+      <cstring>payAmount</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="TrianglesAmountField" name="payAmount">
+     <property name="minimumSize">
+      <size>
+       <width>70</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="Button">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>28</red>
+           <green>28</green>
+           <blue>28</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 1px solid #f26522;
+	background-color: #1c1c1c;
+      </string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QValidatedLineEdit" name="narration">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Enter a short note to send with payment (max 24 characters)</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit
+	{
+	background-color: #1c1c1c;
+	border: 1px solid #f26522;
+	}</string>
+     </property>
+    </widget>
+   </item>
   </layout>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qvalidatedlineedit.h</header>
+  </customwidget>
   <customwidget>
    <class>TrianglesAmountField</class>
    <extends>QSpinBox</extends>
    <header>trianglesamountfield.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>QValidatedLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qvalidatedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

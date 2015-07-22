@@ -1,7 +1,7 @@
 /* Copyright (c) 2009-2010 Satoshi Nakamoto
    Copyright (c) 2009-2012 The Bitcoin developers
    Copyright (c) 2013-2014 The StealthCoin/StealthSend Developers */
-/* Copyright (c) 2014, triangles Developers */
+/* Copyright (c) 2014-2015, Triangles Developers */
 /* See LICENSE for licensing information */
 
 #include "anonymize.h"

@@ -38,7 +38,7 @@ void MessageViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
 
     QTextDocument doc;
     QString align(index.data(MessageModel::TypeRole) == 1 ? "left" : "right");
-    QString html = "<p align=\"" + align + "\" style=\"color:black;\">" + index.data(MessageModel::HTMLRole).toString() + "</p>";
+    QString html = "<p align=\"" + align + "\" style=\"color:#f26522;\">" + index.data(MessageModel::HTMLRole).toString() + "</p>";
     doc.setHtml(html);
 
     /// Painting item without text
@@ -98,6 +98,21 @@ MessagePage::MessagePage(QWidget *parent) :
     contextMenu->addAction(copyFromAddressAction);
     contextMenu->addAction(copyToAddressAction);
     contextMenu->addAction(deleteAction);
+    contextMenu->setStyleSheet("QMenu {\
+                               background-color: #000; \
+                               border: 1px solid #f26522;\
+                               color: #f26522;\
+                           }\
+                           \
+                           QMenu::item {\
+                               background-color: transparent;\
+                           }\
+                           \
+                           QMenu::item:selected {\
+                               color: #000;\
+                               background-color: #f26522;\
+                           }\
+                           ");
 
     connect(replyAction,           SIGNAL(triggered()), this, SLOT(on_sendButton_clicked()));
     connect(copyFromAddressAction, SIGNAL(triggered()), this, SLOT(on_copyFromAddressButton_clicked()));
@@ -266,10 +281,13 @@ void MessagePage::selectionChanged()
         copyFromAddressAction->setEnabled(true);
         copyToAddressAction->setEnabled(true);
         deleteAction->setEnabled(true);
-
+        
         ui->copyFromAddressButton->setEnabled(true);
+        ui->copyFromAddressButton->setVisible(true);
         ui->copyToAddressButton->setEnabled(true);
+        ui->copyToAddressButton->setVisible(true);
         ui->deleteButton->setEnabled(true);
+        ui->deleteButton->setVisible(true);
 
         ui->newButton->setEnabled(false);
         ui->newButton->setVisible(false);
@@ -322,8 +340,11 @@ void MessagePage::selectionChanged()
         ui->sendButton->setEnabled(false);
         ui->sendButton->setVisible(false);
         ui->copyFromAddressButton->setEnabled(false);
+        ui->copyFromAddressButton->setVisible(false);
         ui->copyToAddressButton->setEnabled(false);
+        ui->copyToAddressButton->setVisible(false);
         ui->deleteButton->setEnabled(false);
+        ui->deleteButton->setVisible(false);
         ui->messageEdit->hide();
         ui->messageDetails->hide();
         ui->messageEdit->clear();
@@ -345,8 +366,11 @@ void MessagePage::itemSelectionChanged()
         deleteAction->setEnabled(true);
 
         ui->copyFromAddressButton->setEnabled(true);
+        ui->copyFromAddressButton->setVisible(true);
         ui->copyToAddressButton->setEnabled(true);
+        ui->copyToAddressButton->setVisible(true);
         ui->deleteButton->setEnabled(true);
+        ui->deleteButton->setVisible(true);
 
         ui->newButton->setEnabled(false);
         ui->newButton->setVisible(false);
@@ -364,8 +388,11 @@ void MessagePage::itemSelectionChanged()
         ui->sendButton->setEnabled(false);
         ui->sendButton->setVisible(false);
         ui->copyFromAddressButton->setEnabled(false);
+        ui->copyFromAddressButton->setVisible(false);
         ui->copyToAddressButton->setEnabled(false);
+        ui->copyToAddressButton->setVisible(false);
         ui->deleteButton->setEnabled(false);
+        ui->deleteButton->setVisible(false);
         ui->messageEdit->hide();
         ui->messageDetails->hide();
         ui->messageEdit->clear();

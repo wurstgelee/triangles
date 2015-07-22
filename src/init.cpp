@@ -52,6 +52,7 @@ void ExitTimeout(void* parg)
 
 void StartShutdown()
 {
+fRequestShutdown = true;
 #ifdef QT_GUI
     // ensure we leave the Qt main loop for a clean GUI exit (Shutdown() is called in triangles.cpp afterwards)
     uiInterface.QueueShutdown();
@@ -59,6 +60,12 @@ void StartShutdown()
     // Without UI, Shutdown() can simply be started in a new thread
     NewThread(Shutdown, NULL);
 #endif
+}
+
+bool ShutdownRequested()
+
+{
+    return fRequestShutdown;
 }
 
 void Shutdown(void* parg)

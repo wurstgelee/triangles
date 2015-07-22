@@ -1,0 +1,1794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>808</width>
+    <height>694</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>101</green>
+        <blue>34</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>180</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>140</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>161</red>
+        <green>67</green>
+        <blue>22</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>178</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>101</green>
+        <blue>34</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>180</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>140</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>161</red>
+        <green>67</green>
+        <blue>22</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>178</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="WindowText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Button">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Light">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>180</green>
+        <blue>144</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Midlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>248</red>
+        <green>140</green>
+        <blue>89</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Dark">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Mid">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>161</red>
+        <green>67</green>
+        <blue>22</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Text">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="BrightText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ButtonText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>121</red>
+        <green>50</green>
+        <blue>17</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Base">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Window">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="Shadow">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="AlternateBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>242</red>
+        <green>101</green>
+        <blue>34</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipBase">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>220</blue>
+       </color>
+      </brush>
+     </colorrole>
+     <colorrole role="ToolTipText">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="font">
+   <font>
+    <stylestrategy>PreferAntialias</stylestrategy>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow {
+	background-color: #000;
+	}
+
+QMenu {
+    	background-color: #AF272E;
+    	border: 0px solid black;
+	}
+
+QMenu::item {
+	background-color: transparent;
+	color: #deeef1;
+	padding: 4px 10px 4px 20px;	
+	}
+
+QMenu::item:selected {
+	background-color: #9D0B17;
+	color: #E9D9D8;
+	border: none;
+	}
+
+/* ================= combobox */
+QComboBox {
+	border: 1px solid #f26522;
+	background-color: #1c1c1c;
+	}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	/*width: 15px;*/
+	border-left-width: 1px;
+	border-left-color: #f26522;
+	border-left-style: solid;
+	}
+
+QComboBox::down-arrow {
+	image: url(:/icons/down_arrow);
+	}
+
+QComboBox QAbstractItemView {
+	background-color: #1c1c1c;
+	selection-background-color:#61280E;
+	selection-color: #f26522; 
+	border: 1px solid #f26522;
+	color:#f26522;
+	}
+
+/* =========== QLineEdit =============*/
+QLineEdit {
+	border: 0px solid gray;
+	}
+	
+QLineEdit:disabled {
+	background-color: #e0e0e0;
+	}
+
+/* =========== header ===============*/
+QWidget[is_header=&quot;true&quot;] {
+	background-color: #AB7F82;
+	}
+/* =========== CheckBox ==============*/
+QCheckBox {
+	spacing: 5px;
+	color: #AF272E;
+	}
+
+QCheckBox::indicator {
+	width: 12px;
+	height: 12px;
+	}
+
+QCheckBox::indicator:unchecked {
+	image: url(:/res/check_unchecked.png);
+	}
+
+QCheckBox::indicator:unchecked:hover {
+	image: url(:/res/check_unchecked.png);
+	}
+
+QCheckBox::indicator:unchecked:pressed {
+	image: url(:/res/check_unchecked.png);
+	}
+
+QCheckBox::indicator:checked {
+	image: url(:/res/check_checked.png);
+	}
+
+QCheckBox::indicator:checked:hover {
+	image: url(:/res/check_checked.png);
+	}
+
+QCheckBox::indicator:checked:pressed {
+	image: url(:/res/check_checked.png);
+	}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">#centralWidget {
+	background-color: #000;
+	border: 2px solid #f26522;
+	}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>6</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="wHeader" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>127</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>127</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#wHeader {
+	background-color: #000;
+}
+
+QWidget {
+	color: #f26522;
+	}</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QWidget" name="wCaption" native="true">
+           <property name="styleSheet">
+            <string notr="true">#wCaption {
+	background-color: #000;
+}
+
+QWidget {
+	color: #f26522;
+	}</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="leftMargin">
+             <number>9</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="lbLogo">
+              <property name="minimumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="text">
+               <string notr="true"/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="../triangles.qrc">:/icons/toolbar</pixmap>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Triangles">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+                <stylestrategy>PreferAntialias</stylestrategy>
+               </font>
+              </property>
+              <property name="text">
+               <string>Triangles</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_1">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>220</width>
+                <height>17</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_File">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <stylestrategy>PreferAntialias</stylestrategy>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 15px 3px 15px;
+	}
+
+QPushButton:pressed:flat {
+	color: #000;
+	background-color: #f26522;
+	}</string>
+              </property>
+              <property name="text">
+               <string>File</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>13</width>
+                <height>17</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_Help">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <stylestrategy>PreferAntialias</stylestrategy>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 15px 3px 15px;
+	}
+
+QPushButton:pressed:flat {
+	color: #000;
+	background-color: #f26522;
+	}</string>
+              </property>
+              <property name="text">
+               <string>Operations</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>13</width>
+                <height>17</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_Settings">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+                <stylestrategy>PreferAntialias</stylestrategy>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 15px 3px 15px;
+	}
+
+QPushButton:pressed:flat {
+	color: #000;
+	background-color: #f26522;
+	}</string>
+              </property>
+              <property name="text">
+               <string>Help</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>100</width>
+                <height>17</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_minimize">
+              <property name="minimumSize">
+               <size>
+                <width>16</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {	
+	image: url(:/icons/minimize_normal);
+	border: 0px solid gray;
+	}
+
+QPushButton:pressed:flat {
+	image: url(:/icons/minimize_normal);
+	}
+
+QPushButton:hover {
+	image: url(:/icons/minimize_hover);
+	}</string>
+              </property>
+              <property name="text">
+               <string notr="true"/>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_close">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {	
+	image: url(:/icons/close_normal);
+	border: 0px solid gray;
+	}
+
+QPushButton:pressed:flat {
+	image: url(:/icons/close_normal);
+	}
+
+QPushButton:hover {
+	image: url(:/icons/close_hover);
+	}</string>
+              </property>
+              <property name="text">
+               <string notr="true"/>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_Menu">
+           <item>
+            <spacer name="horizontalSpacer_first">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Overview">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QPushButton:pressed:flat {
+	background-color: #61280E;
+	}
+
+QPushButton:hover {
+	background-color: #61280E;
+	}</string>
+             </property>
+             <property name="text">
+              <string>Overview</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../triangles.qrc">
+               <normaloff>:/menu_32/home</normaloff>:/menu_32/home</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Send">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QPushButton:pressed:flat {
+	background-color: #61280E;
+	}
+
+QPushButton:hover {
+	background-color: #61280E;
+	}</string>
+             </property>
+             <property name="text">
+              <string>Send Coins</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../triangles.qrc">
+               <normaloff>:/menu_32/send</normaloff>:/menu_32/send</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Receive">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QPushButton:pressed:flat {
+	background-color: #61280E;
+	}
+
+QPushButton:hover {
+	background-color: #61280E;
+	}</string>
+             </property>
+             <property name="text">
+              <string>Receive Coins</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../triangles.qrc">
+               <normaloff>:/menu_32/receive</normaloff>:/menu_32/receive</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Addressbook">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QPushButton:pressed:flat {
+	background-color: #61280E;
+	}
+
+QPushButton:hover {
+	background-color: #61280E;
+	}</string>
+             </property>
+             <property name="text">
+              <string>Address Book</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../triangles.qrc">
+               <normaloff>:/menu_32/addressbook</normaloff>:/menu_32/addressbook</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Transactions">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QPushButton:pressed:flat {
+	background-color: #61280E;
+	}
+
+QPushButton:hover {
+	background-color: #61280E;
+	}</string>
+             </property>
+             <property name="text">
+              <string>Transactions</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../triangles.qrc">
+               <normaloff>:/menu_32/transactions</normaloff>:/menu_32/transactions</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Messages">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+               <stylestrategy>PreferAntialias</stylestrategy>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+	text-align:left;
+	border: 0px solid gray;
+	padding: 3px 5px 3px 5px;
+	}
+
+QPushButton:pressed:flat {
+	background-color: #61280E;
+	}
+
+QPushButton:hover {
+	background-color: #61280E;
+	}</string>
+             </property>
+             <property name="text">
+              <string>Messages</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../triangles.qrc">
+               <normaloff>:/menu_32/messages</normaloff>:/menu_32/messages</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>32</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="flat">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_last">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_4">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="palette">
+         <palette>
+          <active>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Base">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Window">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </active>
+          <inactive>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Base">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Window">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </inactive>
+          <disabled>
+           <colorrole role="Button">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Base">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+           <colorrole role="Window">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>242</red>
+              <green>101</green>
+              <blue>34</blue>
+             </color>
+            </brush>
+           </colorrole>
+          </disabled>
+         </palette>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #f26522;</string>
+        </property>
+        <property name="lineWidth">
+         <number>0</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="wStatusBar" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>37</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>37</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#wStatusBar {
+	background-color: #000;
+	}
+QLabel {
+	color: #f26522;
+	}</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="0,1,0,1,0,0,0,0,0,0">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>70</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_synchronization">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Synchronization</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="progressBar">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QProgressBar {
+    border: 1px solid#f26522;
+	background-color: #000;
+	}
+
+QProgressBar::chunk {
+	background-color: #61280E;
+	/*width: 20px;*/
+	}</string>
+           </property>
+           <property name="value">
+            <number>24</number>
+           </property>
+           <property name="textVisible">
+            <bool>false</bool>
+           </property>
+           <property name="format">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_blocks">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>33333 blocks</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>10</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_encryption">
+           <property name="maximumSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../triangles.qrc">:/icons/lock_closed</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_staking">
+           <property name="text">
+            <string notr="true"/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../triangles.qrc">:/icons/staking_off</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_connections">
+           <property name="text">
+            <string notr="true"/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../triangles.qrc">:/icons/connect_1</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_synced">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../triangles.qrc">:/icons/synced</pixmap>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>5</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../triangles.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_close</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>796</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>736</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_minimize</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>760</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>754</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Transactions</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gotoHistoryPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>477</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>803</x>
+     <y>61</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Receive</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gotoReceiveCoinsPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>310</x>
+     <y>105</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>-8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Addressbook</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gotoAddressBookPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>-7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Send</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gotoSendCoinsPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>281</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>120</x>
+     <y>-4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Overview</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gotoOverviewPage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>614</x>
+     <y>70</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>806</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Messages</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>gotoMessagePage()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>634</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>806</x>
+     <y>122</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Settings</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuSettingsRequested()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>541</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>601</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_File</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuFileRequested()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>358</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>73</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_Help</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuOperationsRequested()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>434</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>miningClicked(bool)</slot>
+  <slot>showTransactionsRequested()</slot>
+  <slot>showHomeRequested()</slot>
+  <slot>menuFileRequested()</slot>
+  <slot>menuOperationsRequested()</slot>
+  <slot>menuSettingsRequested()</slot>
+  <slot>showReceiveMegsRequested()</slot>
+  <slot>showAddressBookRequested()</slot>
+  <slot>showSendMegsRequested()</slot>
+  <slot>transactionsSortOrderChanged()</slot>
+  <slot>showServiceMessages()</slot>
+  <slot>addAddressBookRecordRequested()</slot>
+  <slot>showSignMessageRequested()</slot>
+  <slot>showMessageVerificationDialogRequested()</slot>
+  <slot>verifyMessageRequested()</slot>
+  <slot>signMessageRequested()</slot>
+  <slot>editAddressBookRecordRequested()</slot>
+  <slot>useProxyChangedRequested(bool)</slot>
+  <slot>gotoOverviewPage()</slot>
+  <slot>gotoHistoryPage()</slot>
+  <slot>gotoAddressBookPage()</slot>
+  <slot>gotoReceiveCoinsPage()</slot>
+  <slot>gotoSendCoinsPage()</slot>
+  <slot>optionsClicked()</slot>
+  <slot>aboutClicked()</slot>
+  <slot>gotoSignMessageTab()</slot>
+  <slot>gotoVerifyMessageTab()</slot>
+  <slot>gotoMessagePage()</slot>
+  <slot>onMiningClicked()</slot>
+  <slot>onMiningToggled(bool)</slot>
+ </slots>
+</ui>

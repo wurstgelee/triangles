@@ -1,21 +1,28 @@
 /*
- * Qt4 Triangles GUI.
+ * Qt5 Triangles GUI.
  *
  * W.J. van der Laan 2011-2012
  * The Bitcoin developers 2011-2012
+ * The Triangles Team 2014-2015 
  */
 #include "trianglesgui.h"
+#include "ui_mainwindow.h"
 #include "transactiontablemodel.h"
 #include "addressbookpage.h"
 #include "messagepage.h"
 #include "sendcoinsdialog.h"
-#include "signverifymessagedialog.h"
+
+#include "dialog_move_handler.h"
 #include "optionsdialog.h"
 #include "aboutdialog.h"
+
+#include "signmessagepage.h"
+#include "verifymessagepage.h"
 #include "clientmodel.h"
 #include "walletmodel.h"
 #include "messagemodel.h"
 #include "editaddressdialog.h"
+
 #include "optionsmodel.h"
 #include "transactiondescdialog.h"
 #include "addresstablemodel.h"
@@ -27,6 +34,11 @@
 #include "notificator.h"
 #include "guiutil.h"
 #include "rpcconsole.h"
+#include "ui_interface.h"
+#include "main.h"
+#include "init.h"
+#include "util.h"
+//#include "message_box_dialog.h"
 #include "wallet.h"
 
 #ifdef Q_OS_MAC
@@ -47,7 +59,6 @@
 #include <QPushButton>
 #include <QLocale>
 #include <QMessageBox>
-#include <QMimeData>
 #include <QProgressBar>
 #include <QStackedWidget>
 #include <QDateTime>
@@ -56,11 +67,20 @@
 #include <QDesktopServices>
 #include <QTimer>
 #include <QDragEnterEvent>
+#if QT_VERSION < 0x050000
 #include <QUrl>
+#endif
+#include <QMimeData>
 #include <QStyle>
 #include <QStyleFactory>
 #include <QTextStream>
 #include <QTextDocument>
+#include <QSettings>
+#include <QDesktopWidget>
+#include <QListWidget>
+#include <QPainter>
+//#include <QSound>
+#include <QSizeGrip>
 
 #include <iostream>
 
@@ -68,120 +88,245 @@ extern CWallet* pwalletMain;
 extern int64_t nLastCoinStakeSearchInterval;
 extern unsigned int nTargetSpacing;
 double GetPoSKernelPS();
+const QString TrianglesGUI::DEFAULT_WALLET = "~Default";
 
-ActiveLabel::ActiveLabel(const QString & text, QWidget * parent):
-    QLabel(parent){}
-
-void ActiveLabel::mouseReleaseEvent(QMouseEvent * event)
-{
-    emit clicked();
-}
-
-TrianglesGUI::TrianglesGUI(QWidget *parent):
+TrianglesGUI::TrianglesGUI(bool fIsTestnet, QWidget *parent):
     QMainWindow(parent),
+    ui(new Ui::MainWindow),
     clientModel(0),
     walletModel(0),
     encryptWalletAction(0),
     changePassphraseAction(0),
     unlockWalletAction(0),
+    unlockWalletStakingAction(0),
     lockWalletAction(0),
     aboutQtAction(0),
     trayIcon(0),
     notificator(0),
-    rpcConsole(0)
+    rpcConsole(0),
+    prevBlocks(0)
 {
-    resize(1000, 650);
-    setWindowTitle(tr("Triangles") + " - " + tr("Wallet"));
-    // Prevent resizing.
-    //setFixedSize(size());
-    // Remove "hand" cursor from status bar.
-    this->statusBar()->setSizeGripEnabled(false);
+
+    ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
 
     this->setStyleSheet(".TrianglesGUI \
-                        QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; } \
-                        QToolButton:on {  \
-                            border: 1px solid #00baff; \
-                            border-radius: 4px; \
-                        } \
+                        QToolTip \
+                        {\
+                             color: #f26522;\
+                             border: 1px solid #61280E;\
+                             background-color: #000;\
+                             /*padding: 10px 10px;*/\
+                             border-radius: 3px;\
+                             /*opacity: 200;*/\
+                             min-height: 20px;\
+                             /*min-width:60px;*/\
+                        }\
+                        QComboBox::drop-down {\
+                        subcontrol-origin: padding;\
+                        subcontrol-position: top right;\
+                        /*width: 15px;*/\
+                        border-left-width: 1px;\
+                        border-left-color: #f26522;\
+                        border-left-style: solid;\
+                        }\
+                        QComboBox::down-arrow {\
+                        image: url(:/icons/down_arrow);\
+                        }\
+                        QMenu {\
+                             background-color: #000; \
+                             border: 1px solid #f26522;\
+                             color: #f26522;\
+                         }\
+                         \
+                         QMenu::item {\
+                             background-color: transparent;\
+                         }\
+                         \
+                         QMenu::item:selected {\
+                             background-color: #61280E;\
+                         }\
+                        \
+                        QScrollBar:horizontal {\
+                             border: 1px solid #f26522;\
+                             background: #000;\
+                             height: 15px;\
+                             margin: 0px 16px 0 16px;\
+                        }\
+                        \
+                        QScrollBar::handle:horizontal\
+                        {\
+                              border: 1px solid #f26522;\
+                              background: #1c1c1c;\
+                              min-height: 20px;\
+                              /*border-radius: 2px;*/\
+                        }\
+                        \
+                        QScrollBar::add-line:horizontal {\
+                              border: 1px solid #f26522;\
+                              /*border-radius: 2px;*/\
+                              background: #1c1c1c;\
+                              width: 14px;\
+                              subcontrol-position: right;\
+                              subcontrol-origin: margin;\
+                        }\
+                        \
+                        QScrollBar::sub-line:horizontal {\
+                              border: 1px solid #f26522;\
+                              /*border-radius: 2px;*/\
+                              background: #1c1c1c;\
+                              width: 14px;\
+                             subcontrol-position: left;\
+                             subcontrol-origin: margin;\
+                        }\
+                        \
+                        QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal\
+                        {\
+                              border: 1px solid #f26522;\
+                              width: 1px;\
+                              height: 1px;\
+                              background: #f26522;\
+                        }\
+                        \
+                        QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal\
+                        {\
+                              background: none;\
+                        }\
+                        \
+                        QScrollBar:vertical\
+                        {\
+                              background: #000;\
+                              width: 15px;\
+                              margin: 16px 0 16px 0;\
+                              border: 1px solid #f26522;\
+                        }\
+                        \
+                        QScrollBar::handle:vertical\
+                        {\
+                              border: 1px solid #f26522;\
+                              background: #1c1c1c;\
+                              min-height: 20px;\
+                              /*border-radius: 2px;*/\
+                        }\
+                        \
+                        QScrollBar::add-line:vertical\
+                        {\
+                              border: 1px solid #f26522;\
+                              /*border-radius: 2px;*/\
+                              background: #1c1c1c;\
+                              height: 14px;\
+                              subcontrol-position: bottom;\
+                              subcontrol-origin: margin;\
+                        }\
+                        \
+                        QScrollBar::sub-line:vertical\
+                        {\
+                              border: 1px solid #f26522;\
+                              /*border-radius: 2px;*/\
+                              background: #1c1c1c;\
+                              height: 14px;\
+                              subcontrol-position: top;\
+                              subcontrol-origin: margin;\
+                        }\
+                        \
+                        QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical\
+                        {\
+                              border: 1px solid #f26522;\
+                              width: 1px;\
+                              height: 1px;\
+                              background: #f26522;\
+                        }\
+                        \
+                        \
+                        QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical\
+                        {\
+                              background: none;\
+                        }\
                         ");
+
 #ifndef Q_OS_MAC
-    qApp->setWindowIcon(QIcon(":icons/triangles"));
-    setWindowIcon(QIcon(":icons/triangles"));
+    if (!fIsTestnet)
+    {
+        setWindowTitle(tr("Triangles") + " - " + tr("Wallet"));
+        QApplication::setWindowIcon(QIcon(":icons/triangles"));
+        setWindowIcon(QIcon(":icons/triangles"));
+    }
+    else
+    {
+        setWindowTitle(tr("Triangles") + " - " + tr("Wallet") + " " + tr("[testnet]"));
+        QApplication::setWindowIcon(QIcon(":icons/triangles"));
+        setWindowIcon(QIcon(":icons/triangles_testnet"));
+    }
 #else
     setUnifiedTitleAndToolBarOnMac(true);
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
+
+    if (!fIsTestnet)
+        MacDockIconHandler::instance()->setIcon(QIcon(":icons/triangles"));
+    else
+        MacDockIconHandler::instance()->setIcon(QIcon(":icons/triangles_testnet"));
 #endif
     // Accept D&D of URIs
     setAcceptDrops(true);
 
     // Create actions for the toolbar, menu bar and tray/dock icon
-    createActions();
+    // Needs walletFrame to be initialized
+    createActions(fIsTestnet);
 
-    // Create application menu bar
-    createMenuBar();
 
-    // Create the toolbars
-    createToolBars();
-
-    // Create the tray icon (or setup the dock icon)
+    // Create system tray icon and notification
     createTrayIcon();
 
     // Create tabs
-    overviewPage = new OverviewPage(this);
+    overviewPage = new OverviewPage();
     {
       transactionsPage = new QWidget(this);
       QHBoxLayout* hl = new QHBoxLayout(transactionsPage);
       QFrame* frameMain = new QFrame(transactionsPage);
       hl->addWidget(frameMain);
-      //frameMain->setObjectName(QStringLiteral("frameMain"));
       frameMain->setFrameShape(QFrame::NoFrame);
       QVBoxLayout *vbox = new QVBoxLayout(frameMain);
       transactionView = new TransactionView(transactionsPage);
       vbox->addWidget(transactionView);
       frameMain->setLayout(vbox);
     }
-
     addressBookPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::SendingTab);
 
     receiveCoinsPage = new AddressBookPage(AddressBookPage::ForEditing, AddressBookPage::ReceivingTab);
 
     sendCoinsPage = new SendCoinsDialog(this);
     messagePage   = new MessagePage(this);
-
-    signVerifyMessageDialog.reset(new SignVerifyMessageDialog);
-
-    centralWidget = new QStackedWidget(this);
+	signMessagePage = new SignMessagePage(this);
+    verifyMessagePage = new VerifyMessagePage(this);
+    centralWidget = ui->stackedWidget;
     centralWidget->addWidget(overviewPage);
     centralWidget->addWidget(transactionsPage);
     centralWidget->addWidget(addressBookPage);
     centralWidget->addWidget(receiveCoinsPage);
     centralWidget->addWidget(sendCoinsPage);
     centralWidget->addWidget(messagePage);
-    setCentralWidget(centralWidget);
+	centralWidget->addWidget(signMessagePage);
+    centralWidget->addWidget(verifyMessagePage);
 
-    // Create status bar
-    statusBar();
+    QSizeGrip* grip = new QSizeGrip(this);
+    grip->setStyleSheet("width: 6px; height: 6px; image: url(:/res/icons/handle.png);");
+    ui->horizontalLayout_8->addWidget(grip, 0, Qt::AlignBottom | Qt::AlignRight);
+
 
     // Status bar notification icons
     QFrame *frameBlocks = new QFrame();
     frameBlocks->setContentsMargins(0,0,0,0);
-    frameBlocks->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
+    frameBlocks->setMinimumWidth(56);
+    frameBlocks->setMaximumWidth(56);
     QHBoxLayout *frameBlocksLayout = new QHBoxLayout(frameBlocks);
     frameBlocksLayout->setContentsMargins(3,0,3,0);
     frameBlocksLayout->setSpacing(3);
-    labelEncryptionIcon = new QLabel();
-    labelStakingIcon = new QLabel();
-    labelConnectionsIcon = new QLabel();
-    labelBlocksIcon = new QLabel();
-    frameBlocksLayout->addStretch();
-    frameBlocksLayout->addWidget(labelEncryptionIcon);
-    frameBlocksLayout->addStretch();
-    frameBlocksLayout->addWidget(labelStakingIcon);
-    frameBlocksLayout->addStretch();
-    frameBlocksLayout->addWidget(labelConnectionsIcon);
-    frameBlocksLayout->addStretch();
-    frameBlocksLayout->addWidget(labelBlocksIcon);
-    frameBlocksLayout->addStretch();
+    labelEncryptionIcon = ui->label_encryption;
+    labelStakingIcon = ui->label_staking;
+    labelConnectionsIcon = ui->label_connections;
+    labelBlocksIcon = ui->label_synced;
 
     if (GetBoolArg("-staking", true))
     {
@@ -192,24 +337,17 @@ TrianglesGUI::TrianglesGUI(QWidget *parent):
     }
 
     // Progress bar and label for blocks download
-    progressBarLabel = new QLabel();
+    progressBarLabel = ui->label_synchronization;
     progressBarLabel->setVisible(false);
-    progressBar = new QProgressBar();
+    ui->label_blocks->setVisible(false);
+    progressBar = ui->progressBar;
     progressBar->setAlignment(Qt::AlignCenter);
     progressBar->setVisible(false);
 
     // Override style sheet for progress bar for styles that have a segmented progress bar,
     // as they make the text unreadable (workaround for issue #1071)
     // See https://qt-project.org/doc/qt-4.8/gallery.html
-    QString curStyle = qApp->style()->metaObject()->className();
-    if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
-    {
-        progressBar->setStyleSheet("QProgressBar { background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #828282, stop: 1 #D1D1D1); border-radius: 7px; margin: 0px; }");
-    }
-
-    statusBar()->addWidget(progressBarLabel);
-    statusBar()->addWidget(progressBar);
-    statusBar()->addPermanentWidget(frameBlocks);
+    QString curStyle = QApplication::style()->metaObject()->className();
 
     syncIconMovie = new QMovie(":/movies/update_spinner", "mng", this);
 
@@ -220,14 +358,17 @@ TrianglesGUI::TrianglesGUI(QWidget *parent):
     // Double-clicking on a transaction on the transaction history page shows details
     connect(transactionView, SIGNAL(doubleClicked(QModelIndex)), transactionView, SLOT(showDetails()));
 
-    rpcConsole.reset(new RPCConsole);
-    connect(openRPCConsoleAction, SIGNAL(triggered()), rpcConsole.data(), SLOT(show()));
+    rpcConsole = new RPCConsole(this);
+    connect(openRPCConsoleAction, SIGNAL(triggered()), rpcConsole, SLOT(show()));
 
     // Clicking on "Verify Message" in the address book sends you to the verify message tab
     connect(addressBookPage, SIGNAL(verifyMessage(QString)), this, SLOT(gotoVerifyMessageTab(QString)));
     // Clicking on "Sign Message" in the receive coins page sends you to the sign message tab
     connect(receiveCoinsPage, SIGNAL(signMessage(QString)), this, SLOT(gotoSignMessageTab(QString)));
 
+    // Install event filter to be able to catch status tip events (QEvent::StatusTip)
+    this->installEventFilter(this);
+    ui->pushButton_Overview->installEventFilter(this);
     gotoOverviewPage();
 }
 
@@ -238,46 +379,46 @@ TrianglesGUI::~TrianglesGUI()
 #ifdef Q_OS_MAC
     delete appMenuBar;
 #endif
+    delete ui;
 }
 
-void TrianglesGUI::createActions()
+void TrianglesGUI::createActions(bool fIsTestnet)
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
-    overviewAction->setToolTip(tr("Show general overview of wallet"));
+    overviewAction = new QAction(QIcon(":/menu_16/overview"), tr("&Overview"), this);
+    overviewAction->setStatusTip(tr("Show general overview of wallet"));
+    overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
-    overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send coins"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a TRI address"));
+    sendCoinsAction = new QAction(QIcon(":/menu_16/send"), tr("&Send Triangles"), this);
+    sendCoinsAction->setStatusTip(tr("Send coins to a Triangles address"));
+    sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
-    sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive coins"), this);
-    receiveCoinsAction->setToolTip(tr("Show the list of addresses for receiving payments"));
+    receiveCoinsAction = new QAction(QIcon(":/menu_16/receive"), tr("&Receive Triangles"), this);
+    receiveCoinsAction->setStatusTip(tr("Show the list of addresses for receiving payments"));
+    receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
-    receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
-    historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
-    historyAction->setToolTip(tr("Browse transaction history"));
+    historyAction = new QAction(QIcon(":/menu_16/transactions"), tr("&Transactions"), this);
+    historyAction->setStatusTip(tr("Browse transaction history"));
+    historyAction->setToolTip(historyAction->statusTip());
     historyAction->setCheckable(true);
-    historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Address Book"), this);
-    addressBookAction->setToolTip(tr("Edit the list of stored addresses and labels"));
+    addressBookAction = new QAction(QIcon(":/menu_16/addressbook"), tr("&Address Book"), this);
+    addressBookAction->setStatusTip(tr("Edit the list of stored addresses and labels"));
+    addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
-    addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
     tabGroup->addAction(addressBookAction);
 
-    messageAction = new QAction(QIcon(":/icons/edit"), tr("&Messages"), this);
+    messageAction = new QAction(QIcon(":/menu_16/edit"), tr("&Messages"), this);
     messageAction->setToolTip(tr("View and Send Encrypted messages"));
     messageAction->setCheckable(true);
-    messageAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
     tabGroup->addAction(messageAction);
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
@@ -292,41 +433,53 @@ void TrianglesGUI::createActions()
     connect(messageAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(messageAction, SIGNAL(triggered()), this, SLOT(gotoMessagePage()));
 
-    quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
-    quitAction->setToolTip(tr("Quit application"));
-    quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
+    quitAction = new QAction(QIcon(":/menu_16/exit"), tr("E&xit Triangles wallet"), this);
+    quitAction->setStatusTip(tr("Quit application"));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/triangles"), tr("&About Triangles"), this);
-    aboutAction->setToolTip(tr("Show information about Triangles"));
+    if (!fIsTestnet)
+        aboutAction = new QAction(QIcon(":/menu_16/triangles_menu"), tr("&About Triangles"), this);
+    else
+        aboutAction = new QAction(QIcon(":/icons/triangles_testnet"), tr("&About Triangles"), this);
+    aboutAction->setStatusTip(tr("Show information about Triangles"));
     aboutAction->setMenuRole(QAction::AboutRole);
-    aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
-    aboutQtAction->setToolTip(tr("Show information about Qt"));
+    aboutQtAction = new QAction(QIcon(":/menu_16/triangles_menu"), tr("About &Qt"), this);
+    aboutQtAction->setStatusTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
-    optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for Triangles"));
+    optionsAction = new QAction(QIcon(":/menu_16/options"), tr("&Options..."), this);
+    optionsAction->setStatusTip(tr("Modify configuration options for Triangles"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/triangles"), tr("&Show / Hide"), this);
-    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
-    encryptWalletAction->setToolTip(tr("Encrypt or decrypt wallet"));
-    encryptWalletAction->setCheckable(true);
-    backupWalletAction = new QAction(QIcon(":/icons/filesave"), tr("&Backup Wallet..."), this);
-    backupWalletAction->setToolTip(tr("Backup wallet to another location"));
-    changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
-    changePassphraseAction->setToolTip(tr("Change the passphrase used for wallet encryption"));
-    unlockWalletAction = new QAction(QIcon(":/icons/lock_open"), tr("&Unlock Wallet..."), this);
-    unlockWalletAction->setToolTip(tr("Unlock wallet"));
-    lockWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Lock Wallet"), this);
-    lockWalletAction->setToolTip(tr("Lock wallet"));
-    signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
+    if (!fIsTestnet)
+        toggleHideAction = new QAction(QIcon(":/menu_16/triangles_menu"), tr("&Show / Hide Triangles wallet"), this);
+    else
+        toggleHideAction = new QAction(QIcon(":/icons/triangles_testnet"), tr("&Show / Hide Triangles wallet"), this);
+    toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
-    exportAction = new QAction(QIcon(":/icons/export"), tr("&Export..."), this);
-    exportAction->setToolTip(tr("Export the data in the current tab to a file"));
-    openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
-    openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));
+    encryptWalletAction = new QAction(QIcon(":/menu_16/lock"), tr("&Encrypt Wallet..."), this);
+    encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
+    encryptWalletAction->setCheckable(true);
+    backupWalletAction = new QAction(QIcon(":/menu_16/export"), tr("&Backup Wallet..."), this);
+    backupWalletAction->setStatusTip(tr("Backup wallet to another location"));
+    changePassphraseAction = new QAction(QIcon(":/menu_16/passphrase"), tr("&Change Passphrase..."), this);
+    changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
+    unlockWalletAction = new QAction(QIcon(":/menu_16/unlock"), tr("&Unlock Wallet..."), this);
+    unlockWalletAction->setStatusTip(tr("Unlock wallet"));
+    unlockWalletStakingAction = new QAction(QIcon(":/menu_16/unlock"), tr("&Unlock Wallet for staking..."), this);
+    unlockWalletStakingAction->setStatusTip(tr("Unlock wallet for staking"));
+    lockWalletAction = new QAction(QIcon(":/menu_16/lock"), tr("&Lock Wallet"), this);
+    lockWalletAction->setStatusTip(tr("Lock wallet"));
+    signMessageAction = new QAction(QIcon(":/menu_16/sign"), tr("Sign &message..."), this);
+    signMessageAction->setStatusTip(tr("Sign messages with your Triangles addresses to prove you own them"));
+    verifyMessageAction = new QAction(QIcon(":/menu_16/verify"), tr("&Verify message..."), this);
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Triangles addresses"));
+
+    exportAction = new QAction(QIcon(":/menu_16/export"), tr("&Export..."), this);
+    exportAction->setStatusTip(tr("Export the data in the current tab to a file"));
+    exportAction->setToolTip(exportAction->statusTip());
+    openRPCConsoleAction = new QAction(QIcon(":/menu_16/debug"), tr("&Debug window"), this);
+    openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
-    connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
+    connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));    
     connect(aboutQtAction, SIGNAL(triggered()), qApp, SLOT(aboutQt()));
     connect(optionsAction, SIGNAL(triggered()), this, SLOT(optionsClicked()));
     connect(toggleHideAction, SIGNAL(triggered()), this, SLOT(toggleHidden()));
@@ -334,6 +487,7 @@ void TrianglesGUI::createActions()
     connect(backupWalletAction, SIGNAL(triggered()), this, SLOT(backupWallet()));
     connect(changePassphraseAction, SIGNAL(triggered()), this, SLOT(changePassphrase()));
     connect(unlockWalletAction, SIGNAL(triggered()), this, SLOT(unlockWallet()));
+    connect(unlockWalletStakingAction, SIGNAL(triggered()), this, SLOT(unlockWalletStaking()));
     connect(lockWalletAction, SIGNAL(triggered()), this, SLOT(lockWallet()));
     connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
@@ -387,7 +541,6 @@ void TrianglesGUI::createToolBars()
     QToolBar *toolbar2 = addToolBar(tr("Actions toolbar"));
     toolbar2->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     toolbar2->addAction(exportAction);
-    toolbar2->setMovable(false);
 }
 
 void TrianglesGUI::setClientModel(ClientModel *clientModel)
@@ -395,25 +548,9 @@ void TrianglesGUI::setClientModel(ClientModel *clientModel)
     this->clientModel = clientModel;
     if(clientModel)
     {
-        // Replace some strings and icons, when using the testnet
-        if(clientModel->isTestNet())
-        {
-            setWindowTitle(windowTitle() + QString(" ") + tr("[testnet]"));
-#ifndef Q_OS_MAC
-            qApp->setWindowIcon(QIcon(":icons/triangles_testnet"));
-            setWindowIcon(QIcon(":icons/triangles_testnet"));
-#else
-            MacDockIconHandler::instance()->setIcon(QIcon(":icons/triangles_testnet"));
-#endif
-            if(trayIcon)
-            {
-                trayIcon->setToolTip(tr("Triangles client") + QString(" ") + tr("[testnet]"));
-                trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
-                toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
-            }
-
-            aboutAction->setIcon(QIcon(":/icons/toolbar_testnet"));
-        }
+        // Create system tray menu (or setup the dock menu) that late to prevent users from calling actions,
+        // while the client has not yet fully loaded
+        createTrayIconMenu();
 
         // Keep up to date with client
         setNumConnections(clientModel->getNumConnections());
@@ -422,8 +559,8 @@ void TrianglesGUI::setClientModel(ClientModel *clientModel)
         setNumBlocks(clientModel->getNumBlocks(), clientModel->getNumBlocksOfPeers());
         connect(clientModel, SIGNAL(numBlocksChanged(int,int)), this, SLOT(setNumBlocks(int,int)));
 
-        // Report errors from network/worker thread
-        connect(clientModel, SIGNAL(error(QString,QString,bool)), this, SLOT(error(QString,QString,bool)));
+        // Receive and report messages from network/worker thread
+        connect(clientModel, SIGNAL(message(QString,QString,unsigned int)), this, SLOT(message(QString,QString,unsigned int)));
 
         rpcConsole->setClientModel(clientModel);
         addressBookPage->setOptionsModel(clientModel->getOptionsModel());
@@ -436,17 +573,17 @@ void TrianglesGUI::setWalletModel(WalletModel *walletModel)
     this->walletModel = walletModel;
     if(walletModel)
     {
-        // Report errors from wallet thread
-        connect(walletModel, SIGNAL(error(QString,QString,bool)), this, SLOT(error(QString,QString,bool)));
+        // Receive and report messages from wallet thread
+        connect(walletModel, SIGNAL(message(QString,QString,unsigned int)), this, SLOT(message(QString,QString,unsigned int)));
 
         // Put transaction list in tabs
         transactionView->setModel(walletModel);
-
         overviewPage->setModel(walletModel);
         addressBookPage->setModel(walletModel->getAddressTableModel());
         receiveCoinsPage->setModel(walletModel->getAddressTableModel());
         sendCoinsPage->setModel(walletModel);
-        signVerifyMessageDialog->setModel(walletModel);
+        signMessagePage->setModel(walletModel);
+        verifyMessagePage->setModel(walletModel);
 
         setEncryptionStatus(walletModel->getEncryptionStatus());
         connect(walletModel, SIGNAL(encryptionStatusChanged(int)), this, SLOT(setEncryptionStatus(int)));
@@ -479,16 +616,30 @@ void TrianglesGUI::setMessageModel(MessageModel *messageModel)
 
 void TrianglesGUI::createTrayIcon()
 {
-    QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
-    trayIconMenu = new QMenu(this);
-    trayIcon->setContextMenu(trayIconMenu);
+
     trayIcon->setToolTip(tr("Triangles client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
+    trayIcon->show();
+#endif
+
+    notificator = new Notificator(QApplication::applicationName(), trayIcon);
+}
+
+void TrianglesGUI::createTrayIconMenu()
+{
+    QMenu *trayIconMenu;
+#ifndef Q_OS_MAC
+    // return if trayIcon is unset (only on non-Mac OSes)
+    if (!trayIcon)
+        return;
+
+    trayIconMenu = new QMenu(this);
+    trayIcon->setContextMenu(trayIconMenu);
+
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
-    trayIcon->show();
 #else
     // Note: On Mac, the dock icon is used to provide the tray's functionality.
     MacDockIconHandler *dockIconHandler = MacDockIconHandler::instance();
@@ -506,13 +657,10 @@ void TrianglesGUI::createTrayIcon()
     trayIconMenu->addAction(verifyMessageAction);
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(optionsAction);
-    trayIconMenu->addAction(openRPCConsoleAction);
 #ifndef Q_OS_MAC // This is built-in on Mac
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(quitAction);
 #endif
-
-    notificator = new Notificator(qApp->applicationName(), trayIcon);
 }
 
 #ifndef Q_OS_MAC
@@ -526,18 +674,40 @@ void TrianglesGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
+void TrianglesGUI::saveWindowGeometry()
+{
+    QSettings settings;
+    settings.setValue("nWindowPos", pos());
+    settings.setValue("nWindowSize", size());
+}
+
+void TrianglesGUI::restoreWindowGeometry()
+{
+    QSettings settings;
+    QPoint pos = settings.value("nWindowPos").toPoint();
+    QSize size = settings.value("nWindowSize", QSize(850, 550)).toSize();
+    if (!pos.x() && !pos.y())
+    {
+        QRect screen = QApplication::desktop()->screenGeometry();
+        pos.setX((screen.width()-size.width())/2);
+        pos.setY((screen.height()-size.height())/2);
+    }
+    resize(size);
+    move(pos);
+}
+
 void TrianglesGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
-    OptionsDialog dlg;
+    OptionsDialog dlg(this);
     dlg.setModel(clientModel->getOptionsModel());
     dlg.exec();
 }
 
 void TrianglesGUI::aboutClicked()
 {
-    AboutDialog dlg;
+    AboutDialog dlg(this);
     dlg.setModel(clientModel);
     dlg.exec();
 }
@@ -564,47 +734,40 @@ void TrianglesGUI::setNumBlocks(int count, int nTotalBlocks)
     {
         progressBarLabel->setVisible(false);
         progressBar->setVisible(false);
+        ui->label_blocks->setVisible(false);
 
         return;
     }
 
-    QString strStatusBarWarnings = clientModel->getStatusBarWarnings();
     QString tooltip;
+
+    QString importText;
+    importText = tr("Synchronizing with network...");
 
     if(count < nTotalBlocks)
     {
         int nRemainingBlocks = nTotalBlocks - count;
         float nPercentageDone = count / (nTotalBlocks * 0.01f);
 
-        if (strStatusBarWarnings.isEmpty())
-        {
-            progressBarLabel->setText(tr("Synchronizing with network..."));
-            progressBarLabel->setVisible(true);
-            progressBar->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
-            progressBar->setMaximum(nTotalBlocks);
-            progressBar->setValue(count);
-            progressBar->setVisible(true);
-        }
+        progressBarLabel->setText(importText);
+        progressBarLabel->setVisible(true);
+        progressBar->setFormat(tr("~%n block(s) remaining", "", nRemainingBlocks));
+        progressBar->setMaximum(nTotalBlocks);
+        progressBar->setValue(count);
+        progressBar->setVisible(true);
+        ui->label_blocks->setText(tr("%n blocks", "", count));
+        ui->label_blocks->setVisible(true);
 
-        tooltip = tr("Downloaded %1 of %2 blocks of transaction history (%3% done).").arg(count).arg(nTotalBlocks).arg(nPercentageDone, 0, 'f', 2);
+		tooltip = tr("Downloaded %1 of %2 blocks of transaction history (%3% done).").arg(count).arg(nTotalBlocks).arg(nPercentageDone, 0, 'f', 2);
     }
     else
     {
-        if (strStatusBarWarnings.isEmpty())
-            progressBarLabel->setVisible(false);
+        progressBarLabel->setVisible(false);
 
         progressBar->setVisible(false);
-        tooltip = tr("Downloaded %1 blocks of transaction history.").arg(count);
+        ui->label_blocks->setVisible(false);
+        tooltip = tr("Processed %1 blocks of transaction history.").arg(count);
     }
-
-    // Override progressBarLabel text and hide progress bar, when we have warnings to display
-    if (!strStatusBarWarnings.isEmpty())
-    {
-        progressBarLabel->setText(strStatusBarWarnings);
-        progressBarLabel->setVisible(true);
-        progressBar->setVisible(false);
-    }
-    
     tooltip = tr("Current difficulty is %1.").arg(clientModel->GetDifficulty()) + QString("<br>") + tooltip;
 
     QDateTime lastBlockDate = clientModel->getLastBlockDate();
@@ -638,14 +801,16 @@ void TrianglesGUI::setNumBlocks(int count, int nTotalBlocks)
     {
         tooltip = tr("Up to date") + QString(".<br>") + tooltip;
         labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
-
+        
         overviewPage->showOutOfSyncWarning(false);
     }
     else
     {
         tooltip = tr("Catching up...") + QString("<br>") + tooltip;
-        labelBlocksIcon->setMovie(syncIconMovie);
-        syncIconMovie->start();
+        //syncIconMovie doesn't work for some reason - using fallback png
+        //labelBlocksIcon->setMovie(syncIconMovie);
+        //syncIconMovie->start();
+        labelBlocksIcon->setPixmap(QIcon(":/icons/notsynced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
 
         overviewPage->showOutOfSyncWarning(true);
     }
@@ -702,7 +867,7 @@ void TrianglesGUI::closeEvent(QCloseEvent *event)
         if(!clientModel->getOptionsModel()->getMinimizeToTray() &&
            !clientModel->getOptionsModel()->getMinimizeOnClose())
         {
-            qApp->quit();
+            QApplication::quit();
         }
 #endif
     }
@@ -711,16 +876,40 @@ void TrianglesGUI::closeEvent(QCloseEvent *event)
 
 void TrianglesGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
-    QString strMessage =
-        tr("This transaction is over the size limit.  You can still send it for a fee of %1, "
-          "which goes to the nodes that process your transaction and helps to support the network.  "
-          "Do you want to pay the fee?").arg(
-                TrianglesUnits::formatWithUnit(TrianglesUnits::TRI, nFeeRequired));
-    QMessageBox::StandardButton retval = QMessageBox::question(
-          this, tr("Confirm transaction fee"), strMessage,
-          QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
+    QString strMessage = tr("<font color='#f26522'>This transaction is over the size limit.  You can still send it for a fee of %1, "
+          "which goes to the nodes that process your transaction and helps to support the network.  </font>"
+          "Do you want to pay the fee?").arg(TrianglesUnits::formatWithUnit(TrianglesUnits::TRI, nFeeRequired));
+          
+    QMessageBox* msgBox = new QMessageBox(QMessageBox::Question,
+                                          tr("Confirm transaction fee"),
+                                          strMessage,
+                                          QMessageBox::Yes | QMessageBox::Cancel, this,
+                                          Qt::FramelessWindowHint);
+                                          
+    msgBox->setIconPixmap(QPixmap(":/msgbox/question"));
+    msgBox->setStyleSheet("\
+                          QMessageBox {border: 2px solid #f26522;\
+                                       background-color: #000;}\
+                          ");
+    msgBox->button(QMessageBox::Yes)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+                          
+    msgBox->button(QMessageBox::Cancel)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+                                                                                                              
+    int retval = msgBox->exec();                                      
+                                          
     *payFee = (retval == QMessageBox::Yes);
 }
+
 
 void TrianglesGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
 {
@@ -802,7 +991,7 @@ void TrianglesGUI::gotoHistoryPage()
 
     exportAction->setEnabled(true);
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
-    connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
+    connect(exportAction, SIGNAL(triggered()), transactionsPage, SLOT(exportClicked()));
 }
 
 void TrianglesGUI::gotoAddressBookPage()
@@ -846,20 +1035,30 @@ void TrianglesGUI::gotoMessagePage()
 
 void TrianglesGUI::gotoSignMessageTab(QString addr)
 {
+    centralWidget->setCurrentWidget(signMessagePage);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+
     // call show() in showTab_SM()
-    signVerifyMessageDialog->showTab_SM(true);
+    signMessagePage->showTab_SM(true);
 
     if(!addr.isEmpty())
-        signVerifyMessageDialog->setAddress_SM(addr);
+        signMessagePage->setAddress_SM(addr);
 }
 
 void TrianglesGUI::gotoVerifyMessageTab(QString addr)
 {
+    centralWidget->setCurrentWidget(verifyMessagePage);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
+
     // call show() in showTab_VM()
-    signVerifyMessageDialog->showTab_VM(true);
+    verifyMessagePage->showTab_VM(true);
 
     if(!addr.isEmpty())
-        signVerifyMessageDialog->setAddress_VM(addr);
+        verifyMessagePage->setAddress_VM(addr);
 }
 
 void TrianglesGUI::dragEnterEvent(QDragEnterEvent *event)
@@ -877,18 +1076,78 @@ void TrianglesGUI::dropEvent(QDropEvent *event)
         QList<QUrl> uris = event->mimeData()->urls();
         foreach(const QUrl &uri, uris)
         {
-            if (sendCoinsPage->handleURI(uri.toString()))
+	    if (sendCoinsPage->handleURI(uri.toString()))
                 nValidUrisFound++;
         }
 
         // if valid URIs were found
         if (nValidUrisFound)
-            gotoSendCoinsPage();
+		    gotoSendCoinsPage();
         else
             notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid TRI address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
+}
+
+bool TrianglesGUI::eventFilter(QObject *object, QEvent *event)
+{
+    // Catch status tip events
+    if (event->type() == QEvent::StatusTip)
+    {
+        // Prevent adding text from setStatusTip(), if we currently use the status bar for displaying other stuff
+        if (progressBarLabel->isVisible() || progressBar->isVisible())
+            return true;
+    }
+    if (object == ui->pushButton_Overview && event->type() == QEvent::MouseButtonPress)
+        gotoOverviewPage();
+    return QMainWindow::eventFilter(object, event);
+}
+
+void TrianglesGUI::resizeEvent(QResizeEvent *e)
+{
+    updateMask();
+    QMainWindow::resizeEvent(e);
+}
+
+void TrianglesGUI::paintEvent(QPaintEvent *e)
+{
+    Q_UNUSED(e);
+
+    updateMask();
+
+    QPainter painter(this);
+    painter.setRenderHint(QPainter::Antialiasing); // we need this in order to get correct rounded corners
+    painter.setPen(QPen(QBrush(Qt::black), 2.0));
+    painter.setBrush(QBrush(QColor(0, 140, 0)));
+
+    QMainWindow::paintEvent(e);
+}
+
+void TrianglesGUI::updateMask()
+{
+    // main form mask
+    _mask = QBitmap(size());
+    _mask.clear();
+    {
+        QPainter painter(&_mask);
+        painter.fillRect(rect(), Qt::color1);
+        painter.drawImage(0, 0, QImage("://res/mask0.png"));
+        painter.end();
+    }
+    setMask(_mask);
+
+    // logo widget corner
+    _logoWidgetMask = QBitmap(ui->wHeader->size());
+    _logoWidgetMask.clear();
+
+    {
+        QPainter painter(&_logoWidgetMask);
+        painter.fillRect(ui->wHeader->rect(), Qt::color1);
+        painter.drawImage(0, 0, QImage("://res/mask1.png"));
+        painter.end();
+    }
+    ui->wHeader->setMask(_logoWidgetMask);
 }
 
 void TrianglesGUI::handleURI(QString strURI)
@@ -903,6 +1162,156 @@ void TrianglesGUI::handleURI(QString strURI)
         notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid TRI address or malformed URI parameters."));
 }
 
+void TrianglesGUI::menuFileRequested()
+{
+    QMenu menu(this);
+    QAction* home = menu.addAction(QIcon(":/menu_16/overview"), tr("&Overview").remove('&'));
+    QAction* commonAndNetwork = menu.addAction(QIcon(":/menu_16/options"), tr("Options"));
+    QAction* qaBackupWallet = menu.addAction(QIcon(":/menu_16/backup"), tr("Backup Wallet"));
+    QAction* exportData = menu.addAction(QIcon(":/menu_16/export"), tr("&Export...").remove('&').remove("..."));
+    QAction* exitApp = menu.addAction(QIcon(":/menu_16/exit"), tr("E&xit").remove('&'));
+
+    QPoint poz = QCursor::pos();
+    if (QWidget* w = qobject_cast<QWidget*>(sender()))
+        poz = w->mapToGlobal(w->rect().bottomLeft());
+
+    QAction* selected = menu.exec(poz);
+    if (!selected)
+        return;
+
+    if (selected == home)
+    {
+        gotoOverviewPage();
+    }
+    else if (selected == commonAndNetwork)
+    {
+        optionsClicked();
+    }
+    else if (selected == qaBackupWallet) {
+        this->backupWallet();
+    }
+    else if (selected == exportData)
+    {
+        if (centralWidget->currentWidget() == transactionsPage)
+        {
+            transactionView->exportClicked();
+        } else if (centralWidget->currentWidget() == addressBookPage)
+        {
+            addressBookPage->exportClicked();
+        } else if (centralWidget->currentWidget() == receiveCoinsPage)
+        {
+            receiveCoinsPage->exportClicked();
+        }
+    }
+    else if (selected == exitApp)
+    {
+        qApp->quit();
+    }
+}
+
+void TrianglesGUI::menuOperationsRequested()
+{
+    QMenu menu(this);
+    QAction* send = menu.addAction(QIcon(":/menu_16/send"), tr("Send Triangles"));
+    QAction* receive = menu.addAction(QIcon(":/menu_16/receive"), tr("Receive Triangles"));
+    QAction* transactions = menu.addAction(QIcon(":/menu_16/transactions"), tr("&Transactions").remove('&'));
+    QAction* addressBook = menu.addAction(QIcon(":/menu_16/addressbook"), tr("&Address Book").remove('&'));
+    QAction* encryptWallet = menu.addAction(QIcon(":/menu_16/lock"), tr("&Encrypt Wallet...").remove('&').remove("..."));
+    QAction* unlockWalletStaking = menu.addAction(QIcon(":/menu_16/unlock"), tr("&Unlock Wallet...").remove('&').remove("..."));
+    QAction* lockWallet = menu.addAction(QIcon(":/menu_16/lock"), tr("&Lock Wallet...").remove('&').remove("..."));
+    QAction* changePassword = menu.addAction(QIcon(":/menu_16/passphrase"), tr("&Change Passphrase...").remove('&').remove("..."));
+    QAction* signMessage = menu.addAction(QIcon(":/menu_16/sign"), tr("Sign &message...").remove('&').remove("..."));
+    QAction* verifySignature = menu.addAction(QIcon(":/menu_16/verify"), tr("&Verify message...").remove('&').remove("..."));
+
+    if (!walletModel->getEncryptionStatus() == WalletModel::Unencrypted)
+        encryptWallet->setVisible(false);
+
+    if (walletModel->getEncryptionStatus() == WalletModel::Unlocked || walletModel->getEncryptionStatus() == WalletModel::Unencrypted)
+        unlockWalletStaking->setVisible(false);
+
+    if (walletModel->getEncryptionStatus() == WalletModel::Locked || walletModel->getEncryptionStatus() == WalletModel::Unencrypted)
+        lockWallet->setVisible(false);
+
+    if (walletModel->getEncryptionStatus() == WalletModel::Unencrypted)
+        changePassword->setVisible(false);
+
+
+    QPoint poz = QCursor::pos();
+    if (QWidget* w = qobject_cast<QWidget*>(sender()))
+        poz = w->mapToGlobal(w->rect().bottomLeft());
+
+    QAction* selected = menu.exec(poz);
+    if (!selected)
+        return;
+
+    if (selected == send)
+    {
+        gotoSendCoinsPage();
+    }
+    else if (selected == receive)
+    {
+        gotoReceiveCoinsPage();
+    }
+    else if (selected == transactions)
+    {
+        gotoHistoryPage();
+    }
+    else if (selected == addressBook)
+    {
+        gotoAddressBookPage();
+    }
+    else if (selected == encryptWallet)
+    {
+        if (walletModel->getEncryptionStatus() == WalletModel::Unencrypted)
+            this->encryptWallet(true);
+    }
+    else if (selected == unlockWalletStaking)
+    {
+        if (walletModel->getEncryptionStatus() == WalletModel::Locked)
+            this->unlockWalletStaking();
+    }
+    else if (selected == lockWallet)
+    {
+        if (walletModel->getEncryptionStatus() == WalletModel::Unlocked)
+            this->lockWallet();
+    }
+    else if (selected == changePassword)
+    {
+        if (walletModel->getEncryptionStatus() == WalletModel::Unlocked || walletModel->getEncryptionStatus() == WalletModel::Locked)
+            changePassphrase();
+    }
+    else if (selected == signMessage)
+    {
+        gotoSignMessageTab();
+    }
+    else if (selected == verifySignature)
+    {
+        gotoVerifyMessageTab();
+    }
+}
+void TrianglesGUI::menuSettingsRequested()
+{
+    QMenu menu(this);
+    QAction* debugWindow = menu.addAction(QIcon(":/menu_16/debug"),tr("&Debug window").remove('&'));
+    QAction* about = menu.addAction(QIcon(":/menu_16/triangles_menu"),tr("&About Triangles").remove('&'));    
+
+    QPoint poz = QCursor::pos();
+    if (QWidget* w = qobject_cast<QWidget*>(sender()))
+        poz = w->mapToGlobal(w->rect().bottomLeft());
+
+    QAction* selected = menu.exec(poz);
+    if (!selected)
+        return;
+
+
+    if (selected == about)
+    {
+        aboutClicked();
+    } else if (selected == debugWindow)
+    {
+        on_bHelp_clicked();
+    }
+}
 void TrianglesGUI::setEncryptionStatus(int status)
 {
     switch(status)
@@ -911,17 +1320,22 @@ void TrianglesGUI::setEncryptionStatus(int status)
         labelEncryptionIcon->hide();
         encryptWalletAction->setChecked(false);
         changePassphraseAction->setEnabled(false);
-        unlockWalletAction->setVisible(false);
+        unlockWalletStakingAction->setVisible(false);
         lockWalletAction->setVisible(false);
         encryptWalletAction->setEnabled(true);
         break;
     case WalletModel::Unlocked:
         labelEncryptionIcon->show();
         labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
+        if (fWalletUnlockStakingOnly) {
+            labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked for staking</b>"));
+        }
+        else {
+            labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
+        }
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        unlockWalletAction->setVisible(false);
+        unlockWalletStakingAction->setVisible(false);
         lockWalletAction->setVisible(true);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
         break;
@@ -931,12 +1345,14 @@ void TrianglesGUI::setEncryptionStatus(int status)
         labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
-        unlockWalletAction->setVisible(true);
+        unlockWalletStakingAction->setVisible(true);
         lockWalletAction->setVisible(false);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
         break;
     }
 }
+
+
 
 void TrianglesGUI::encryptWallet(bool status)
 {
@@ -956,8 +1372,10 @@ void TrianglesGUI::backupWallet()
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
     if(!filename.isEmpty()) {
         if(!walletModel->backupWallet(filename)) {
-            QMessageBox::warning(this, tr("Backup Failed"), tr("There was an error trying to save the wallet data to the new location."));
+            QMessageBox::warning(this, tr("Backup failed"), tr("There was an error trying to save the wallet data to the new location."));
         }
+        else
+            QMessageBox::information(this, tr("Backup successful"), tr("The wallet data was successfully saved to the new location."));
     }
 }
 
@@ -968,6 +1386,22 @@ void TrianglesGUI::changePassphrase()
     dlg.exec();
 }
 
+
+void TrianglesGUI::unlockWalletStaking()
+{
+    if(!walletModel)
+        return;
+    // Unlock wallet when requested by wallet model
+    if(walletModel->getEncryptionStatus() == WalletModel::Locked)
+    {
+        AskPassphraseDialog dlg(AskPassphraseDialog::UnlockStaking, this);
+        dlg.setModel(walletModel);
+        dlg.exec();
+    }
+}
+
+
+
 void TrianglesGUI::unlockWallet()
 {
     if(!walletModel)
@@ -975,9 +1409,7 @@ void TrianglesGUI::unlockWallet()
     // Unlock wallet when requested by wallet model
     if(walletModel->getEncryptionStatus() == WalletModel::Locked)
     {
-        AskPassphraseDialog::Mode mode = sender() == unlockWalletAction ?
-              AskPassphraseDialog::UnlockStaking : AskPassphraseDialog::Unlock;
-        AskPassphraseDialog dlg(mode, this);
+        AskPassphraseDialog dlg(AskPassphraseDialog::Unlock, this);
         dlg.setModel(walletModel);
         dlg.exec();
     }
@@ -1017,6 +1449,7 @@ void TrianglesGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
+
 
 void TrianglesGUI::updateStakingIcon()
 {
@@ -1064,4 +1497,16 @@ void TrianglesGUI::updateStakingIcon()
         else
             labelStakingIcon->setToolTip(tr("Not staking"));
     }
+}
+
+void TrianglesGUI::detectShutdown()
+{
+    if (ShutdownRequested())
+        QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);
+}
+
+
+void TrianglesGUI::on_bHelp_clicked()
+{    
+    rpcConsole->show();
 }

@@ -28,6 +28,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     model(0)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
 
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->addButton->setIcon(QIcon());
@@ -149,11 +150,32 @@ void SendCoinsDialog::on_sendButton_clicked()
     }
 
     fNewRecipientAllowed = false;
+    QMessageBox* msgBox = new QMessageBox(QMessageBox::Question,
+                                          tr("Confirm send coins"),
+                                          tr("Are you sure you want to send %1?").arg(formatted.join(tr(" and "))),
+                                          QMessageBox::Yes | QMessageBox::Cancel, this,
+                                          Qt::FramelessWindowHint);
+    
+    msgBox->setIconPixmap(QPixmap(":/msgbox/question"));
+    msgBox->setStyleSheet("\
+                          QMessageBox { border: 2px solid #f26522;}\
+                          ");
+    msgBox->button(QMessageBox::Yes)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+                          
+    msgBox->button(QMessageBox::Cancel)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
 
-    QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send coins"),
-                          tr("Are you sure you want to send %1?").arg(formatted.join(tr(" and "))),
-          QMessageBox::Yes|QMessageBox::Cancel,
-          QMessageBox::Cancel);
+    int retval = msgBox->exec();
+
 
     if(retval != QMessageBox::Yes)
     {

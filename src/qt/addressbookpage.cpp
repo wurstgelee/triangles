@@ -7,6 +7,7 @@
 #include "editaddressdialog.h"
 #include "csvmodelwriter.h"
 #include "guiutil.h"
+#include "dialog_move_handler.h"
 
 #include <QSortFilterProxyModel>
 #include <QClipboard>
@@ -26,6 +27,8 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     tab(tab)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wAddressBookHeader->installEventFilter(new DialogMoveHandler(this));
 
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->newAddressButton->setIcon(QIcon());
@@ -43,32 +46,39 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
         connect(ui->tableView, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(accept()));
         ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         ui->tableView->setFocus();
+        ui->borderframe->setStyleSheet("#borderframe {border: 2px solid #f26522;}");
         break;
     case ForEditing:
         ui->buttonBox->setVisible(false);
+        ui->cancelbuttonBox->setVisible(false);
         break;
     }
     switch(tab)
     {
     case SendingTab:
+		    ui->icon_ab_receive->setVisible(false);
         ui->labelExplanation->setVisible(false);
         ui->deleteButton->setVisible(true);
+        ui->verifyMessage->setVisible(true);
         ui->signMessage->setVisible(false);
         break;
     case ReceivingTab:
+		    ui->icon_ab_send->setVisible(false);
+		    ui->label_ab->setText(tr("Triangles receiving addresses"));
         ui->deleteButton->setVisible(false);
+        ui->verifyMessage->setVisible(false);
         ui->signMessage->setVisible(true);
         break;
     }
 
     // Context menu actions
-    QAction *copyLabelAction = new QAction(tr("Copy &Label"), this);
-    QAction *copyAddressAction = new QAction(ui->copyToClipboard->text(), this);
-    QAction *editAction = new QAction(tr("&Edit"), this);
+    QAction *copyLabelAction = new QAction(QIcon(":/menu_16/copy"),tr("Copy &Label"), this);
+    QAction *copyAddressAction = new QAction(QIcon(":/menu_16/copy"),ui->copyToClipboard->text(), this);
+    QAction *editAction = new QAction(QIcon(":/menu_16/edit"), tr("&Edit"), this);
     QAction *showQRCodeAction = new QAction(ui->showQRCode->text(), this);
-    QAction *signMessageAction = new QAction(ui->signMessage->text(), this);
-    QAction *verifyMessageAction = new QAction(ui->verifyMessage->text(), this);
-    deleteAction = new QAction(ui->deleteButton->text(), this);
+    QAction *signMessageAction = new QAction(QIcon(":/menu_16/sign"), ui->signMessage->text(), this);
+    QAction *verifyMessageAction = new QAction(QIcon(":/menu_16/verify"), ui->verifyMessage->text(), this);
+    deleteAction = new QAction(QIcon(":/menu_16/delete"), ui->deleteButton->text(), this);
 
     // Build context menu
     contextMenu = new QMenu();
@@ -78,12 +88,26 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
     if(tab == SendingTab)
         contextMenu->addAction(deleteAction);
     contextMenu->addSeparator();
-    contextMenu->addAction(showQRCodeAction);
+    //contextMenu->addAction(showQRCodeAction);
     if(tab == ReceivingTab)
         contextMenu->addAction(signMessageAction);
     else if(tab == SendingTab)
         contextMenu->addAction(verifyMessageAction);
-
+    contextMenu->setStyleSheet("QMenu {\
+                                 background-color: #000; \
+                                 border: 1px solid #f26522;\
+                                 color: #f26522;\
+                             }\
+                             \
+                             QMenu::item {\
+                                 background-color: transparent;\
+                             }\
+                             \
+                             QMenu::item:selected {\
+                                 color: #f26522;\
+                                 background-color: #61280E;\
+                             }\
+                             ");
     // Connect signals for context menu actions
     connect(copyAddressAction, SIGNAL(triggered()), this, SLOT(on_copyToClipboard_clicked()));
     connect(copyLabelAction, SIGNAL(triggered()), this, SLOT(onCopyLabelAction()));
@@ -97,6 +121,7 @@ AddressBookPage::AddressBookPage(Mode mode, Tabs tab, QWidget *parent) :
 
     // Pass through accept action from button box
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
+    connect(ui->cancelbuttonBox, SIGNAL (rejected()), this, SLOT (reject()));
 }
 
 AddressBookPage::~AddressBookPage()

@@ -6,7 +6,8 @@
 #include "addressbookpage.h"
 #include "optionsmodel.h"
 #include "sendmessagesentry.h"
-//#include "guiutil.h"
+#include "dialog_move_handler.h"
+#include "guiutil.h"
 
 #include <QMessageBox>
 #include <QLocale>
@@ -24,6 +25,8 @@ SendMessagesDialog::SendMessagesDialog(Mode mode, Type type, QWidget *parent) :
 {
 
     ui->setupUi(this);
+    setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint | Qt::Window);
+    ui->wCaption->installEventFilter(new DialogMoveHandler(this));
 
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     ui->addButton->setIcon(QIcon());
@@ -49,6 +52,7 @@ SendMessagesDialog::SendMessagesDialog(Mode mode, Type type, QWidget *parent) :
 
     if(type == SendMessagesDialog::Page)
         ui->closeButton->hide();
+    ui->addressFrom->setFont(GUIUtil::trianglesAddressFont());
 }
 
 void SendMessagesDialog::setModel(MessageModel *model)
@@ -160,10 +164,31 @@ void SendMessagesDialog::on_sendButton_clicked()
 
     fNewRecipientAllowed = false;
 
-    QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm send messages"),
-                          tr("Are you sure you want to send %1?").arg(formatted.join(tr(" and "))),
-          QMessageBox::Yes|QMessageBox::Cancel,
-          QMessageBox::Cancel);
+    QMessageBox* msgBox = new QMessageBox(QMessageBox::Question,
+                                          tr("Confirm send messages"),
+                                          tr("Are you sure you want to send %1?").arg(formatted.join(tr(" and "))),
+                                          QMessageBox::Yes | QMessageBox::Cancel, this,
+                                          Qt::FramelessWindowHint);
+    
+    msgBox->setIconPixmap(QPixmap(":/msgbox/question"));
+    msgBox->setStyleSheet("\
+                          QMessageBox { border: 2px solid #f26522;}\
+                          ");
+    msgBox->button(QMessageBox::Yes)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+                          
+    msgBox->button(QMessageBox::Cancel)->setStyleSheet("\
+                          QMessageBox QPushButton {background-color: #000;color: #f26522;border: 1px solid #f26522;\
+                              min-width: 120px;max-width: 120px;max-height: 20px;min-height: 20px;}\
+                          QMessageBox QPushButton:hover {background-color: #61280E;}\
+                          QMessageBox QPushButton:pressed:flat {color: #000;background-color: #f26522;}\
+                          ");
+
+    int retval = msgBox->exec();                    
 
     if(retval != QMessageBox::Yes)
     {

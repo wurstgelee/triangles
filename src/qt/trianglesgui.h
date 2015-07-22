@@ -3,10 +3,8 @@
 
 #include <QMainWindow>
 #include <QSystemTrayIcon>
-#include <QLabel>
-
-#include <stdint.h>
-#include <QScopedPointer>
+#include <QMap>
+#include <QBitmap>
 
 class TransactionTableModel;
 class ClientModel;
@@ -20,6 +18,8 @@ class SendCoinsDialog;
 class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
+class SignMessagePage;
+class VerifyMessagePage;
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -30,22 +30,15 @@ class QModelIndex;
 class QProgressBar;
 class QStackedWidget;
 class QUrl;
+class QListWidget;
+class QPushButton;
+class QAction;
 QT_END_NAMESPACE
 
-class ActiveLabel : public QLabel
-{
-    Q_OBJECT
-public:
-    ActiveLabel(const QString & text = "", QWidget * parent = 0);
-    ~ActiveLabel(){}
+namespace Ui {
+class MainWindow;
+}
 
-signals:
-    void clicked();
-
-protected:
-    void mouseReleaseEvent (QMouseEvent * event) ;
-
-};
 /**
   Triangles GUI main class. This class represents the main window of the Triangles UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
@@ -53,8 +46,11 @@ protected:
 class TrianglesGUI : public QMainWindow
 {
     Q_OBJECT
+
 public:
-    explicit TrianglesGUI(QWidget *parent = 0);
+    static const QString DEFAULT_WALLET;
+
+    explicit TrianglesGUI(bool fIsTestnet = false, QWidget *parent = 0);
     ~TrianglesGUI();
 
     /** Set the client model.
@@ -77,8 +73,18 @@ protected:
     void closeEvent(QCloseEvent *event);
     void dragEnterEvent(QDragEnterEvent *event);
     void dropEvent(QDropEvent *event);
+    bool eventFilter(QObject *object, QEvent *event);
+    void resizeEvent(QResizeEvent *e);
+    void paintEvent(QPaintEvent *e);
 
 private:
+    void updateMask();
+
+private:
+    Ui::MainWindow *ui;
+    QBitmap _mask;
+    QBitmap _logoWidgetMask;
+
     ClientModel *clientModel;
     WalletModel *walletModel;
     MessageModel *messageModel;
@@ -91,7 +97,8 @@ private:
     AddressBookPage *receiveCoinsPage;
     MessagePage *messagePage;
     SendCoinsDialog *sendCoinsPage;
-    QScopedPointer<SignVerifyMessageDialog> signVerifyMessageDialog;
+    SignMessagePage* signMessagePage;
+    VerifyMessagePage* verifyMessagePage;
 
     QLabel *labelEncryptionIcon;
     QLabel *labelStakingIcon;
@@ -118,6 +125,7 @@ private:
     QAction *backupWalletAction;
     QAction *changePassphraseAction;
     QAction *unlockWalletAction;
+    QAction *unlockWalletStakingAction;
     QAction *lockWalletAction;
     QAction *aboutQtAction;
     QAction *openRPCConsoleAction;
@@ -125,18 +133,26 @@ private:
     QSystemTrayIcon *trayIcon;
     Notificator *notificator;
     TransactionView *transactionView;
-    QScopedPointer<RPCConsole> rpcConsole;
+    RPCConsole *rpcConsole;
 
     QMovie *syncIconMovie;
+    /** Keep track of previous number of blocks, to detect progress */
+    int prevBlocks;
 
     /** Create the main UI actions. */
-    void createActions();
+    void createActions(bool fIsTestnet);
     /** Create the menu bar and sub-menus. */
     void createMenuBar();
     /** Create the toolbars */
     void createToolBars();
-    /** Create system tray (notification) icon */
+    /** Create system tray icon and notification */
     void createTrayIcon();
+    /** Create system tray menu (or setup the dock menu) */
+    void createTrayIconMenu();
+    /** Save window size and position */
+    void saveWindowGeometry();
+    /** Restore window size and position */
+    void restoreWindowGeometry();
 
 public slots:
     /** Set number of connections shown in the UI */
@@ -162,7 +178,13 @@ public slots:
     void askFee(qint64 nFeeRequired, bool *payFee);
     void handleURI(QString strURI);
 
+
 private slots:
+
+    void menuFileRequested();
+    void menuOperationsRequested();
+    void menuSettingsRequested();
+
     /** Switch to overview (home) page */
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
@@ -209,6 +231,8 @@ private slots:
     void changePassphrase();
     /** Ask for passphrase to unlock wallet temporarily */
     void unlockWallet();
+    /** Ask for passphrase to unlock wallet temporarily - FOR STAKING ONLY */
+    void unlockWalletStaking();
 
     void lockWallet();
 
@@ -218,6 +242,11 @@ private slots:
     void toggleHidden();
 
     void updateStakingIcon();
+	/** called by a timer to check if fRequestShutdown has been set **/
+	void detectShutdown();
+
+    void on_bHelp_clicked();
+
 };
 
-#endif
+#endif //TRIANGLESGUI_H

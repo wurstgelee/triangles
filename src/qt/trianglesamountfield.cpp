@@ -22,11 +22,27 @@ TrianglesAmountField::TrianglesAmountField(QWidget *parent):
     amount->setDecimals(8);
     amount->installEventFilter(this);
     amount->setMaximumWidth(170);
-    amount->setSingleStep(0.001);
+    amount->setMinimumHeight(22);
+    amount->setSingleStep(0.1);
+    amount->setContextMenuPolicy(Qt::NoContextMenu);
 
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(amount);
     unit = new QValueComboBox(this);
+    unit->setMinimumHeight(22);
+    unit->setMinimumWidth(50);
+    unit->setStyleSheet("QToolTip \
+                        {\
+                             color: #f26522;\
+                             border: 1px solid #61280E;\
+                             background-color: #000;\
+                             /*padding: 10px 10px;*/\
+                             border-radius: 3px;\
+                             /*opacity: 200;*/\
+                             min-height: 20px;\
+                             /*min-width:60px;*/\
+                        }\
+                        ");
     unit->setModel(new TrianglesUnits(this));
     layout->addWidget(unit);
     layout->addStretch(1);
