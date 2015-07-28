@@ -1,8 +1,4 @@
 <RCC>
-    <qresource prefix="/fonts">
-        <file alias="roboto_regular">res/fonts/Roboto/Roboto-Regular.ttf</file>
-        <file alias="roboto_medium">res/fonts/Roboto/Roboto-Medium.ttf</file>
-    </qresource>
     <qresource prefix="/menu_16">
          <file alias="addressbook">res/icons/menu_16/addressbook.png</file>
          <file alias="addressbook_alt">res/icons/menu_16/addressbook_alt.png</file>
